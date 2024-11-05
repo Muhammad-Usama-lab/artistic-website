@@ -32,7 +32,8 @@ export default function Home() {
             "Finishing",
           ]}
           _class=""
-          images={["/images/section/row1/1.jpg"]}
+          folder="row1"
+          
         />
       </div>
       <div className="snap-always snap-center">
@@ -45,7 +46,7 @@ export default function Home() {
             "Sourcing",
           ]}
           _class=""
-          images={["/images/section/row2/1.jpg"]}
+          folder="row2"
         />
       </div>
       <div className="snap-always snap-center">
@@ -59,7 +60,8 @@ export default function Home() {
             "Water Conservation & Recycling",
           ]}
           _class=""
-          images={["/images/section/row3/1.jpg"]}
+          folder="row3"
+          
         />
       </div>
       <div className="snap-always snap-center">
@@ -73,7 +75,9 @@ export default function Home() {
             "Finishing",
           ]}
           _class=""
-          images={["/images/section/row4/1.jpg"]}
+          folder="row4"
+          
+          
         />
       </div>
     </div>

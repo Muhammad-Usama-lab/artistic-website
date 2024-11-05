@@ -7,8 +7,8 @@ const ArrowButton = ({ onClick, right }: ArrowI) => {
   if (right)
     return (
       <button
-        // onClick={onClick}
-        className="border border-black dark:border-gray-300 rounded-full px-4 py-0"
+        onClick={onClick}
+        className="border border-black dark:border-gray-300 rounded-full px-4 py-0 hover:bg-gray-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const ArrowButton = ({ onClick, right }: ArrowI) => {
     <>
       <button
         // onClick={onClick}
-        className="border border-black dark:border-gray-300 rounded-full px-4 py-0"
+        className="border border-black dark:border-gray-300 rounded-full px-4 py-0 hover:bg-gray-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
