@@ -33,7 +33,7 @@ const ArrowButton = ({ onClick, right }: ArrowI) => {
   return (
     <>
       <button
-        // onClick={onClick}
+        onClick={onClick}
         className="border border-black dark:border-gray-300 rounded-full px-4 py-0 hover:bg-gray-100"
       >
         <svg

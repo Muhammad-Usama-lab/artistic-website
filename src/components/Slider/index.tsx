@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import ArrowButton from "../Button/ArrowButton";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { useRef } from "react";
 
 const Slider = ({
   title,
@@ -23,6 +24,19 @@ const Slider = ({
     threshold: 0.1,
     triggerOnce: false,
   });
+  const carouselRef = useRef<Carousel>(null);
+
+  const goToNext = () => {
+    if (carouselRef.current) {
+      carouselRef.current.onClickNext();
+    }
+  };
+
+  const goToPrev = () => {
+    if (carouselRef.current) {
+      carouselRef.current.onClickPrev();
+    }
+  };
 
   return (
     <>
@@ -56,14 +70,15 @@ const Slider = ({
                   IMAGES
                 </h2>
                 <div className="flex gap-2">
-                  <ArrowButton onClick={null} />
-                  <ArrowButton right={true} onClick={null} />
+                  <ArrowButton onClick={goToPrev} />
+                  <ArrowButton right={true} onClick={goToNext} />
                 </div>
               </div>
             </div>
             <div className="p-4">
               <div className="h-full flex flex-col">
                 <Carousel
+                  ref={carouselRef}
                   className="grow"
                   showArrows={false}
                   showIndicators={false}
