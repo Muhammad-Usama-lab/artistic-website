@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <ScrollUp />
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <Hero />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <Features />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <Slider
           title="OUR AREAS OF EXPERTISE"
           paragraph={[
@@ -36,7 +36,7 @@ export default function Home() {
           folder="row1"
         />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <Slider
           title="OUR AREAS OF EXPERTISE"
           paragraph={[
@@ -48,7 +48,7 @@ export default function Home() {
           folder="row2"
         />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <Slider
           title="OUR AREAS OF EXPERTISE"
           paragraph={[
@@ -61,7 +61,7 @@ export default function Home() {
           folder="row3"
         />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <Slider
           title="OUR AREAS OF EXPERTISE"
           paragraph={[
@@ -73,7 +73,7 @@ export default function Home() {
           quantity={3}
         />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-center">
         <OurValues />
       </div>
       <div className=" snap-center">

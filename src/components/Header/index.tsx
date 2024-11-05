@@ -2,9 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import menuData from "./menuData";
 import "../../styles/hero.module.css";
-import ThemeToggler from "./ThemeToggler";
+import menuData from "./menuData";
 
 const Header = () => {
   // Navbar toggle
@@ -106,7 +105,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 uppercase ${
+                            className={`flex py-2 text-xs lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 uppercase ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -141,7 +140,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  className="block rounded py-2.5 text-xs text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -151,7 +150,7 @@ const Header = () => {
                         )}
                       </li>
                     ))}
-                  <ThemeToggler />
+                  {/* <ThemeToggler /> */}
                   </ul>
                   <div>
                 </div> 
