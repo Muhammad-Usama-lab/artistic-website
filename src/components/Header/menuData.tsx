@@ -10,25 +10,25 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Renewable Energy",
-    path: "/about",
+    path: "/",
     newTab: false,
   },
   {
     id: 33,
     title: "Western Hemisphere",
-    path: "/blog",
+    path: "/",
     newTab: false,
   },
   {
     id: 3,
     title: "Esg",
-    path: "/contact",
+    path: "/",
     newTab: false,
   },
   {
     id: 4,
     title: "News",
-    path: "/contact",
+    path: "/",
     newTab: false,
   },
   {

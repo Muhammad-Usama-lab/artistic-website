@@ -12,7 +12,7 @@ const Features = () => {
             </span>{" "}
             we strive for excellence in all we do.
           </h1>
-        <Button label="Learn More" onClick={() => null} />
+        <Button label="Learn More" />
         </div>
       </section>
     </>

@@ -41,17 +41,17 @@ const Header = () => {
   return (
     <>
       <header
-        className={`main-header header left-0 top-0 z-40 flex w-full items-center ${
+        className={` header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? " fixed z-[9999]  !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" // dark:bg-gray-dark dark:shadow-sticky-dark bg-white
-            : "absolute " // bg-transparent
+            ? " fixed z-[9999]  shadow-sticky backdrop-blur-sm transition" // dark:bg-gray-dark dark:shadow-sticky-dark bg-white
+            : " absolute main-header" // bg-transparent
         }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
+          <div className="relative -mx-4 flex items-center justify-between " >
             
             {/* Logo */}
-            <div className="w-3/6 sm:w-2/3 xs:w-4/5 max-w-full px-4 ">
+            <div className="w-[40%] md:w-[20%] px-4">
               <Link
                 href="/"
                 className={`header-logo flex gap-2 items-center block w-full ${

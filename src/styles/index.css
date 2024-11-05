@@ -1,43 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @font-face {
-  font-family: 'SuisseIntl';
-  src: url('/fonts/SuisseIntl/SuisseIntl-Bold.ttf') format('truetype');
+  font-family: "SuisseIntl";
+  src: url("/fonts/SuisseIntl/SuisseIntl-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SuisseIntl';
-  src: url('/fonts/SuisseIntl/SuisseIntl-Regular.ttf') format('truetype');
+  font-family: "SuisseIntl";
+  src: url("/fonts/SuisseIntl/SuisseIntl-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SuisseIntl';
-  src: url('/fonts/SuisseIntl/SuisseIntl-RegularItalic.ttf') format('truetype');
+  font-family: "SuisseIntl";
+  src: url("/fonts/SuisseIntl/SuisseIntl-RegularItalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'SuisseIntl';
-  src: url('/fonts/SuisseIntl/SuisseIntl-SemiBold.ttf') format('truetype');
+  font-family: "SuisseIntl";
+  src: url("/fonts/SuisseIntl/SuisseIntl-SemiBold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SuisseIntl';
-  src: url('/fonts/SuisseIntl/SuisseIntl-SemiBoldItalic.ttf') format('truetype');
+  font-family: "SuisseIntl";
+  src: url("/fonts/SuisseIntl/SuisseIntl-SemiBoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'SuisseIntl';
-  src: url('/fonts/SuisseIntl/SuisseIntl-Thin.ttf') format('truetype');
+  font-family: "SuisseIntl";
+  src: url("/fonts/SuisseIntl/SuisseIntl-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
@@ -47,7 +47,7 @@
 
 @layer base {
   body {
-    font-family:  "SuisseIntl", "Inter", sans-serif;
+    font-family: "SuisseIntl", "Inter", sans-serif;
   }
 }
 
@@ -71,6 +71,12 @@
   input#checkboxLabel:checked ~ .box span {
     @apply opacity-100;
   }
+}
+
+.main-header {
+  background: linear-gradient(to bottom, white,white,white, transparent);
+  /* height:100px; */
+  /* -webkit-filter: blur(1px); */
 }
 
 /* Fade In */
@@ -169,7 +175,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ac2029; /* Color of the scrollbar */
+  background: #112E9D; /* Color of the scrollbar */
   border-radius: 10px; /* Round corners */
 }
 

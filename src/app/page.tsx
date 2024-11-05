@@ -1,8 +1,10 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Slider from "@/components/Slider";
+import OurValues from "@/components/Values";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -31,9 +33,7 @@ export default function Home() {
             "Manufacturing",
             "Finishing",
           ]}
-          _class=""
           folder="row1"
-          
         />
       </div>
       <div className="snap-always snap-center">
@@ -45,7 +45,6 @@ export default function Home() {
             "Fabric & Wash Innovation",
             "Sourcing",
           ]}
-          _class=""
           folder="row2"
         />
       </div>
@@ -59,26 +58,27 @@ export default function Home() {
             "Biodiversity",
             "Water Conservation & Recycling",
           ]}
-          _class=""
           folder="row3"
-          
         />
       </div>
       <div className="snap-always snap-center">
         <Slider
           title="OUR AREAS OF EXPERTISE"
           paragraph={[
-            "Cotton",
-            "Spinning",
-            "Fabric",
-            "Manufacturing",
-            "Finishing",
+            "Community Wellbeing",
+            "Equity & Inclusion",
+            "Worker Empowerment",
           ]}
-          _class=""
           folder="row4"
-          
-          
+          quantity={3}
         />
+      </div>
+      <div className="snap-always snap-center">
+        <OurValues />
+      </div>
+      <div className=" snap-center">
+
+      <Footer />
       </div>
     </div>
   );
