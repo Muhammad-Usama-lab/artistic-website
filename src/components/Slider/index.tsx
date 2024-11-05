@@ -27,7 +27,7 @@ const Slider = ({
 
   return (
     <>
-      <section ref={inViewRef}>
+      <section ref={inViewRef} className="min-h-screen flex">
         <div className="container">
           <div className="grid grid-cols-2 border-2 border-black dark:border-gray-300">
             <div className="border-r-2 py-5 px-10 border-black dark:border-gray-300 flex flex-col">
