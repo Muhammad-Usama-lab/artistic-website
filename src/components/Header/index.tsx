@@ -47,8 +47,7 @@ const Header = () => {
         }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between " >
-            
+          <div className="relative -mx-4 flex items-center justify-between ">
             {/* Logo */}
             <div className="w-[40%] md:w-[20%] px-4">
               <Link
@@ -58,16 +57,14 @@ const Header = () => {
                 }`}
               >
                 <div className="xs:invisible sm:visible">
-                  <h6 className="font-bold text-xl text-primary uppercase">
+                  <h6 className="font-bold text-xl xs:text-md md:text-xl  text-primary uppercase">
                     Artistic Milliners
                   </h6>
                 </div>
               </Link>
             </div>
 
-            
             <div className="flex items-center justify-end pr-16 lg:pr-0">
-
               <div>
                 <button
                   onClick={navbarToggleHandler}
@@ -150,10 +147,9 @@ const Header = () => {
                         )}
                       </li>
                     ))}
-                  {/* <ThemeToggler /> */}
+                    {/* <ThemeToggler /> */}
                   </ul>
-                  <div>
-                </div> 
+                  <div></div>
                 </nav>
               </div>
               {/* <Link

@@ -46,7 +46,6 @@ const Slider = ({
         <div className="container-full p-4 flex">
           <div className="flex-col grid grid-cols-12 lg:grid-cols-12 border-2 border-black dark:border-gray-300">
             <div className="col-span-5 lg:border-r-2  md:border-b-2 py-5 px-10 border-black dark:border-gray-300 flex flex-col">
-              
               <div className="flex-none">
                 <h2
                   className={`${isVisible ? "slide-left" : ""} text-sm tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]`}
