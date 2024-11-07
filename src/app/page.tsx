@@ -14,6 +14,40 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  
+  const slides = [
+    {
+      title: "OUR AREAS OF EXPERTISE",
+      list: ["Cotton", "Spinning", "Fabric", "Manufacturing", "Finishing"],
+      folder: "row1",
+      quantity: 4,
+    },
+    {
+      title: "OUR AREAS OF EXPERTISE",
+      list: ["Design", "Development", "Fabric & Wash Innovation", "Sourcing"],
+      folder: "row2",
+      quantity: 4,
+    },
+    {
+      title: "OUR AREAS OF EXPERTISE",
+      list: [
+        "Renewable Energy",
+        "Circularity & Zero Waste",
+        "Green Chemistry",
+        "Biodiversity",
+        "Water Conservation & Recycling",
+      ],
+      folder: "row3",
+      quantity: 4,
+    },
+    {
+      title: "OUR AREAS OF EXPERTISE",
+      list: ["Community Wellbeing", "Equity & Inclusion", "Worker Empowerment"],
+      folder: "row4",
+      quantity: 3,
+    },
+  ];
+
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <ScrollUp />
@@ -23,62 +57,24 @@ export default function Home() {
       <div className="snap-center">
         <Features />
       </div>
-      <div className="snap-center">
-        <Slider
-          title="OUR AREAS OF EXPERTISE"
-          paragraph={[
-            "Cotton",
-            "Spinning",
-            "Fabric",
-            "Manufacturing",
-            "Finishing",
-          ]}
-          folder="row1"
-        />
-      </div>
-      <div className="snap-center">
-        <Slider
-          title="OUR AREAS OF EXPERTISE"
-          paragraph={[
-            "Design",
-            "Development",
-            "Fabric & Wash Innovation",
-            "Sourcing",
-          ]}
-          folder="row2"
-        />
-      </div>
-      <div className="snap-center">
-        <Slider
-          title="OUR AREAS OF EXPERTISE"
-          paragraph={[
-            "Renewable Energy",
-            "Circularity & Zero Waste",
-            "Green Chemistry",
-            "Biodiversity",
-            "Water Conservation & Recycling",
-          ]}
-          folder="row3"
-        />
-      </div>
-      <div className="snap-center">
-        <Slider
-          title="OUR AREAS OF EXPERTISE"
-          paragraph={[
-            "Community Wellbeing",
-            "Equity & Inclusion",
-            "Worker Empowerment",
-          ]}
-          folder="row4"
-          quantity={3}
-        />
-      </div>
+
+      {slides.map((slide, index) => (
+        <div key={index} className="snap-center">
+          <Slider
+            title={slide.title}
+            paragraph={slide.list}
+            folder={slide.folder}
+            quantity={slide.quantity}
+          />
+        </div>
+      ))}
+       
+
       <div className="snap-center">
         <OurValues />
       </div>
       <div className=" snap-center">
-
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

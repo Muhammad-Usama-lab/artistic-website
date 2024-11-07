@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={` header left-0 top-0 z-40 flex w-full items-center ${
+        className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
             ? " fixed z-[9999]  shadow-sticky backdrop-blur-sm transition" // dark:bg-gray-dark dark:shadow-sticky-dark bg-white
             : " absolute main-header" // bg-transparent
@@ -49,7 +49,7 @@ const Header = () => {
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between ">
             {/* Logo */}
-            <div className="w-[40%] md:w-[20%] px-4">
+            <div className="w-[60%] md:w-[20%] px-4">
               <Link
                 href="/"
                 className={`header-logo flex gap-2 items-center block w-full ${
@@ -57,7 +57,7 @@ const Header = () => {
                 }`}
               >
                 <div className="xs:invisible sm:visible">
-                  <h6 className="font-bold text-xl xs:text-md md:text-xl  text-primary uppercase">
+                  <h6 className="font-bold text-sm  md:text-xl  text-primary uppercase">
                     Artistic Milliners
                   </h6>
                 </div>

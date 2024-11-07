@@ -15,30 +15,22 @@ const Footer = () => {
 
   const Part1 = (
     <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-      <div className="mb-12 max-w-[360px] lg:mb-16">
-        <Link href="/" className="mb-8 inline-block">
-          <Image
-            src="/images/logo/logo.png"
-            alt="logo"
-            className="dark:hidden"
-            width={100}
-            height={30}
-          />
-          <h3 className="mt-3 text-sm tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]">
-            CONTACT US
-          </h3>
-          <h6 className="font text-sm text-black my-5">
-            ADDRESS: PLOT 4 & 8 SECTOR 25, KORANGI INDUSTRIAL AREA, KARACHI,
-            PAKISTAN.
-          </h6>
-          <h6 className="font text-sm text-black my-5">
-            PHONE: +92 21 111-263-646
-          </h6>
-          <h6 className="font text-sm text-black my-5">
-            EMAIL: INFO@ARTISTICMILLINERS.COM
-          </h6>
-        </Link>
-        <p className="mb-9 uppercase tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]">
+      <div className="mb-12 max-w-[800px] lg:mb-16">
+        <h3 className="mt-3 text-xs sm:text-sm tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]">
+          CONTACT US
+        </h3>
+        <h6 className="font text-sm text-black my-5">
+          ADDRESS: PLOT 4 & 8 SECTOR 25, KORANGI INDUSTRIAL AREA, KARACHI,
+          PAKISTAN.
+        </h6>
+        <h6 className="font text-sm text-black my-5">
+          PHONE: +92 21 111-263-646
+        </h6>
+        <h6 className="font text-sm text-black my-5">
+          EMAIL: INFO@ARTISTICMILLINERS.COM
+        </h6>
+
+        <p className="mb-9 uppercase text-xs sm:text-sm tracking-widest text-gray-500 dark:text-white  md:text-[13px]">
           Social
         </p>
         <div className="flex items-center">
@@ -124,15 +116,15 @@ const Footer = () => {
   const Part2 = (
     <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-6/12 flex items-center justify-end">
       <div className="mb-12 lg:mb-16">
-        <h2 className="mt-3 text-sm uppercase text-right tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]">
+        <h2 className="my-3 text-xs sm:text-sm uppercase text-right tracking-widest text-gray-500 dark:text-white  md:text-[13px]">
           Site map
         </h2>
         <ul>
           {links?.map((v, i) => (
-            <li key={`${i}-link`}>
+            <li key={`${i}-link`} className="text-right">
               <Link
                 href={v?.path}
-                className="mb-4 inline-block text-xs text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                className="mb-2 inline-block text-sm text-black text-right duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
               >
                 {v?.label}
               </Link>
@@ -145,16 +137,16 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
+      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-8 ">
         <div className="container-full">
           <div className="p-4 flex justify-between flex-wrap">
             {Part1}
             {Part2}
           </div>
 
-          <div className="h-px w-full bg-black dark:bg-white"></div>
-          <div className="py-8">
-            <p className="px-8 text-primary font-bold uppercase text-base text-body-color dark:text-white">
+          <div className="h-px w-full bg-gray-300 dark:bg-white"></div>
+          <div className="py-4">
+            <p className="px-8 text-primary font-bold uppercase text-sm sm:text-base text-body-color dark:text-white">
               Artistic Milliners
             </p>
             {/* © 2024 . All rights reserved. */}

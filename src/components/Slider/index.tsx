@@ -7,18 +7,14 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ArrowButton from "../Button/ArrowButton";
 
-const Slider = ({
-  title,
-  paragraph,
-  folder,
-
-  quantity = 4,
-}: {
+interface SliderI {
   title: string;
   paragraph: string[];
   folder?: string;
   quantity?: number;
-}) => {
+}
+
+const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
   const { ref: inViewRef, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -41,14 +37,14 @@ const Slider = ({
     <>
       <section
         ref={inViewRef}
-        className="min-h-screen flex py-16 md:py-20 lg:py-40"
+        className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center"
       >
-        <div className="container-full p-4 flex">
-          <div className="flex-col grid grid-cols-12 lg:grid-cols-12 border-2 border-black dark:border-gray-300">
-            <div className="col-span-5 lg:border-r-2  md:border-b-2 py-5 px-10 border-black dark:border-gray-300 flex flex-col">
+        <div className="container-full ">
+          <div className="mt-5 flex-col grid grid-cols-12 lg:grid-cols-12 border-t-2 border-b-2 border-black dark:border-gray-300">
+            <div className="md:col-span-5 col-span-12  lg:border-r-2   py-5 px-10 border-black dark:border-gray-300 flex flex-col">
               <div className="flex-none">
                 <h2
-                  className={`${isVisible ? "slide-left" : ""} text-sm tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]`}
+                  className={`${isVisible ? "slide-left" : ""} text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
                 >
                   {title}
                 </h2>
@@ -64,7 +60,7 @@ const Slider = ({
               </div>
               <div className="flex-none">
                 <h2
-                  className={`text-sm tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]`}
+                  className={`text-xs  my-3 tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
                 >
                   IMAGES
                 </h2>
@@ -74,7 +70,7 @@ const Slider = ({
                 </div>
               </div>
             </div>
-            <div className="p-4 col-span-7">
+            <div className="p-4 md:col-span-7 col-span-12 ">
               <div className="h-full flex flex-col md:justify-center sm:justify-default">
                 <Carousel
                   ref={carouselRef}
