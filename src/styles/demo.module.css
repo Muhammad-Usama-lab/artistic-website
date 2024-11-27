@@ -1,0 +1,26 @@
+.blur {
+  display: none;
+  position: sticky;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: var(--blue-gray);
+  padding-inline: 15%;
+  padding: 10px 30px;
+  background-color: rgba(2, 21, 48, 0.711);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.code-snippet {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Courier, monospace;
+  overflow-x: auto;
+}
