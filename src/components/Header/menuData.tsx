@@ -4,7 +4,7 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Integrated Supply Chain",
-    path: "/",
+    path: "/supplychain",
     newTab: false,
   },
   {
