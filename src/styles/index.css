@@ -203,3 +203,14 @@
   background: #f1f1f1; /* Background of the scrollbar track */
   border-radius: 10px; /* Round corners for track */
 }
+
+
+/* Hide scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* For Internet Explorer */
+  scrollbar-width: none; /* For Firefox */
+}
