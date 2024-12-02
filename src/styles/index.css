@@ -87,11 +87,17 @@
 }
 
 .main-header {
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.954),rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.8),transparent );
+  background: linear-gradient(
+    to bottom,
+    white,
+    rgba(255, 255, 255, 0.954),
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
 }
 
-
-.primary-font{
+.primary-font {
   font-family: "SuisseIntl" !important;
 }
 
@@ -101,6 +107,9 @@
   opacity: 0;
   animation: fadeIn 3s forwards;
 }
+/* 
+
+
 
 /* Slide Up */
 .slide-up {
@@ -184,6 +193,52 @@
   }
 }
 
+
+
+/* Fade Out */
+.fade-out {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Slide Out */
+.slide-out {
+  visibility: visible;
+  transform: translateX(0);
+  animation: slideOut 3s forwards;
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Zoom Out */
+.zoom-out {
+  visibility: visible;
+  transform: scale(1);
+  animation: zoomOut 3s forwards;
+}
+
+@keyframes zoomOut {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+
+
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 8px; /* Set width for vertical scrollbar */
@@ -204,13 +259,12 @@
   border-radius: 10px; /* Round corners for track */
 }
 
-
 /* Hide scrollbar */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
 
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* For Internet Explorer */
+  -ms-overflow-style: none; /* For Internet Explorer */
   scrollbar-width: none; /* For Firefox */
 }

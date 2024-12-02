@@ -13,6 +13,7 @@ const points = [
   "Smart Farming & Regenerative Agriculture",
   "Western Hemisphere",
 ];
+
 const details = [
   {
     title: "Garments & Finishing",
