@@ -46,7 +46,7 @@ const OurValues = () => {
                 maintaining a safe, inclusive and respectful workplace where all
                 our employees are valued and respected. That includes empowering
                 women, promoting equality and investing in our future by taking
-                action to combat cliemate change.
+                action to combat climate change.
               </h4>
             </div>
           </div>

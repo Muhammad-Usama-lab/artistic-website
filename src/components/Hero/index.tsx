@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -28,13 +29,7 @@ const Hero = () => {
   const handlePlay = () => {
     if (videoRef.current) {
       videoRef.current.play();
-      setFadeOut(true);
-    }
-  };
-
-  const handlePause = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
+      // setFadeOut(true);
     }
   };
 
@@ -71,12 +66,19 @@ const Hero = () => {
 
         <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
           {/* opacity-30 */}
-          <video
+
+          {/* <video
             ref={videoRef}
             autoPlay={time >= 5}
             loop
             muted
             src="/images/hero/artisticvideo.mp4"
+            className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+          /> */}
+          <Image
+            src="/images/hero/banner.jpeg"
+            alt="about-image"
+            fill
             className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
           />
         </div>
