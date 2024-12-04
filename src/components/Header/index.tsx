@@ -47,16 +47,16 @@ const Header = () => {
         }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between ">
+          <div className="relative -mx-4 flex items-center justify-between pr-4">
             {/* Logo */}
-            <div className="w-[60%] md:w-[20%] px-4">
+            <div className="w-[60%] md:w-[35%] lg:w-[25%] px-4">
               <Link
                 href="/"
                 className={`header-logo flex gap-2 items-center block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 }`}
               >
-                <div className="xs:invisible sm:visible">
+                <div className="sm:visible">
                   <h6 className="font-bold text-sm  md:text-xl  text-primary uppercase">
                     Artistic Milliners
                   </h6>

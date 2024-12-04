@@ -7,7 +7,7 @@ import Timeline from "./Timeline";
 function TimelineComponent() {
   const ref = useRef(null);
   return (
-    <div className="mt-36">
+    <div className="mt-10 sm:mt-36 ">
       <h2
         className={`uppercase text-xs  my-3 tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
       >

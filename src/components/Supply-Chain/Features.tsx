@@ -8,7 +8,7 @@ const Features = () => {
         className="min-h-screen flex py-16 md:py-30 lg:py-40"
       >
         <div className="container-full p-4">
-          <h1 className="max-w-8xl primary-font lg:text-8xl sm:text-6xl text-xl sm:p-4 sm:pt-10 uppercase my-10 ">
+          <h1 className="max-w-8xl primary-font lg:text-8xl sm:text-6xl text-4xl sm:p-4 sm:pt-10 uppercase my-10 ">
             OUR STRATEGY <br />
             IS ALSO <span className="text-primary ">SUSTAINABLE</span> .
           </h1>

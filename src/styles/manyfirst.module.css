@@ -1,0 +1,45 @@
+.manyRow {
+  display: flex;
+  gap: 5rem;
+}
+
+.manyItem {
+  width: 35%;
+}
+
+.manyFirstImage {
+  width: 200px;
+  height: auto;
+  max-width: min-content;
+}
+
+.part1 {
+  width: 80% !important;
+  border: 1 solid #000 !important;
+}
+
+@media (max-width: 1300px) {
+  .manyItem {
+    width: 45%;
+  }
+}
+
+@media (max-width: 991px) {
+  .manyRow {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .manyItem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .innerWrap {
+    flex-wrap: wrap;
+  }
+  .manyFirstImage {
+    width: 100%;
+  }
+}

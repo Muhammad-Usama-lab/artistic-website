@@ -1,13 +1,13 @@
 .header-title {
-  font-family: "SuisseIntl-Book", monospace;
-  font-weight: 700;
-
-}
-
-.carousel-slider {
-  background-color: black !important;
-}
-
-.thumbs-wrapper {
-  display: none !important;
-}
+    font-family: "SuisseIntl-Book", monospace;
+    font-weight: 700;
+  }
+  
+  .carousel-slider {
+    background-color: black !important;
+  }
+  
+  .thumbs-wrapper {
+    display: none !important;
+  }
+  

@@ -1,6 +1,8 @@
+import useIsMobile from "@/responsive";
 import { forwardRef, useImperativeHandle, useState } from "react";
 
 const Timeline = forwardRef((props, ref) => {
+  const isMobile = useIsMobile();
   const [activeIndex, setActiveIndex] = useState(0); // Index of the bold milestone
   const milestones = [
     "Our renewable energy division is growing",
@@ -35,22 +37,24 @@ const Timeline = forwardRef((props, ref) => {
         <div
           className="flex transition-transform duration-500"
           style={{
-            transform: `translateX(-${activeIndex * 30}%)`, // Shift active milestone to left
+            transform: `translateX(-${activeIndex * (isMobile ? 80 : 30)}%)`, // Shift active milestone to left
           }}
         >
           {milestones.map((milestone, index) => (
             <div
               key={index}
-              className={`flex-shrink-0 w-[30%] mx-auto ${
+              className={`flex-shrink-0 w-[${isMobile ? 80 : 30}%]  mx-auto ${
                 index === activeIndex ? "font-bold" : "text-gray-400"
               }`}
             >
-              <h3 className="text-4xl">{String(index + 1).padStart(2, "0")}</h3>
+              <h3 className="text-3xl md:text-4xl">
+                {String(index + 1).padStart(2, "0")}
+              </h3>
               <div
                 className={`mt-2 p-4 pt-4 border-black border-t border-r flex items-center justify-center h-4 ${index === 0 ? "border-l" : ""}`}
               ></div>
               <div className="flex items-center justify-center">
-                <p className="text-2xl font-light max-w-96">
+                <p className="text-md md:text-2xl font-light max-w-96">
                   {milestone}
                 </p>
               </div>
