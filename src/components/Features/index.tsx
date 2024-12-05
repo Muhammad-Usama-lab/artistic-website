@@ -2,6 +2,7 @@
 
 import { useInView } from "react-intersection-observer";
 import Button from "../Button";
+import styles from "@/styles/hero.module.css";
 
 const Features = () => {
   const { ref: inViewRef, inView: isVisible } = useInView({
@@ -10,15 +11,19 @@ const Features = () => {
   });
   return (
     <>
-      <section ref={inViewRef}
+      <section
+        ref={inViewRef}
         id="features"
         className="min-h-screen flex py-16 md:py-30 lg:py-40"
       >
         <div className="container-full p-4">
-          <h1 className={` ${isVisible ? "slide-up" : ""} max-w-8xl primary-font lg:text-7xl sm:text-6xl text-3xl sm:p-4 sm:pt-10 uppercase my-10`}>
+          <h1
+            className={` ${isVisible ? "slide-up" : ""} max-w-8xl primary-font text-4xl lg:text-7xl sm:text-6xl  sm:p-4 sm:pt-10 uppercase my-10 ${styles["font-size"]}`} // 
+          >
             As the{" "}
             <span className={`text-primary ${isVisible ? "slide-left" : ""}`}>
-              world's leading manufacturer of denim, WOVENS PIECE DYED FABRICS and apparel,
+              world's leading manufacturer of denim, PIECE DYED FABRICS and
+              apparel,
             </span>{" "}
             we strive for excellence in all we do.
           </h1>

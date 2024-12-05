@@ -6,7 +6,7 @@ function Typist() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  const words = ["Denim", "Energy", "Cotton", "Sustainability", "Traceability"];
+  const words = ["Denim", "Energy", "Sustainability", "Traceability", "Cotton"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,8 +14,8 @@ function Typist() {
       setTimeout(() => {
         setIndex((prev) => (prev === words.length - 1 ? 0 : prev + 1)); // Change word
         setFade(true); // Trigger fade-in
-      }, 1000); // Match animation duration
-    }, 4000); // Interval for word change
+      }, 2000); // Match animation duration
+    }, 5000); // Interval for word change
 
     return () => {
       clearInterval(interval);

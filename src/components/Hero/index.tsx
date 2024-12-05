@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import "animate.css";
+import { useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Typist from "../Typist";
-import "animate.css";
+import styles from "@/styles/hero.module.css"
 
 const Hero = () => {
   const [time, setTime] = useState(0);
@@ -13,22 +13,22 @@ const Hero = () => {
 
   const words = ["Denim", "Energy", "Cotton", "Sustainability", "Tracebility"];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime((prev) => {
-        if (prev === 5) {
-          clearInterval(interval);
-          handlePlay();
-          return prev; // Stop incrementing
-        }
-        return prev + 1;
-      });
-    }, 1000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTime((prev) => {
+  //       if (prev === 5) {
+  //         clearInterval(interval);
+  //         handlePlay();
+  //         return prev; // Stop incrementing
+  //       }
+  //       return prev + 1;
+  //     });
+  //   }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -46,14 +46,14 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[200px] dark:bg-gray-dark md:pb-[200px] md:pt-[250px] xl:pb-[350px] xl:pt-[400px] 2xl:pb-[20px] 2xl:pt-[650px]`}
+        className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[200px] dark:bg-gray-dark md:pb-[200px] md:pt-[250px] xl:pb-[350px] xl:pt-[400px] 2xl:pb-[20px] 2xl:pt-[600px]`}
       >
         <div className="container-full" ref={inViewRef}>
           <div className="mx-4 flex flex-wrap">
             <div className="max-w-8xl px-2 sm:px-10">
               <div className="mx-auto">
                 <h1
-                  className={`header-title uppercase mb-5 text-4xl sm:text-7xl lg:text-8xl font-normal leading-tight text-white dark:text-white`}
+                  className={`header-title uppercase mb-5 text-4xl sm:text-6xl lg:text-7xl font-normal leading-tight text-white dark:text-white ${styles.heroText}`}
                 >
                   The Future of <Typist />
                   <br />
@@ -75,11 +75,11 @@ const Hero = () => {
 
           <video
             ref={videoRef}
-            autoPlay={time >= 5}
+            autoPlay
             loop
             muted
-            src="/images/hero/compressed.mp4"
-            className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+            src="/images/hero/video.mp4"
+            className="mx-auto w-full mt-36 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
           />
           {/* <Image
             src="/images/hero/banner.jpeg"
