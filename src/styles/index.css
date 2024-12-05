@@ -107,7 +107,13 @@
     opacity: 0;
     animation: fadeIn 3s forwards;
   }
-  /* 
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
   
   
   
@@ -115,12 +121,6 @@
   .slide-up {
     transform: translateY(50px);
     animation: slideUp 2s forwards;
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
   }
   
   @keyframes slideUp {
@@ -236,6 +236,29 @@
       opacity: 0;
     }
   }
+
+
+  @keyframes flip-in {
+    from {
+      transform: rotateX(-90deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes flip-out {
+    from {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+  }
   
   
   
@@ -269,3 +292,40 @@
     -ms-overflow-style: none; /* For Internet Explorer */
     scrollbar-width: none; /* For Firefox */
   }
+
+
+  .text {
+    display: inline-block;
+    perspective: 1000px;
+  }
+  
+  .cuboid-rotate-in {
+    animation: cuboidIn 1s ease forwards;
+  }
+  
+  .cuboid-rotate-out {
+    animation: cuboidOut 1s ease forwards;
+  }
+  
+  @keyframes cuboidIn {
+    from {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes cuboidOut {
+    from {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotateX(-90deg);
+      opacity: 0;
+    }
+  }
+  

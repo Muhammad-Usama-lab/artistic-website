@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import "../../styles/hero.module.css";
 import menuData from "./menuData";
+import Image from "next/image";
 
 const Header = () => {
   // Navbar toggle
@@ -56,11 +57,17 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 }`}
               >
-                <div className="sm:visible">
+                {/* <div className="sm:visible">
                   <h6 className="font-bold text-sm  md:text-xl  text-primary uppercase">
                     Artistic Milliners
                   </h6>
-                </div>
+                </div> */}
+                <Image
+                  src="/images/logo/logo.png"
+                  alt="artistic logo"
+                  width={150}
+                  height={150}
+                />
               </Link>
             </div>
 

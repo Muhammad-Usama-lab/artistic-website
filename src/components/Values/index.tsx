@@ -21,10 +21,10 @@ const OurValues = () => {
             Our values
           </h2>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-0 md:gap-14">
             <div className="max-w-lg sm:max-w-2xl">
               <h4
-                className={`${isVisible ? "slide-right" : ""} text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5 `}
+                className={`${isVisible ? "fade-in" : ""} text-justify text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5 `}
               >
                 We believe in smart and strategic growth and we think globally.
                 We are investing in our ecosystem, including building a
@@ -32,7 +32,7 @@ const OurValues = () => {
                 Hemisphere.
               </h4>
               <h4
-                className={`${isVisible ? "slide-left" : ""} text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5`}
+                className={`${isVisible ? "fade-in" : ""} text-justify text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5`}
               >
                 Our values inform all aspects of our business, from a
                 committment to renewable energy to our pioneering development of
@@ -41,7 +41,7 @@ const OurValues = () => {
               </h4>
             </div>
             <div className="max-w-2xl">
-              <h4 className={`${isVisible ? "zoom-in" : ""} text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5`}>
+              <h4 className={`${isVisible ? "fade-in" : ""} text-justify text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5`}>
                 We have a large, global workforce and we are committing to
                 maintaining a safe, inclusive and respectful workplace where all
                 our employees are valued and respected. That includes empowering

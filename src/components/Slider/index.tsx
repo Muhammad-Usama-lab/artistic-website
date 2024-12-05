@@ -62,7 +62,7 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                 <h2
                   className={`text-xs  my-3 tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
                 >
-                  IMAGES
+                  {/* IMAGES */}
                 </h2>
                 <div className="flex gap-2">
                   <ArrowButton onClick={goToPrev} />
@@ -79,6 +79,7 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                   showStatus={false}
                   autoPlay
                   infiniteLoop
+                  interval={3000}
                   showThumbs={false}
                 >
                   {Array(quantity)
