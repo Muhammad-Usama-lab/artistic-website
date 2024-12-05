@@ -3,7 +3,9 @@ import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Slider from "@/components/Slider";
-import OurValues from "@/components/Values";
+import OurValues1 from "@/components/Values";
+import OurValues2 from "@/components/Values/value2";
+import OurValues3 from "@/components/Values/value3";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -70,7 +72,13 @@ export default function Home() {
        
 
       <div className="snap-center">
-        <OurValues />
+        <OurValues1 />
+      </div>
+      <div className="snap-center">
+        <OurValues2 />
+      </div>
+      <div className="snap-center">
+        <OurValues3 />
       </div>
       <div className=" snap-center">
         <Footer />

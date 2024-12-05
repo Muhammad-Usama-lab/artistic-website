@@ -3,7 +3,7 @@
 import { useInView } from "react-intersection-observer";
 import Button from "../Button";
 
-const OurValues = () => {
+const OurValues1 = () => {
   const { ref: inViewRef, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -15,22 +15,25 @@ const OurValues = () => {
         className="min-h-screen flex py-16 md:py-15 lg:py-20"
       >
         <div className="container-full px-10" ref={inViewRef}>
-          <h2
-            className={`${isVisible ? "slide-up" : ""} text-sm mt-10  tracking-widest uppercase text-gray-500 dark:text-white sm:text-lg md:text-[16px]`}
-          >
-            Our values
-          </h2>
+          <div className="max-w-4xl  mt-16">
+            <h2
+              className={`${isVisible ? "slide-up" : ""} text-sm mt-10  tracking-widest uppercase text-gray-500 dark:text-white sm:text-lg md:text-[16px]`}
+            >
+              Our values
+            </h2>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-0 md:gap-14">
+            <h4
+              className={`${isVisible ? "fade-in" : ""}  text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5`}
+            >
+              We believe in smart and strategic growth and we think globally. We
+              are investing in our ecosystem, including building a nearshoring
+              network of sourcing solutions in the Western Hemisphere.
+            </h4>
+          </div>
+
+          {/* <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-0 md:gap-14">
             <div className="max-w-lg sm:max-w-2xl">
-              <h4
-                className={`${isVisible ? "fade-in" : ""} text-justify text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5 `}
-              >
-                We believe in smart and strategic growth and we think globally.
-                We are investing in our ecosystem, including building a
-                nearshoring network of sourcing solutions in the Western
-                Hemisphere.
-              </h4>
+              
               <h4
                 className={`${isVisible ? "fade-in" : ""} text-justify text-primary font-normal text-xl sm:text-2xl  md:text-4xl py-5`}
               >
@@ -49,7 +52,7 @@ const OurValues = () => {
                 action to combat climate change.
               </h4>
             </div>
-          </div>
+          </div> */}
           <div className={`flex justify-end ${isVisible ? "slide-up" : ""} `}>
             <Button theme="primary" label="Learn More" />
           </div>
@@ -59,4 +62,4 @@ const OurValues = () => {
   );
 };
 
-export default OurValues;
+export default OurValues1;
