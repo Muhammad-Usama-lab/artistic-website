@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import "../../styles/hero.module.css";
 import menuData from "./menuData";
 import Image from "next/image";
+import useIsMobile from "@/responsive";
 
 const Header = () => {
+  const isMobile = useIsMobile();
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -65,7 +67,7 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="artistic logo"
-                  width={150}
+                  width={isMobile ? 100 : 150}
                   height={150}
                 />
               </Link>

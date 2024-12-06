@@ -54,3 +54,5 @@ export const values = [
     link: "/",
   },
 ];
+
+export const environment: string = "production"; // production development

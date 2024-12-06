@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -14,8 +13,8 @@ const Footer = () => {
   ];
 
   const Part1 = (
-    <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-      <div className="mb-12 max-w-[800px] lg:mb-16">
+    <div className="w-full px-4  sm:mt-0 md:w-1/2 lg:w-4/12 xl:w-5/12">
+      <div className="mb-12 max-w-[800px] lg:mb-16 mt-10">
         <h3 className="mt-3 text-xs sm:text-sm tracking-widest text-gray-500 dark:text-white sm:text-4xl md:text-[13px]">
           CONTACT US
         </h3>
@@ -115,7 +114,7 @@ const Footer = () => {
 
   const Part2 = (
     <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-6/12 flex items-center justify-end">
-      <div className="mb-12 lg:mb-16">
+      <div className="mb-0 lg:mb-16">
         <h2 className="my-3 text-xs sm:text-sm uppercase text-right tracking-widest text-gray-500 dark:text-white  md:text-[13px]">
           Site map
         </h2>

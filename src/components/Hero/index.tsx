@@ -1,10 +1,22 @@
 "use client";
 
 import styles from "@/styles/hero.module.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Typist from "../Typist";
+import { environment } from "@/mock";
 
 const Hero = () => {
+  useEffect(() => {
+    const disableRightClick = (e) => {
+      e.preventDefault();
+    };
+    if (environment === "production")
+      document.addEventListener("contextmenu", disableRightClick);
+    return () => {
+      if (environment === "production")
+        document.removeEventListener("contextmenu", disableRightClick);
+    };
+  }, []);
   const videoRef = useRef(null);
 
   const wordDurations = [3000, 6000, 5000, 8000, 12000, 15000, 10000];
@@ -22,7 +34,8 @@ const Hero = () => {
                 <h1
                   className={`header-title uppercase mb-5 text-4xl sm:text-6xl lg:text-7xl font-normal leading-tight text-white dark:text-white ${styles.heroText}`}
                 >
-                  The Future of <Typist videoRef={videoRef} wordDurations={wordDurations} />
+                  The Future of{" "}
+                  <Typist videoRef={videoRef} wordDurations={wordDurations} />
                   <br />
                   is Global
                 </h1>
