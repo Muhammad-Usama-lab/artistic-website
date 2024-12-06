@@ -9,7 +9,7 @@ export const slides = [
     title: "OUR AREAS OF EXPERTISE",
     list: ["Design", "Development", "Fabric & Wash Innovation", "Sourcing"],
     folder: "row2",
-    quantity: 4,
+    quantity: 5,
   },
   {
     title: "OUR AREAS OF EXPERTISE",
