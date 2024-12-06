@@ -4,9 +4,6 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Slider from "@/components/Slider";
 import OurValues from "@/components/Values";
-import OurValues1 from "@/components/Values";
-import OurValues2 from "@/components/Values/value2";
-import OurValues3 from "@/components/Values/value3";
 import { slides, values } from "@/mock";
 import { Metadata } from "next";
 
