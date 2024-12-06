@@ -7,6 +7,8 @@ import Typist from "../Typist";
 const Hero = () => {
   const videoRef = useRef(null);
 
+  const wordDurations = [3000, 6000, 5000, 8000, 12000, 15000, 10000];
+
   return (
     <>
       <section
@@ -20,7 +22,7 @@ const Hero = () => {
                 <h1
                   className={`header-title uppercase mb-5 text-4xl sm:text-6xl lg:text-7xl font-normal leading-tight text-white dark:text-white ${styles.heroText}`}
                 >
-                  The Future of <Typist />
+                  The Future of <Typist videoRef={videoRef} wordDurations={wordDurations} />
                   <br />
                   is Global
                 </h1>

@@ -1,32 +1,91 @@
+// "use client";
+
+// import { useEffect, useState } from "react";
+
+// function Typist({ videoRef, wordDurations }) {
+//   const [index, setIndex] = useState(0);
+//   const [fade, setFade] = useState(true);
+
+//   const words = [
+//     "ENERGY",
+//     "SUSTAINABILITY",
+//     "COTTON",
+//     "SPINNING",
+//     "DENIM",
+//     "APPAREL",
+//     "RECYCLING",
+//   ];
+//   const durations = [3000, 6000, 5000, 7000, 11000, 14000, 10000];
+
+//   useEffect(() => {
+//     const interval = setTimeout(() => {
+//       setFade(false); // Trigger fade-out
+//       setTimeout(() => {
+//         setIndex((prev) => (prev === words.length - 1 ? 0 : prev + 1)); // Update index
+//         setFade(true); // Trigger fade-in
+//       }, 1000); // Fade-out duration
+//     }, durations[index]); // Dynamic interval based on current word's duration
+
+//     return () => {
+//       clearTimeout(interval); // Clear timeout to avoid memory leaks
+//     };
+//   }, [index]);
+
+//   return (
+//     <span
+//       className={`text ${fade ? "cuboid-rotate-in" : "cuboid-rotate-out"}`}
+//       style={{ color: "#112E9D" }}
+//     >
+//       {words[index]}
+//     </span>
+//   );
+// }
+
+// export default Typist;
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-function Typist() {
+function Typist({ videoRef, wordDurations }) {
   const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [animating, setAnimating] = useState(false);
 
   const words = ["ENERGY", "SUSTAINABILITY", "COTTON", "SPINNING", "DENIM", "APPAREL", "RECYCLING"];
-  const durations = [3000, 6000, 4000, 7000, 10000, 13000, 10000]; // Durations in milliseconds
+  const cumulativeDurations = wordDurations.reduce(
+    (acc, duration, i) => [...acc, duration + (acc[i - 1] || 0)],
+    []
+  );
 
   useEffect(() => {
-    const interval = setTimeout(() => {
-      setFade(false); // Trigger fade-out
-      setTimeout(() => {
-        setIndex((prev) => (prev === words.length - 1 ? 0 : prev + 1)); // Update index
-        setFade(true); // Trigger fade-in
-      }, 1000); // Fade-out duration
-    }, durations[index]); // Dynamic interval based on current word's duration
+    if (!videoRef.current) return;
 
-    return () => {
-      clearTimeout(interval); // Clear timeout to avoid memory leaks
+    const syncWithVideo = () => {
+      const currentTime = videoRef.current.currentTime * 1000; // Convert to milliseconds
+      const cycleTime = currentTime % cumulativeDurations[cumulativeDurations.length - 1]; // Cycle time
+
+      for (let i = 0; i < cumulativeDurations.length; i++) {
+        if (cycleTime < cumulativeDurations[i]) {
+          if (index !== i) {
+            setAnimating(true); // Trigger animation
+            setTimeout(() => setAnimating(false), 900); // Match animation duration
+            setIndex(i);
+          }
+          break;
+        }
+      }
     };
-  }, [index]);
+
+    const interval = setInterval(syncWithVideo, 100); // Poll every 100ms
+
+    return () => clearInterval(interval);
+  }, [videoRef, cumulativeDurations, index]);
 
   return (
     <span
-      className={`text ${fade ? "cuboid-rotate-in" : "cuboid-rotate-out"}`}
-      style={{ color: "#112E9D" }}
+      className={`transition-all ${
+        animating ? "animate-cuboid" : ""
+      }`}
+      style={{ color: "#112E9D", display: "inline-block" }}
     >
       {words[index]}
     </span>
