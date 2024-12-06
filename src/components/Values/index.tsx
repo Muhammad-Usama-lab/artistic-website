@@ -2,7 +2,7 @@
 
 import { useInView } from "react-intersection-observer";
 import Button from "../Button";
-import styles from "@/styles/values.module.css"
+import styles from "@/styles/values.module.css";
 
 const OurValues = ({ data }) => {
   const { ref: inViewRef, inView: isVisible } = useInView({
@@ -12,6 +12,8 @@ const OurValues = ({ data }) => {
   return (
     <>
       <section id="our-values" className="min-h-screen py-16 md:py-15 lg:py-20">
+        
+
         <div className="container px-10" ref={inViewRef}>
           <div className="max-w-7xl mt-16">
             <h2
@@ -25,7 +27,9 @@ const OurValues = ({ data }) => {
             >
               {data?.text}
             </h4>
-            <div className={`flex justify-end ${isVisible ? "slide-left" : ""} `}>
+            <div
+              className={`flex justify-end ${isVisible ? "slide-left" : ""} `}
+            >
               <Button theme="primary" label="Learn More" />
             </div>
           </div>

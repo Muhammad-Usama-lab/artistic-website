@@ -40,6 +40,8 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
         className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center"
       >
         <div className="container">
+          
+
           <div className="mt-5 flex-col grid grid-cols-12 lg:grid-cols-12 border-t-2 border-b-2 border-black dark:border-gray-300">
             <div className="md:col-span-5 col-span-12  lg:border-r-2   py-5 px-10 border-black dark:border-gray-300 flex flex-col">
               <div className="flex-none">

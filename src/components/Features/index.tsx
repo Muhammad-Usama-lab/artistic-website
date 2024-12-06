@@ -2,7 +2,6 @@
 
 import { useInView } from "react-intersection-observer";
 import Button from "../Button";
-import styles from "@/styles/hero.module.css";
 
 const Features = () => {
   const { ref: inViewRef, inView: isVisible } = useInView({
@@ -18,7 +17,7 @@ const Features = () => {
       >
         <div className="container-full p-4">
           <h1
-            className={` ${isVisible ? "slide-up" : ""} max-w-8xl primary-font text-4xl lg:text-7xl sm:text-6xl  sm:p-4 sm:pt-10 uppercase my-10 ${styles["font-size"]}`} // 
+            className={` ${isVisible ? "slide-up" : ""} max-w-8xl primary-font text-4xl lg:text-7xl sm:text-6xl  sm:p-4 sm:pt-10 uppercase my-10 `} //
           >
             As the{" "}
             <span className={`text-primary ${isVisible ? "slide-left" : ""}`}>

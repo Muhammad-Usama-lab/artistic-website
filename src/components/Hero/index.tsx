@@ -24,6 +24,7 @@ const Hero = () => {
                   <br />
                   is Global
                 </h1>
+
                 {/* <p
                   className={`${fadeOut ? "slide-out" : ""} ${isVisible ? "slide-left" : ""} mb-12  text-2xl  lg:text-4xl !leading-relaxed text-white dark:text-body-color-dark `}
                 >
@@ -34,6 +35,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/*
+         */}
 
         <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
           <video
