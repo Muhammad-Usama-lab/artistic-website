@@ -6,31 +6,22 @@ function Typist() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  // const words = ["Denim", "Energy", "Sustainability", "Traceability", "Cotton"];
-  const words = [
-    "Sustainability",
-    "Traceability",
-    "Sustainability",
-    "Traceability",
-    "Sustainability",
-    "Traceability",
-    "Sustainability",
-    "Traceability",
-  ];
+  const words = ["ENERGY", "SUSTAINABILITY", "COTTON", "SPINNING", "DENIM", "APPAREL", "RECYCLING"];
+  const durations = [3000, 6000, 4000, 7000, 10000, 13000, 10000]; // Durations in milliseconds
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = setTimeout(() => {
       setFade(false); // Trigger fade-out
       setTimeout(() => {
-        setIndex((prev) => (prev === words.length - 1 ? 0 : prev + 1)); // Change word
+        setIndex((prev) => (prev === words.length - 1 ? 0 : prev + 1)); // Update index
         setFade(true); // Trigger fade-in
-      }, 1000); // Match animation duration
-    }, 3000); // Interval for word change
+      }, 1000); // Fade-out duration
+    }, durations[index]); // Dynamic interval based on current word's duration
 
     return () => {
-      clearInterval(interval);
+      clearTimeout(interval); // Clear timeout to avoid memory leaks
     };
-  }, []);
+  }, [index]);
 
   return (
     <span
