@@ -1,331 +1,332 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 
 @font-face {
+  font-family: "SuisseIntl";
+  src: url("../../public/fonts/SuisseIntl-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../../public/fonts/SuisseIntl-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../../public/fonts/SuisseIntl-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SuisseIntl-Book";
+  src: url("../../public/fonts/SuisseIntl-Book.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../../public/fonts/SuisseIntl-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../../public/fonts/SuisseIntl-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../../public/fonts/SuisseIntl-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
     font-family: "SuisseIntl";
-    src: url("../../public/fonts/SuisseIntl-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
   }
-  
-  @font-face {
-    font-family: "SuisseIntl";
-    src: url("../../public/fonts/SuisseIntl-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+}
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
   }
-  
-  @font-face {
-    font-family: "SuisseIntl";
-    src: url("../../public/fonts/SuisseIntl-RegularItalic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
   }
-  
-  @font-face {
-    font-family: "SuisseIntl-Book";
-    src: url("../../public/fonts/SuisseIntl-Book.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
   }
-  
-  @font-face {
-    font-family: "SuisseIntl";
-    src: url("../../public/fonts/SuisseIntl-SemiBold.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
   }
-  
-  @font-face {
-    font-family: "SuisseIntl";
-    src: url("../../public/fonts/SuisseIntl-SemiBoldItalic.ttf")
-      format("truetype");
-    font-weight: 600;
-    font-style: italic;
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
   }
-  
-  @font-face {
-    font-family: "SuisseIntl";
-    src: url("../../public/fonts/SuisseIntl-Thin.ttf") format("truetype");
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
-  @layer base {
-    body {
-      font-family: "SuisseIntl";
-    }
-  }
-  
-  @layer components {
-    input[type="checkbox"]:checked ~ label span svg {
-      @apply inline-flex;
-    }
-  
-    .sticky .header-logo {
-      @apply py-5 lg:py-2;
-    }
-  
-    .sticky .menu-scroll.active {
-      @apply opacity-70;
-    }
-  
-    input#togglePlan:checked ~ .dot {
-      @apply translate-x-full;
-    }
-  
-    input#checkboxLabel:checked ~ .box span {
-      @apply opacity-100;
-    }
-  }
-  
-  .header-title {
-    font-family: "SuisseIntl" !important;
-  }
-  
-  .main-header {
-    background: linear-gradient(
-      to bottom,
-      white,
-      rgba(255, 255, 255, 0.954),
-      rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.8),
-      transparent
-    );
-  }
-  
-  .primary-font {
-    font-family: "SuisseIntl" !important;
-  }
-  
-  /* Fade In */
-  .fade-in {
-    visibility: visible;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  
-  
-  
-  
-  /* Slide Up */
-  .slide-up {
-    transform: translateY(50px);
-    animation: slideUp 2s forwards;
-  }
-  
-  @keyframes slideUp {
-    to {
-      transform: translateY(0);
-    }
-  }
-  
-  /* Slide Down */
-  .slide-down {
-    transform: translateY(-50px);
-    opacity: 0;
-    animation: slideDown 3s forwards;
-  }
-  
-  
-  @keyframes slideDown {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Slide Left */
-  .slide-left {
-    transform: translateX(50px);
-    opacity: 0;
-    animation: slideLeft 2s forwards;
-  }
-  
-  @keyframes slideLeft {
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Slide Right */
-  .slide-right {
-    transform: translateX(-50px);
-    opacity: 0;
-    animation: slideRight 2s forwards;
-  }
-  
-  @keyframes slideRight {
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  .hidden2 {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .zoom-in {
-    visibility: visible;
+}
+
+.header-title {
+  font-family: "SuisseIntl" !important;
+}
+
+.main-header {
+  background: linear-gradient(
+    to bottom,
+    white,
+    rgba(255, 255, 255, 0.954),
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.primary-font {
+  font-family: "SuisseIntl" !important;
+}
+
+/* Fade In */
+.fade-in {
+  visibility: visible;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
     opacity: 1;
-    transform: scale(1);
-    animation: zoomIn 1.5s forwards ease-out;
   }
-  
-  @keyframes zoomIn {
-    0% {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+}
+
+/* Slide Up */
+.slide-up {
+  transform: translateY(50px);
+  animation: slideUp 2s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
   }
-  
-  
-  
-  /* Fade Out */
-  .fade-out {
-    visibility: visible;
+}
+
+/* Slide Down */
+.slide-down {
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: slideDown 3s forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
     opacity: 1;
-    animation: fadeOut 2s forwards;
   }
-  
-  @keyframes fadeOut {
-    to {
-      opacity: 0;
-    }
-  }
-  
-  /* Slide Out */
-  .slide-out {
-    visibility: visible;
+}
+
+/* Slide Left */
+.slide-left {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: slideLeft 2s forwards;
+}
+
+@keyframes slideLeft {
+  to {
     transform: translateX(0);
-    animation: slideOut 3s forwards;
+    opacity: 1;
   }
-  
-  @keyframes slideOut {
-    to {
-      transform: translateX(100%);
-      opacity: 0;
-    }
+}
+
+/* Slide Right */
+.slide-right {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: slideRight 2s forwards;
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  /* Zoom Out */
-  .zoom-out {
-    visibility: visible;
+}
+.hidden2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.zoom-in {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  animation: zoomIn 1.5s forwards ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
     transform: scale(1);
-    animation: zoomOut 3s forwards;
+    opacity: 1;
   }
-  
-  @keyframes zoomOut {
-    to {
-      transform: scale(0);
-      opacity: 0;
-    }
+}
+
+/* Fade Out */
+.fade-out {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
   }
+}
+
+/* Slide Out */
+.slide-out {
+  visibility: visible;
+  transform: translateX(0);
+  animation: slideOut 3s forwards;
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Zoom Out */
+.zoom-out {
+  visibility: visible;
+  transform: scale(1);
+  animation: zoomOut 3s forwards;
+}
+
+@keyframes zoomOut {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flip-in {
+  from {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-out {
+  from {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Set width for vertical scrollbar */
+  height: 8px; /* Set height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #112e9d; /* Color of the scrollbar */
+  border-radius: 10px; /* Round corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Round corners for track */
+}
+
+/* Hide scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* For Internet Explorer */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.text {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.cuboid-rotate-in {
+  animation: cuboidIn 1s ease forwards;
+}
+
+.cuboid-rotate-out {
+  animation: cuboidOut 1s ease forwards;
+}
+
+@keyframes cuboidIn {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cuboidOut {
+  from {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1600px !important;
+  }
+}
 
 
-  @keyframes flip-in {
-    from {
-      transform: rotateX(-90deg);
-      opacity: 0;
-    }
-    to {
-      transform: rotateX(0deg);
-      opacity: 1;
-    }
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1900px !important;
   }
-  
-  @keyframes flip-out {
-    from {
-      transform: rotateX(0deg);
-      opacity: 1;
-    }
-    to {
-      transform: rotateX(90deg);
-      opacity: 0;
-    }
-  }
-  
-  
-  
-  
-  /* For WebKit browsers (Chrome, Safari) */
-  ::-webkit-scrollbar {
-    width: 8px; /* Set width for vertical scrollbar */
-    height: 8px; /* Set height for horizontal scrollbar */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #112e9d; /* Color of the scrollbar */
-    border-radius: 10px; /* Round corners */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color on hover */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background of the scrollbar track */
-    border-radius: 10px; /* Round corners for track */
-  }
-  
-  /* Hide scrollbar */
-  .scrollbar-hidden::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .scrollbar-hidden {
-    -ms-overflow-style: none; /* For Internet Explorer */
-    scrollbar-width: none; /* For Firefox */
-  }
-
-
-  .text {
-    display: inline-block;
-    perspective: 1000px;
-  }
-  
-  .cuboid-rotate-in {
-    animation: cuboidIn 1s ease forwards;
-  }
-  
-  .cuboid-rotate-out {
-    animation: cuboidOut 1s ease forwards;
-  }
-  
-  @keyframes cuboidIn {
-    from {
-      transform: rotateX(90deg);
-      opacity: 0;
-    }
-    to {
-      transform: rotateX(0deg);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes cuboidOut {
-    from {
-      transform: rotateX(0deg);
-      opacity: 1;
-    }
-    to {
-      transform: rotateX(-90deg);
-      opacity: 0;
-    }
-  }
-  
+}

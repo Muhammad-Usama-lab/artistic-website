@@ -1,46 +1,11 @@
 "use client";
 
-import "animate.css";
-import { useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import styles from "@/styles/hero.module.css";
+import { useRef } from "react";
 import Typist from "../Typist";
-import styles from "@/styles/hero.module.css"
 
 const Hero = () => {
-  const [time, setTime] = useState(0);
-  const [fadeOut, setFadeOut] = useState(false);
   const videoRef = useRef(null);
-
-  const words = ["Denim", "Energy", "Cotton", "Sustainability", "Tracebility"];
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setTime((prev) => {
-  //       if (prev === 5) {
-  //         clearInterval(interval);
-  //         handlePlay();
-  //         return prev; // Stop incrementing
-  //       }
-  //       return prev + 1;
-  //     });
-  //   }, 1000);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      // setFadeOut(true);
-    }
-  };
-
-  const { ref: inViewRef, inView: isVisible } = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
 
   return (
     <>
@@ -48,7 +13,7 @@ const Hero = () => {
         id="home"
         className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[200px] dark:bg-gray-dark md:pb-[200px] md:pt-[250px] xl:pb-[350px] xl:pt-[400px] 2xl:pb-[20px] 2xl:pt-[600px]`}
       >
-        <div className="container-full" ref={inViewRef}>
+        <div className="container-full">
           <div className="mx-4 flex flex-wrap">
             <div className="max-w-8xl px-2 sm:px-10">
               <div className="mx-auto">
@@ -71,8 +36,6 @@ const Hero = () => {
         </div>
 
         <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
-          {/* opacity-30 */}
-
           <video
             ref={videoRef}
             autoPlay

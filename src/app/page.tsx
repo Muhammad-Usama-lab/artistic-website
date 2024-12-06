@@ -3,9 +3,11 @@ import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Slider from "@/components/Slider";
+import OurValues from "@/components/Values";
 import OurValues1 from "@/components/Values";
 import OurValues2 from "@/components/Values/value2";
 import OurValues3 from "@/components/Values/value3";
+import { slides, values } from "@/mock";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,40 +17,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  
-  const slides = [
-    {
-      title: "OUR AREAS OF EXPERTISE",
-      list: ["Cotton", "Spinning", "Fabric", "Manufacturing", "Finishing"],
-      folder: "row1",
-      quantity: 4,
-    },
-    {
-      title: "OUR AREAS OF EXPERTISE",
-      list: ["Design", "Development", "Fabric & Wash Innovation", "Sourcing"],
-      folder: "row2",
-      quantity: 4,
-    },
-    {
-      title: "OUR AREAS OF EXPERTISE",
-      list: [
-        "Renewable Energy",
-        "Circularity & Zero Waste",
-        "Green Chemistry",
-        "Biodiversity",
-        "Water Conservation & Recycling",
-      ],
-      folder: "row3",
-      quantity: 4,
-    },
-    {
-      title: "OUR AREAS OF EXPERTISE",
-      list: ["Community Wellbeing", "Equity & Inclusion", "Worker Empowerment"],
-      folder: "row4",
-      quantity: 3,
-    },
-  ];
-
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <ScrollUp />
@@ -69,17 +37,13 @@ export default function Home() {
           />
         </div>
       ))}
-       
 
-      <div className="snap-center">
-        <OurValues1 />
-      </div>
-      <div className="snap-center">
-        <OurValues2 />
-      </div>
-      <div className="snap-center">
-        <OurValues3 />
-      </div>
+      {values?.map((val, index) => (
+        <div key={`values ${index}`} className="snap-center">
+          <OurValues data={val} />
+        </div>
+      ))}
+
       <div className=" snap-center">
         <Footer />
       </div>

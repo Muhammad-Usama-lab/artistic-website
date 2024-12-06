@@ -48,7 +48,7 @@ const Header = () => {
         }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between pr-4">
+          <div className="relative -mx-4 flex items-center justify-between pr-10">
             {/* Logo */}
             <div className="w-[60%] md:w-[35%] lg:w-[25%] px-4">
               <Link

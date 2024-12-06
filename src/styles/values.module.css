@@ -1,0 +1,51 @@
+.valueText {
+  line-height: 4rem;
+  
+}
+
+
+
+
+@media (min-width: 400px) {
+    .valueText {
+      line-height: 2.5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+
+@media (min-width: 600px) {
+    .valueText {
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+  }
+
+
+@media (min-width: 900px) {
+    .valueText {
+      line-height: 3rem;
+      font-size: 2.25rem;
+    }
+  }
+
+@media (min-width: 1150px) {
+  .valueText {
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .valueText {
+    line-height: 3.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .valueText {
+    line-height: 4rem;
+    font-size: 3rem;
+  }
+}
