@@ -12,8 +12,17 @@
 }
 
 .heroText {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
+
+
+
+@media (min-width: 450px) {
+  .heroText {
+    font-size: 2.5rem;
+  }
+}
+
 
 @media (min-width: 850px) {
   .heroText {
