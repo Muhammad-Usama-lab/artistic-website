@@ -318,6 +318,23 @@
   }
 }
 
+
+
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 992px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 1400px;
+  }
+}
+
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1600px !important;
@@ -330,6 +347,5 @@
     max-width: 1900px !important;
   }
 }
-
 
 

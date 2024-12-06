@@ -15,7 +15,7 @@ const Features = () => {
         id="features"
         className="min-h-screen flex py-16 md:py-30 lg:py-40"
       >
-        <div className="container-full p-4">
+        <div className="container p-4">
           <h1
             className={` ${isVisible ? "slide-up" : ""} max-w-8xl primary-font text-4xl lg:text-7xl sm:text-6xl  sm:p-4 sm:pt-10 uppercase my-10 `} //
           >

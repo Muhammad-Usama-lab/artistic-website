@@ -6,7 +6,17 @@ function Typist() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  const words = ["Denim", "Energy", "Sustainability", "Traceability", "Cotton"];
+  // const words = ["Denim", "Energy", "Sustainability", "Traceability", "Cotton"];
+  const words = [
+    "Sustainability",
+    "Traceability",
+    "Sustainability",
+    "Traceability",
+    "Sustainability",
+    "Traceability",
+    "Sustainability",
+    "Traceability",
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

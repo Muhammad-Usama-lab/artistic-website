@@ -11,7 +11,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[200px] dark:bg-gray-dark md:pb-[200px] md:pt-[250px] xl:pb-[350px] xl:pt-[400px] 2xl:pb-[20px] 2xl:pt-[600px]`}
+        className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[200px] dark:bg-gray-dark sm:pt-[250px] md:pb-[200px] md:pt-[330px] xl:pb-[350px] xl:pt-[500px] 2xl:pb-[20px] 2xl:pt-[550px]`}
       >
         <div className="container-full">
           <div className="mx-4 flex flex-wrap">

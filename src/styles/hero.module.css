@@ -12,24 +12,36 @@
 }
 
 .heroText {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 850px) {
+  .heroText {
+    font-size: 2.75rem;
+  }
+}
+
+
+@media (min-width: 950px) {
+  .heroText {
+    font-size: 3.5rem;
+  }
 }
 
 @media (min-width: 1150px) {
   .heroText {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
 @media (min-width: 1300px) {
   .heroText {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1380px) {
+  .heroText {
     font-size: 5rem;
   }
 }
-
-@media (min-width: 1350px) {
-  .heroText {
-    font-size: 6rem;
-  }
-}
-
