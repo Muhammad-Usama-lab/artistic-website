@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ArrowButton from "../Button/ArrowButton";
-
+import styles from "@/styles/slider.module.css";
 interface SliderI {
   title: string;
   paragraph: string[];
@@ -40,13 +40,11 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
         className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center"
       >
         <div className="container">
-          
-
           <div className="mt-5 flex-col grid grid-cols-12 lg:grid-cols-12 border-t-2 border-b-2 border-black dark:border-gray-300">
             <div className="md:col-span-5 col-span-12  lg:border-r-2   py-5 px-10 border-black dark:border-gray-300 flex flex-col">
               <div className="flex-none">
                 <h2
-                  className={`${isVisible ? "slide-left" : ""} text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
+                  className={`${isVisible ? "slide-left" : ""}  text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
                 >
                   {title}
                 </h2>
@@ -73,7 +71,9 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
               </div>
             </div>
             <div className="p-4 md:col-span-7 col-span-12 ">
-              <div className="h-full flex flex-col md:justify-center sm:justify-default">
+              <div
+                className={`h-full flex flex-col md:justify-center sm:justify-default `}
+              >
                 <Carousel
                   ref={carouselRef}
                   showArrows={false}
@@ -82,18 +82,21 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                   autoPlay
                   infiniteLoop
                   interval={3000}
+                  
                   showThumbs={false}
+                  className={styles.carouselContainer}
                 >
+                  
                   {Array(quantity)
                     .fill(0)
                     ?.map((val, i) => (
-                      <Image
+                      <img
                         key={"any" + i}
                         src={`/images/section/${folder}/${i + 1}.jpg`}
                         alt="about-image"
                         width={400}
                         height={600}
-                        className="grow w-full h-full border drop-shadow-three dark:drop-shadow-none"
+                        className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${styles.image}`}
                       />
                     ))}
                 </Carousel>

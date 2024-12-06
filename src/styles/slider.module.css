@@ -1,0 +1,21 @@
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.carouselContainer{
+  /* overflow: hidden; */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* background-color: purple; */
+}
+
+
+.carousel-slider{
+  /* max-width: 100%;
+  display: block;
+  background-color: blue; */
+}

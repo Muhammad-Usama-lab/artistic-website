@@ -25,7 +25,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[200px] dark:bg-gray-dark sm:pt-[250px] md:pb-[200px] md:pt-[330px] xl:pb-[350px] xl:pt-[500px] 2xl:pb-[20px] 2xl:pt-[550px]`}
+        className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[300px] dark:bg-gray-dark sm:pt-[450px] md:pb-[200px] md:pt-[350px] xl:pb-[350px] xl:pt-[250px] 2xl:pb-[20px] 2xl:pt-[550px]`}
       >
         <div className="container-full">
           <div className="mx-4 flex flex-wrap">
@@ -51,10 +51,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/*
-         */}
-
-        <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
+        <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1] lg:opacity-100 bg-black md:bg-white">
           <video
             ref={videoRef}
             autoPlay
@@ -62,7 +59,7 @@ const Hero = () => {
             muted
             playsInline
             src="/images/hero/video.mp4"
-            className="mx-auto w-full mt-36 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+            className="mx-auto w-full mt-60 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
           />
           {/* <Image
             src="/images/hero/banner.jpeg"
