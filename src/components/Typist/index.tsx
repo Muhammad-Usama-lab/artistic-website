@@ -38,8 +38,8 @@ function Typist({ videoRef, wordDurations }) {
         color: "#112E9D",
         display: "inline-block",
         fontWeight: "bold",
-        backgroundColor: "#ffffff54",
-        padding: "5px 4px",
+        backgroundColor: "#ffffff36",
+        padding: "5px 2px",
         borderRadius: "4%",
       }}
     >

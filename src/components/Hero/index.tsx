@@ -60,6 +60,7 @@ const Hero = () => {
             autoPlay
             loop
             muted
+            playsInline
             src="/images/hero/video.mp4"
             className="mx-auto w-full mt-36 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
           />
