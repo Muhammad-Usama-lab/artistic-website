@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1] lg:opacity-100 bg-black md:bg-white">
+        <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1] lg:opacity-100 ">
           <video
             ref={videoRef}
             autoPlay

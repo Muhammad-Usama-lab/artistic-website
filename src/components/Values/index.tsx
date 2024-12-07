@@ -12,8 +12,6 @@ const OurValues = ({ data }) => {
   return (
     <>
       <section id="our-values" className="min-h-screen py-16 md:py-15 lg:py-20">
-        
-
         <div className="container px-10" ref={inViewRef}>
           <div className="max-w-7xl mt-16">
             <h2
@@ -23,7 +21,7 @@ const OurValues = ({ data }) => {
             </h2>
 
             <h4
-              className={`${isVisible ? "fade-in" : ""} mt-16 sm:mt-24   mb-16 text-justify text-primary font-normal text-xl sm:text-2xl  md:text-5xl ${styles.valueText}`}
+              className={`${isVisible ? "fade-in" : ""} mt-16 sm:mt-24   mb-16 md:text-justify text-primary font-normal text-xl sm:text-2xl  md:text-5xl ${styles.valueText}`}
             >
               {data?.text}
             </h4>
