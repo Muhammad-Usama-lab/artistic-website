@@ -1,7 +1,7 @@
 export const slides = [
   {
     title: "OUR AREAS OF EXPERTISE",
-    list: ["Cotton", "Spinning", "Fabric", "Manufacturing", "Finishing"],
+    list: ["Milliner Cotton Projects", "Yarns", "Fabrics", "LEED Certified Apparel Manufacturing", "Finishing"],
     folder: "row1",
     quantity: 4,
   },
