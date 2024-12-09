@@ -1,7 +1,14 @@
 export const slides = [
   {
     title: "OUR AREAS OF EXPERTISE",
-    list: ["Milliner Cotton Projects", "Yarns", "Fabrics", "LEED Certified Apparel Manufacturing", "Finishing"],
+    // list: ["Milliner Cotton Projects", "Yarns", "Fabrics", "LEED Certified Apparel Manufacturing", "Finishing"],
+    list: [
+      "Yarns",
+      "Fabric Manufacturing",
+      "Apparel Manufacturing",
+      "Milliner Cotton Projects",
+      "Clean Energy",
+    ],
     folder: "row1",
     quantity: 5,
   },
@@ -9,7 +16,7 @@ export const slides = [
     title: "OUR AREAS OF EXPERTISE",
     list: ["Design", "Development", "Fabric & Wash Innovation", "Sourcing"],
     folder: "row2",
-    quantity: 4,
+    quantity: 5,
   },
   {
     title: "OUR AREAS OF EXPERTISE",
