@@ -31,6 +31,8 @@ export const slides = [
   },
 ];
 
+// changed images
+
 export const values = [
   {
     text: `We believe in smart and strategic growth and we think globally. We
