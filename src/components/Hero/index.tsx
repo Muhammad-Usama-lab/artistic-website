@@ -31,14 +31,14 @@ const Hero = () => {
           <div className="mx-4 flex flex-wrap">
             <div className="max-w-8xl px-2 sm:px-10">
               <div className="mx-auto">
-                <h1
+                {/* <h1
                   className={`header-title uppercase mb-5 text-4xl sm:text-6xl lg:text-7xl font-normal leading-tight text-white dark:text-white ${styles.heroText}`}
                 >
                   The Future of{" "}
                   <Typist videoRef={videoRef} wordDurations={wordDurations} />
                   <br />
                   is Global
-                </h1>
+                </h1> */}
 
                 {/* <p
                   className={`${fadeOut ? "slide-out" : ""} ${isVisible ? "slide-left" : ""} mb-12  text-2xl  lg:text-4xl !leading-relaxed text-white dark:text-body-color-dark `}
