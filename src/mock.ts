@@ -42,9 +42,10 @@ export const slides = [
 
 export const values = [
   {
-    text: `We believe in smart and strategic growth and we think globally. We
-              are investing in our ecosystem, including building a nearshoring
-              network of sourcing solutions in the Western Hemisphere.`,
+    // text: `We believe in smart and strategic growth and we think globally. We
+    //           are investing in our ecosystem, including building a nearshoring
+    //           network of sourcing solutions in the Western Hemisphere.`,
+    text:`We believe in smart and strategic growth and we think globally. We are investing in product diversification and our ecosystem, including building a nearshoring network of sourcing solutions in the Western Hemisphere.`,
     link: "/",
   },
   {

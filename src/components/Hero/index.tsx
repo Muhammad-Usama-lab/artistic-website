@@ -58,7 +58,7 @@ const Hero = () => {
             loop
             muted
             playsInline
-            src="/images/hero/video.mp4"
+            src="/images/hero/videoo.mp4"
             className="mx-auto w-full mt-60 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
           />
           {/* <Image
