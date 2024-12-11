@@ -4,8 +4,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import "../../styles/hero.module.css";
 import menuData from "./menuData";
+import Image from "next/image";
+import useIsMobile from "@/responsive";
 
 const Header = () => {
+  const isMobile = useIsMobile();
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -47,20 +50,26 @@ const Header = () => {
         }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between ">
+          <div className="relative -mx-4 flex items-center justify-between pr-10">
             {/* Logo */}
-            <div className="w-[60%] md:w-[20%] px-4">
+            <div className="w-[60%] md:w-[35%] lg:w-[25%] px-4">
               <Link
                 href="/"
                 className={`header-logo flex gap-2 items-center block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 }`}
               >
-                <div className="xs:invisible sm:visible">
+                {/* <div className="sm:visible">
                   <h6 className="font-bold text-sm  md:text-xl  text-primary uppercase">
                     Artistic Milliners
                   </h6>
-                </div>
+                </div> */}
+                <Image
+                  src="/images/logo/logo.png"
+                  alt="artistic logo"
+                  width={isMobile ? 100 : 150}
+                  height={150}
+                />
               </Link>
             </div>
 
@@ -103,9 +112,9 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-xs lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 uppercase ${
-                              usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                              // usePathName === menuItem.path ?
+                              "text-primary dark:text-white"
+                              // : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}

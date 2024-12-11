@@ -1,0 +1,81 @@
+.border-svg rect {
+  stroke-dasharray: 760; /* Total perimeter */
+  stroke-dashoffset: 760; /* Start hidden */
+  animation: draw-border 2s ease-in-out forwards;
+}
+
+@keyframes draw-border {
+  to {
+    stroke-dashoffset: 0; /* Fully drawn */
+  }
+}
+
+.animated-border {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid transparent;
+}
+
+.animated-border::before,
+.animated-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.animated-border:hover::before {
+  transform: scale(1);
+}
+.animated-border:hover::after {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.animated-button {
+  position: relative;
+  background: none;
+  border: none;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.animated-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@keyframes draw-border {
+  to {
+    stroke-dashoffset: 0; /* Fully drawn */
+  }
+}
+
+.button-border rect {
+  stroke-dasharray: 380; /* Total perimeter */
+  stroke-dashoffset: 380; /* Start hidden */
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+.rect-visible {
+  stroke-dashoffset: 0; /* Fully drawn */
+}
