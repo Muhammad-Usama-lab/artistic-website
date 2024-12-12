@@ -28,7 +28,7 @@ export const slides = [
       "Water Conservation & Recycling",
     ],
     folder: "row3",
-    quantity: 4,
+    quantity: 5,
   },
   {
     title: "OUR AREAS OF EXPERTISE",
