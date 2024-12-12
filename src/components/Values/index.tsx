@@ -21,7 +21,7 @@ const OurValues = ({ data }) => {
             </h2>
 
             <h4
-              className={`${isVisible ? "fade-in" : ""} mt-16 sm:mt-24   mb-16 md:text-justify text-primary font-normal text-xl sm:text-2xl  md:text-5xl ${styles.valueText}`}
+              className={`${isVisible ? "fade-in" : ""} mt-16 sm:mt-24   mb-16  text-primary font-normal text-xl sm:text-2xl  md:text-5xl ${styles.valueText}`}
             >
               {data?.text}
             </h4>
