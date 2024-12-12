@@ -7,7 +7,7 @@ export const slides = [
       "Fabric Manufacturing",
       "Apparel Manufacturing",
       "Milliner Cotton Projects",
-      "Clean Energy",
+      "Renewable Energy",
     ],
     folder: "row1",
     quantity: 5,
@@ -16,12 +16,11 @@ export const slides = [
     title: "OUR AREAS OF EXPERTISE",
     list: ["Design", "Development", "Fabric & Wash Innovation", "Sourcing"],
     folder: "row2",
-    quantity: 5,
+    quantity: 4,
   },
   {
     title: "OUR AREAS OF EXPERTISE",
     list: [
-      "Renewable Energy",
       "Circularity & Zero Waste",
       "Green Chemistry",
       "Biodiversity",
