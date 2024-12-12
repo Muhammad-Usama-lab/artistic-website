@@ -10,7 +10,7 @@ export const slides = [
       "Renewable Energy",
     ],
     folder: "row1",
-    quantity: 5,
+    quantity: 6,
   },
   {
     title: "OUR AREAS OF EXPERTISE",
