@@ -117,7 +117,7 @@
 /* Slide Up */
 .slide-up {
   transform: translateY(50px);
-  animation: slideUp 2s forwards;
+  animation: slideUp 1s forwards;
 }
 
 @keyframes slideUp {
