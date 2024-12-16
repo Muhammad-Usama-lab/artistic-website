@@ -9,7 +9,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Artistic Milliners",
-  description: "This is Home for Startup Nextjs Template",
+  description: "The Future of the Denim",
   // other metadata
 };
 
