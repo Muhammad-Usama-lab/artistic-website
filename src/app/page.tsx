@@ -9,18 +9,19 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Artistic Milliners",
-  description: "This is Home for Startup Nextjs Template",
+  description: "The Future of the Denim",
   // other metadata
 };
 
 export default function Home() {
+ 
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <ScrollUp />
       <div className="snap-center">
         <Hero />
       </div>
-      <div className="snap-center">
+      <div className="snap-center" >
         <Features />
       </div>
 
