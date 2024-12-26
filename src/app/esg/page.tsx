@@ -43,11 +43,11 @@ const Page = () => {
       <div className="snap-center">
         <Features />
       </div>
-      {data?.map((v, index) => (
+      {/* {data?.map((v, index) => (
         <div className="snap-center" key={`v?.title ${index}`}>
           <DetailComponent title={v?.title} paragraph={v?.paragraph} />
         </div>
-      ))}
+      ))} */}
 
       <div className=" snap-center">
         <Footer />
