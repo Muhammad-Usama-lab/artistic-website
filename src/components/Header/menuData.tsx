@@ -10,19 +10,19 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Renewable Energy",
-    path: "/",
+    path: "/renewable",
     newTab: false,
   },
   {
     id: 33,
     title: "Western Hemisphere",
-    path: "/",
+    path: "/western-hemisphere",
     newTab: false,
   },
   {
     id: 3,
     title: "Esg",
-    path: "/",
+    path: "/esg",
     newTab: false,
   },
   {

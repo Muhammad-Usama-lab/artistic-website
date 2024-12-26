@@ -14,13 +14,14 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+ 
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <ScrollUp />
       <div className="snap-center">
         <Hero />
       </div>
-      <div className="snap-center">
+      <div className="snap-center" >
         <Features />
       </div>
 

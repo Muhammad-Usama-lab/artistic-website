@@ -21,8 +21,8 @@ const Features = () => {
           >
             As the{" "}
             <span className={`text-primary ${isVisible ? "slide-left" : ""}`}>
-              world's leading manufacturer of denim, PREMIUM WOVENS & PIECE DYED FABRICS and
-              apparel,
+              world's leading manufacturer of denim, PREMIUM WOVENS & PIECE DYED
+              FABRICS and apparel,
             </span>{" "}
             we strive for excellence in all we do.
           </h1>
