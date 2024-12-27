@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+
       <ScrollUp />
       <div className="snap-center">
         <Hero />

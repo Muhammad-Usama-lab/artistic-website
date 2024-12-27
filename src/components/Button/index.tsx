@@ -7,7 +7,7 @@ const Button = ({ label, theme = "black" }: ButtonI) => {
   return (
     <>
       <button
-        className={`flex items-center gap-x-1 uppercase border-2 hover:bg-gray-100 border-${theme} text-${theme} dark:border-gray-300 rounded-full px-10 py-3 text-sm font-semibold`}
+        className={`flex items-center gap-x-1 uppercase border-2 hover:bg-gray-100 border-${theme} text-${theme} dark:border-gray-300 rounded-full px-4 sm:px-10 py-1 sm:py-3 text-sm font-semibold`}
       >
         {label}
 

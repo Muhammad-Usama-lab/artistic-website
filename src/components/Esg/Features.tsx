@@ -9,7 +9,7 @@ const Features = () => {
       >
         <div className="container px-4">
           <div className="grid grid-cols-12 pr-10">
-            <div className="max-w-4xl col-span-7">
+            <div className="max-w-4xl col-span-12 lg:col-span-7">
               <h5 className="primary-font lg:text-3xl sm:p-4 pt-4 sm:pt-2">
                 At Artistic Milliners, we're fully committed to sustainability.
                 It is central to everything we do, and we're proud to align our
@@ -22,7 +22,7 @@ const Features = () => {
                 ourselves to do even better.
               </h5>
             </div>
-            <div className="max-w-3xl col-span-5">
+            <div className="max-w-3xl col-span-12 lg:col-span-5">
               <h5 className="primary-font lg:text-3xl  sm:p-4 pt-4 sm:pt-2">
                 Our vision of a successful future is one that is responsible,
                 equitable, and sustainable for people, for the planet, and for
