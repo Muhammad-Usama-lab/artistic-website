@@ -1,4 +1,3 @@
-import Button from "../Button";
 
 const Collage = () => {
   const data = [
@@ -26,7 +25,7 @@ const Collage = () => {
       class: "max-w-xl pt-10",
     },
     {
-      title: "220000 tonnes GHG Emissions Mitigated",
+      title: "220,000 tonnes GHG Emissions Mitigated",
       desc: "through wind and solar",
       class: "max-w-xl",
     },

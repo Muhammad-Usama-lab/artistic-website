@@ -9,30 +9,32 @@ const Page = () => {
     {
       title: "Solar",
       paragraph: [
-        `Our first foray into renewable energy was solar. Solar panels
+        `<p>Our first foray into renewable energy was solar. Solar panels
         installed on all our facilities helps generate clean energy for
-        our operations.`,
-        `Incorporated as a separate entity in 2018, Artistic Energy Pvt.
-        Ltd. has a current capacity in excess of 49.3MW, delivers 155GWh
-        of green energy to the grid and has a CO2 offset of 101,511 Mt.`,
-        `And the work continues. We have another 50dc capacity solar
-        energy project in the works.`,
+        our operations.</p>`,
+        `<p>Incorporated as a separate entity in 2018, Artistic Energy Pvt.
+        Ltd. has a current capacity in excess of 49.3MW, delivers <b>155GWh</b>
+        of green energy to the grid and has a CO2 offset of 101,511 Mt.</p>`,
+        `<p>And the work continues. We have another 50mw capacity solar
+        energy project in the works.</p>`,
       ],
+      image:"/images/renewable/1.jpg"
     },
     {
       title: "Wind",
       paragraph: [
-        `The company's Artistic Energy unit built and operates two state-of-the art wind farms in Jhimpir in the Thatta District of the Sindh province.`,
-        `Our wind farms power 144,500 households through Pakistan's national grid.`,
-        `Operational since 2022, Artistic Wind Power Pvt. has a capacity in excess of 50MW, delivers 147GWh of green energy to the grid and offset 96,396Mt of CO2`,
+        `<p>The company's Artistic Energy unit built and operates two state-of-the art wind farms in Jhimpir in the Thatta District of the Sindh province.</p>`,
+        `<p>Our wind farms power 144,500 households through Pakistan's national grid.</p>`,
+        `<p>Operational since 2022, Artistic Wind Power Pvt. has a capacity in excess of 50MW, delivers 147GWh of green energy to the grid and offset 96,396Mt of CO2</p>`,
       ],
+      image:"/images/renewable/2.jpg"
     },
-    {
-      title: "Hydro",
-      paragraph: [
-        `The next frontier for Artistic Milliners's renewable energy initiatives is water. We have two hydroelectric projects including ROR (Run of River) power plants and IPPs (Independent Power Producer). When completed, the two projects will have a capacity of 118MW.`,
-      ],
-    },
+    // {
+    //   title: "Hydro",
+    //   paragraph: [
+    //     `The next frontier for Artistic Milliners's renewable energy initiatives is water. We have two hydroelectric projects including ROR (Run of River) power plants and IPPs (Independent Power Producer). When completed, the two projects will have a capacity of 118MW.`,
+    //   ],
+    // },
   ];
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
@@ -45,7 +47,7 @@ const Page = () => {
       </div>
       {data?.map((v, index) => (
         <div className="snap-center" key={`v?.title ${index}`}>
-          <DetailComponent title={v?.title} paragraph={v?.paragraph} />
+          <DetailComponent image={v?.image} title={v?.title} paragraph={v?.paragraph} />
         </div>
       ))}
 

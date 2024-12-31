@@ -6,30 +6,30 @@ function ManyFirst() {
   const firstCol = [
     {
       digit: "01",
-      text: "First Gold-certified plant in Pakistan",
-      image: "/images/hero/banner.png",
+      text: "Pakistan's first LEED Platinum Certified Apparel Business",
+      image: "/images/business/1.jpg",
     },
     {
       digit: "02",
       text: "First PCW Cotton",
-      image: "/images/hero/banner.png",
+      image: "/images/business/2.jpg",
     },
     {
       digit: "03",
-      text: "First Cradle to Cradle certified denism",
-      image: "/images/hero/banner.png",
+      text: "First Cradle to Cradle certified denim",
+      image: "/images/business/3.jpg",
     },
   ];
   const secondCol = [
     {
       digit: "04",
-      text: "First Fairtrade Factory",
-      image: "/images/hero/banner.png",
+      text: "Pakistan's First Fair Trade Certified Factory",
+      image: "/images/business/4.jpg",
     },
     {
       digit: "05",
-      text: "First Platinum-certified LEED Unit",
-      image: "/images/hero/banner.png",
+      text: "Founded Artistic Milliners Mexico",
+      image: "/images/business/5.jpg",
     },
   ];
   return (

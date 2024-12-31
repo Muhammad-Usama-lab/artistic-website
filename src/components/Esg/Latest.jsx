@@ -1,36 +1,8 @@
 import Button from "../Button";
 
 const Latest = () => {
-  const data = [
-    {
-      title: "55% of women",
-      desc: "in senior leadership positions",
-      class: "max-w-56",
-    },
-    {
-      title: "7,954 workers",
-      desc: "fair trade-certified",
-      class: "max-w-56",
-    },
-    {
-      title: "252 million gallons of water",
-      desc: "saved by recycling/reusing water in production",
-      class: "max-w-96",
-    },
-  ];
+  
 
-  const data2 = [
-    {
-      title: "1262 billion watt-hours of green energy",
-      desc: "supplied to the national grid through wind production",
-      class: "max-w-xl pt-10",
-    },
-    {
-      title: "220000 tonnes GHG Emissions Mitigated",
-      desc: "through wind and solar",
-      class: "max-w-xl",
-    },
-  ];
   return (
     <>
       <section id="collage" className="h-screen py-28 lg:py-0">

@@ -10,7 +10,7 @@ const Features = () => {
         <div className="container px-4">
           <h1 className="uppercase max-w-8xl primary-font mt-10 md:mt-0 text-2xl sm:text-3xl md:text-4xl xl:text-6xl sm:p-4 mb-4">
             {/* {" lg:text-8xl sm:text-6xl text-4xl "} */}
-            International Local
+            International/Local
           </h1>
 
           <h5 className=" max-w-3xl primary-font lg:text-3xl  sm:p-4 pt-4 sm:pt-2">

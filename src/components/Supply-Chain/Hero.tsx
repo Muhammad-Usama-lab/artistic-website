@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
           {/* opacity-30 */}
           <Image
-            src="/images/hero/banner.png"
+            src="/images/hero/business.png"
             alt="about-image"
             fill
             className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"

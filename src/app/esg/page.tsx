@@ -9,7 +9,6 @@ import Footer from "@/components/Footer";
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
-
       <ScrollUp />
       <div className="snap-center">
         <Hero />
@@ -28,6 +27,7 @@ const Page = () => {
 Our efforts to provide health and wellness benefits extend beyond our employees and into the communities where we operate. Those initiatives include providing new jobs, community schools, clean drinking water and medical services.`,
             `We are always expanding the scope of our worker empowerment initiatives in collaboration with our customers and international organizations.`,
           ]}
+          image="/images/esg/1.jpg"
         />
       </div>
       <div className=" snap-center">

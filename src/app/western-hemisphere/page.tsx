@@ -11,6 +11,7 @@ const Page = () => {
       paragraph: [
         `SFI joined the Artistic Milliners ecosystem in 2020, with the aquisition of an existing laundry in Southern California with a dedicated clientele and a staff of seasoned denim experts. Since that time, SFI has grown to be a nearshoring hub where brands and retailers can experiement and test new developments and put those development into action in the Western Hemisphere. The growing SFI nearshoring network gives denim companies sourcing options closer to distribution centers and customers.`,
       ],
+      image: "/images/western-hemisphere/1.jpg",
     },
     {
       title: "SFI CENTRAL AMERICA",
@@ -18,12 +19,14 @@ const Page = () => {
         `SFI expanded its nearshoring network into Central America with the 2023 opening of the SFI office in Guatemala City. The company is currently forging strategic partnerships with garment faciliities in the region that can produce quality denim apparel, as well as other garments, giving
 manufacturers and brands more sourcing options closer to the United States.`,
       ],
+      image: "/images/western-hemisphere/2.jpg",
     },
     {
       title: "ARTISTIC MILLINERS MEXICO",
       paragraph: [
         `Artistic Milliners took a milestone step into building its Western Hemisphere operations in 2024 with the purchase of a vast garment manufacturing facility in Mexico. Spread over 10 acres, the facility has been modernized with state- of-the-art equipment and added services for apparel brands and manufacturers looking to for nearshoring sourcing solutions.`,
       ],
+      image: "/images/western-hemisphere/3.jpg",
     },
   ];
   return (
@@ -35,10 +38,10 @@ manufacturers and brands more sourcing options closer to the United States.`,
       <div className="snap-center">
         <Features />
       </div>
-      
+
       {data?.map((v, index) => (
         <div className="snap-center" key={`v?.title ${index}`}>
-          <DetailComponent title={v?.title} paragraph={v?.paragraph} />
+          <DetailComponent image={v?.image} title={v?.title} paragraph={v?.paragraph} />
         </div>
       ))}
 
