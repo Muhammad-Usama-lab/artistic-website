@@ -15,19 +15,19 @@ const Features = () => {
           <div className="p-4 mt-5 xl:mt-0 grid grid-cols-1 xl:grid-cols-2 gap-10">
             <div className="">
               <h1 className="text-xl md:text-5xl xl:text-7xl uppercase">About us</h1>
-              <h5 className="max-w-full xl:max-w-3xl text-lg sm:text-2xl my-4">
+              <h5 className="max-w-full xl:max-w-3xl text-sm sm:text-2xl my-4">
                 The Artistic Milliners portfolio of companies is a vertical
                 ecosystem that strives for excellence in every facet of its
                 operation.
               </h5>
-              <h5 className="max-w-full xl:max-w-3xl text-justify max-w-3xl text-lg sm:text-2xl my-4">
+              <h5 className="max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-2xl my-4">
                 Artistic Milliners’ global footprint includes Star Fades
                 International, the Los Angeles-based design, development and
                 laundry facility; Artmill, a cutting-edge finishing facility for
                 non-denim fabrics and garments; Circular Park, a 360-degree
                 recycling facility; and Artistic Energy.
               </h5>
-              <h5 className="max-w-full xl:max-w-3xl text-justify max-w-3xl text-lg sm:text-2xl my-4">
+              <h5 className="max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-2xl my-4">
                 AM web redesign 100% B12 As the preeminent vertical denim
                 manufacturer in Pakistan, Artistic Milliners expanded its
                 holdings to anticipate the needs of its international customer

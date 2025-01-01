@@ -19,7 +19,7 @@ const Latest = () => {
               <h1 className={`max-w-xl font-bold text-lg md:text-2xl`}>
                 Vogue Business Names AM's Saqib Sohail to Innovators List
               </h1>
-              <h5 className="max-w-2xl mt-5 sm:mt-14 text-sm sm:text-2xl grow">
+              <h5 className="max-w-2xl mt-5 sm:mt-14 text-sm sm:text-xl lg:text-2xl grow sm:mb-14">
                 Artistic Milliner's Head of Responsible Business Projects, Saqib
                 Sohail, was named a Vogue Business Innovator. Saqib's dedication
                 to our ethos for equitable sustainability has helped drive
@@ -41,7 +41,7 @@ const Latest = () => {
               <h1 className={`max-w-2xl font-bold text-lg md:text-2xl`}>
                 Proud Partner with WWF - Pakistan on Local Water Stewardship
               </h1>
-              <h5 className="max-w-3xl mt-14 text-sm sm:text-xl grow">
+              <h5 className="max-w-3xl mt-14 text-sm sm:text-xl lg:text-2xl grow sm:mb-14">
                 We are proud to partner with WWF - Pakistan to promote Water
                 Stewardship among the vulnerable communities of Karachi. We
                 recognize the critical importance of preserving and managing our

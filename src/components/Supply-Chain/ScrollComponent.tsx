@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
+import styles from "@/styles/scroll.module.css"
 const points = [
   "Garments & Finishing",
   "Yarns, Fabrics, Dyes and Finishing",
@@ -99,9 +99,9 @@ const ScrollComponent = () => {
   };
 
   return (
-    <div className="flex border-t border-b border-black px-20" style={{ height: 700 }}>
+    <div className={`flex xl:border-t xl:border-b xl:border-black px-5 md:px-20 ${styles.scrollComponent}`}>
       {/* Left Side - Points */}
-      <div className="w-1/3 border-r border-black p-4">
+      <div className="w-1/3 border-r border-black p-4 hidden md:block">
         <ul className="space-y-4">
           {points.map((point, index) => (
             <li
@@ -118,17 +118,17 @@ const ScrollComponent = () => {
       </div>
 
       {/* Right Side - Details */}
-      <div className="w-2/3 p-8 overflow-y-scroll scrollbar-hidden">
+      <div className="w-full p-2 pt-8 md:pt-0 xl:w-2/3 md:p-8 overflow-y-scroll scrollbar-hidden">
         {details.map((detail, index) => (
           <div
             key={index}
             ref={(el) => (detailRefs.current[index] = el)}
             className="mb-16"
           >
-            <h2 className="text-5xl uppercase font-regular mb-4">
+            <h2 className="text-2xl md:text-5xl uppercase font-regular mb-0 md:mb-4">
               {detail.title}
             </h2>
-            <p className="text-2xl py-8 text-gray-700">{detail.content}</p>
+            <p className="text-lg md:text-2xl py-8 text-gray-700">{detail.content}</p>
           </div>
         ))}
       </div>

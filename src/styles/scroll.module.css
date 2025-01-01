@@ -1,0 +1,11 @@
+.scrollComponent {
+  height: 700;
+}
+
+@media (max-width: 786px) {
+    .scrollComponent {
+      height: 100%;
+    }
+
+}
+

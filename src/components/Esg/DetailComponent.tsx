@@ -15,7 +15,7 @@ const DetailComponent = ({ title, paragraph, image }) => {
     >
       <div className="container">
         <div className="mt-5 flex-col grid grid-cols-12 lg:grid-cols-12 ">
-          <div className="lg:col-span-5 col-span-12  py-5 px-10 flex flex-col">
+          <div className="col-span-12 xl:col-span-5   py-5 px-10 flex flex-col">
             <div className="flex-none">
               <h2
                 className={`${isVisible ? "slide-left" : ""} sm:mt-4 xl:mt-8  tracking-widest uppercase dark:text-white font-bold sm:font-normal text-2xl sm:text-3xl md:text-4xl xl:text-6xl md:mb-14 ${styles.initiativesText}`}
@@ -33,7 +33,7 @@ const DetailComponent = ({ title, paragraph, image }) => {
               ))}
             </div>
           </div>
-          <div className="p-4 lg:col-span-7 col-span-12 ">
+          <div className="p-4 xl:col-span-7 col-span-12 ">
             <div
               className={`2xl:h-full flex flex-col md:justify-center sm:justify-default `}
             >

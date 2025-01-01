@@ -48,7 +48,7 @@ const Global = () => {
     <>
       <section id="Global" className="min-h-screen  py-16 md:py-30 lg:py-28">
         <div>
-          <h1 className="uppercase  max-w-8xl mt-5  primary-font text-2xl sm:text-3xl md:text-4xl xl:text-7xl  p-4 sm:pt-8 sm:p-4 border-black border-t border-b-1">
+          <h1 className="uppercase  max-w-8xl mt-8 primary-font text-2xl sm:text-3xl md:text-4xl xl:text-7xl  p-2 sm:p-4 sm:pt-8 border-black border-t border-b-1">
             We are Global
           </h1>
 
@@ -57,7 +57,7 @@ const Global = () => {
               {data?.map((val, index) => (
                 <div
                   key={index + val?.title}
-                  className="border-black border-t-2 my-3 p-8"
+                  className="border-black border-t md:border-t-2 my-0 sm:my-3 p-5 sm:p-8"
                 >
                   <h1 className="text-lg sm:text-3xl">{val?.title}</h1>
                   <h5 className="text-sm sm:text-xl my-4">
@@ -74,7 +74,7 @@ const Global = () => {
               {data2?.map((val, index) => (
                 <div
                   key={index + val?.title}
-                  className="border-black border-t-2 my-3 p-8"
+                  className="border-black border-t md:border-t-2 my-0 sm:my-3 p-5 sm:p-8"
                 >
                   <h1 className="text-lg sm:text-3xl">{val?.title}</h1>
                   <h5 className="text-sm sm:text-xl my-4">
@@ -89,16 +89,15 @@ const Global = () => {
             </div>
           </div>
           <div className="container">
-
-          <div
-            className={`2xl:h-full flex flex-col md:justify-center sm:justify-default `}
-          >
-            <img
-              src={`/images/section/row1/1.jpg`}
-              alt="about-image"
-              className={`grow w-full xl:h-full border ${styles.detailImage}`}
-            />
-          </div>
+            <div
+              className={`2xl:h-full flex flex-col md:justify-center sm:justify-default `}
+            >
+              <img
+                src={`/images/section/row1/1.jpg`}
+                alt="about-image"
+                className={`grow w-full xl:h-full border ${styles.detailImage}`}
+              />
+            </div>
           </div>
         </div>
       </section>
