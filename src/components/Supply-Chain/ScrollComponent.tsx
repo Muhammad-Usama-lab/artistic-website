@@ -125,7 +125,7 @@ const ScrollComponent = () => {
             ref={(el) => (detailRefs.current[index] = el)}
             className="mb-16"
           >
-            <h2 className="text-2xl md:text-5xl uppercase font-regular mb-0 md:mb-4">
+            <h2 className="mt-0 md:mt-5 text-2xl md:text-5xl uppercase font-regular mb-0 md:mb-4">
               {detail.title}
             </h2>
             <p className="text-lg md:text-2xl py-8 text-gray-700">{detail.content}</p>

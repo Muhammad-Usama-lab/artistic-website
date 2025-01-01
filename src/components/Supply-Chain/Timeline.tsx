@@ -4,6 +4,7 @@ import styles from "@/styles/timeline.module.css";
 
 const Timeline = forwardRef((props, ref) => {
   const isMobile = useIsMobile();
+  console.log(isMobile)
   const [activeIndex, setActiveIndex] = useState(0); // Index of the bold milestone
   const milestones = [
     "Our renewable energy division is growing",
@@ -38,13 +39,14 @@ const Timeline = forwardRef((props, ref) => {
         <div
           className="flex transition-transform duration-500"
           style={{
-            transform: `translateX(-${activeIndex * (isMobile ? 80 : 30)}%)`, // Shift active milestone to left
+            transform: `translateX(-${activeIndex * (isMobile ? 83 : 33.33)}%)`, // Shift active milestone to left
           }}
         >
           {milestones?.map((milestone, index) => (
             <div
               key={index}
-              className={`flex-shrink-0 w-[${isMobile ? 80 : 30}%]  mx-auto ${
+              // w-[${isMobile ? 80 : 30}%]
+              className={`flex-shrink-0 ${isMobile? "w-5/6":"w-2/6"} mx-auto ${
                 index === activeIndex ? "font-bold" : "text-gray-400"
               }`}
             >

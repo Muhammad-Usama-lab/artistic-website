@@ -7,7 +7,7 @@ const Footer = () => {
     { label: "RENEWABLE ENERGY", path: "/renewable" },
     { label: "WESTERN HEMISPHERE", path: "/western-hemisphere" },
     { label: "ESG", path: "/esg" },
-    { label: "NEWS", path: "/" },
+    { label: "NEWS", path: "/news" },
     { label: "ABOUT", path: "/about" },
     { label: "PRIVACY POLICY", path: "/" },
   ];

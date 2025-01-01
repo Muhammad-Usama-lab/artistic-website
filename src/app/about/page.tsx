@@ -1,9 +1,7 @@
-import ScrollUp from "@/components/Common/ScrollUp";
-import DetailComponent from "@/components/Esg/DetailComponent";
-import Global from "@/components/About/Global";
 import Features from "@/components/About/Features";
-import Latest from "@/components/About/Latest";
+import Global from "@/components/About/Global";
 import Hero from "@/components/About/Hero";
+import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
 
 const Page = () => {
