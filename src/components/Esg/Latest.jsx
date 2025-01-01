@@ -5,7 +5,7 @@ const Latest = () => {
 
   return (
     <>
-      <section id="collage" className="h-screen py-28 lg:py-0">
+      <section id="collage" className="min-h-screen md:h-screen py-28 lg:py-0">
         <div className="lg:h-1/5">
           <div className="h-full flex flex-col justify-end">
             <h1 className="uppercase primary-font text-2xl sm:text-3xl md:text-4xl xl:text-5xl px-4 py-2  sm:p-4  border-black border-t border-b-1">
@@ -15,7 +15,7 @@ const Latest = () => {
         </div>
         <div className="lg:h-3/4">
           <div className="grid h-full grid-cols-1 lg:grid-cols-2">
-            <div className="flex flex-col justify-between border-black border p-8">
+            <div className="flex flex-col justify-between border-black border-t lg:border  p-8">
               <h1 className={`max-w-xl font-bold text-lg md:text-2xl`}>
                 Vogue Business Names AM's Saqib Sohail to Innovators List
               </h1>
@@ -37,7 +37,7 @@ const Latest = () => {
                 <Button label="Learn More" />
               </div>
             </div>
-            <div className="flex flex-col justify-between border-black border p-8">
+            <div className="flex flex-col justify-between border-black border-t border-b lg:border p-8">
               <h1 className={`max-w-2xl font-bold text-lg md:text-2xl`}>
                 Proud Partner with WWF - Pakistan on Local Water Stewardship
               </h1>
@@ -55,10 +55,10 @@ const Latest = () => {
                 approach to address water-related challenges and promote best
                 practices.
               </h5>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-6 sm:mt-0">
                 <div>
-                  <h6 className="text-xl uppercase">news</h6>
-                  <h4 className="text-5xl ">13.11.24</h4>
+                  <h6 className="text-sm sm:text-xl uppercase">news</h6>
+                  <h4 className="text-xl sm:text-5xl">13.11.24</h4>
                 </div>
                 <Button label="Learn More" />
               </div>
