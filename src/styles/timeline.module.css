@@ -1,0 +1,21 @@
+.timeLineText {
+
+}
+
+@media (max-width: 1300px) {
+  .timelineText {
+    color: red;
+  }
+}
+
+@media (max-width: 991px) {
+  .timelineText {
+    color: blue;
+  }
+}
+
+@media (max-width: 550px) {
+  .timelineText {
+    color: pink;
+  }
+}

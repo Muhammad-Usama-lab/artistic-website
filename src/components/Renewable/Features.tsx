@@ -13,27 +13,13 @@ const Features = () => {
             Artistic Renewables
           </h1>
 
-          <h5 className=" max-w-3xl primary-font lg:text-3xl  sm:p-4 pt-4 sm:pt-2">
+          <h5 className="text-justify max-w-3xl primary-font lg:text-3xl  sm:p-4 pt-4 sm:pt-2">
             Artistic Milliners has played a major role in renewable energy in
             Pakistan. Our current and in-process renewable energy projects play
             a pivotal role in shifting away from energy generated from imported
             fossil fuels, substituting carbon emissions, and reducing the cost
             of energy generation.
           </h5>
-
-          {/* <h5 className=" max-w-2xl primary-font lg:text-3xl  sm:p-4 pt-4 sm:pt-2">
-            Our current and in-process renewable energy projects play a pivotal
-            role in shifting away from energy generated from imported fossil
-            fuels, substituting carbon emissions, and reducing the cost of
-            energy generation.
-          </h5>
-          <h5 className=" max-w-2xl primary-font lg:text-3xl  sm:p-4 pt-4 sm:pt-2">
-            Artistic Milliners has played a major role in renewable energy in
-            Pakistan. Our current and in-process renewable energy projects play
-            a pivotal role in shifting away from energy generated from imported
-            fossil fuels, substituting carbon emissions, and reducing the cost
-            of energy generation.
-          </h5> */}
         </div>
       </section>
     </>

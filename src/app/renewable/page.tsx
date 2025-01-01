@@ -12,10 +12,8 @@ const Page = () => {
         `<p>Our first foray into renewable energy was solar. Solar panels
         installed on all our facilities helps generate clean energy for
         our operations.</p>`,
-        `<p>Incorporated as a separate entity in 2018, Artistic Energy Pvt.
-        Ltd. has a current capacity in excess of 49.3MW, delivers <b>155GWh</b>
-        of green energy to the grid and has a CO2 offset of 101,511 Mt.</p>`,
-        `<p>And the work continues. We have another 50mw capacity solar
+       
+        `<p>And the work continues. We have another <b>50MW</b> capacity solar
         energy project in the works.</p>`,
       ],
       image:"/images/renewable/1.jpg"
@@ -24,8 +22,11 @@ const Page = () => {
       title: "Wind",
       paragraph: [
         `<p>The company's Artistic Energy unit built and operates two state-of-the art wind farms in Jhimpir in the Thatta District of the Sindh province.</p>`,
-        `<p>Our wind farms power 144,500 households through Pakistan's national grid.</p>`,
-        `<p>Operational since 2022, Artistic Wind Power Pvt. has a capacity in excess of 50MW, delivers 147GWh of green energy to the grid and offset 96,396Mt of CO2</p>`,
+        `<p>Our wind farms power <b>144,500</b> households through Pakistan's national grid.</p>`,
+        `<p>Incorporated as a separate entity in 2018, Artistic Energy Pvt.
+        Ltd. has a current capacity in excess of <b>49.3MW</b>, delivers <b>155GWh</b>
+        of green energy to the grid and has a CO2 offset of <b>101,511 MT</b>.</p>`,
+        `<p>Operational since 2022, Artistic Wind Power Pvt. has a capacity in excess of <b>50MW</b>, delivers <b>147GWh</b> of green energy to the grid and offset <b>96,396MT</b> of CO2</p>`,
       ],
       image:"/images/renewable/2.jpg"
     },

@@ -1,9 +1,10 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Collage from "@/components/Esg/Collage";
 import DetailComponent from "@/components/Esg/DetailComponent";
-import Features from "@/components/Esg/Features";
-import Latest from "@/components/Esg/Latest";
+
 import Hero from "@/components/Esg/Hero";
+import Latest from "@/components/Esg/Latest";
+import Features from "@/components/Esg/Features";
 import Footer from "@/components/Footer";
 
 const Page = () => {
@@ -13,9 +14,9 @@ const Page = () => {
       <div className="snap-center">
         <Hero />
       </div>
-      <div className="snap-center">
-        <Features />
-      </div>
+
+      <Features />
+
       <div className="snap-center">
         <Collage />
       </div>

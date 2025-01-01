@@ -20,7 +20,7 @@ const Collage = () => {
 
   const data2 = [
     {
-      title: "1262 billion watt-hours of green energy",
+      title: "1,262 billion watt-hours of green energy",
       desc: "supplied to the national grid through wind production",
       class: "max-w-xl pt-10",
     },

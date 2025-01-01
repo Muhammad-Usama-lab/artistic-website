@@ -1,5 +1,6 @@
 import useIsMobile from "@/responsive";
 import { forwardRef, useImperativeHandle, useState } from "react";
+import styles from "@/styles/timeline.module.css";
 
 const Timeline = forwardRef((props, ref) => {
   const isMobile = useIsMobile();
@@ -40,7 +41,7 @@ const Timeline = forwardRef((props, ref) => {
             transform: `translateX(-${activeIndex * (isMobile ? 80 : 30)}%)`, // Shift active milestone to left
           }}
         >
-          {milestones.map((milestone, index) => (
+          {milestones?.map((milestone, index) => (
             <div
               key={index}
               className={`flex-shrink-0 w-[${isMobile ? 80 : 30}%]  mx-auto ${
@@ -54,7 +55,9 @@ const Timeline = forwardRef((props, ref) => {
                 className={`mt-2 p-4 pt-4 border-black border-t border-r flex items-center justify-center h-4 ${index === 0 ? "border-l" : ""}`}
               ></div>
               <div className="flex items-center justify-center">
-                <p className="text-md md:text-2xl font-light max-w-96">
+                <p
+                  className={`text-md md:text-2xl font-light max-w-96 ${styles.timelineText}`}
+                >
                   {milestone}
                 </p>
               </div>
