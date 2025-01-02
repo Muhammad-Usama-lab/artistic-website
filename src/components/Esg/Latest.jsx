@@ -28,17 +28,16 @@ const Latest = () => {
           <div className="grid h-full grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col justify-between border-black border-t lg:border  p-8">
               <h1 className={`max-w-xl font-bold text-lg md:text-2xl`}>
-                Vogue Business Names AM's Saqib Sohail to Innovators List
+                Artistic Milliners Furthers Western Hemisphere Footprint with
+                Mexico Facility Acquisition
               </h1>
               <h5 className="max-w-2xl mt-5 sm:mt-14 text-sm sm:text-xl lg:text-2xl grow sm:mb-14">
-                Artistic Milliner's Head of Responsible Business Projects, Saqib
-                Sohail, was named a Vogue Business Innovator. Saqib's dedication
-                to our ethos for equitable sustainability has helped drive
-                transformative change within the wider industry., and sparked
-                vital conversations. From helping build our organic and
-                sustainable cotton initiatives to championing traceability and
-                community development, Saqib exemplifies Artistic Milliners'
-                commitment to a more responsible future.
+                In today’s unpredictable sourcing environment, stability and
+                agility are key. Retailers, having experienced volatile shipping
+                and supply chains over the last few years, are focused on
+                safeguarding their production processes. Nearshoring has emerged
+                as a powerful strategy, allowing for more responsive
+                manufacturing timelines and fewer inventory issues.
               </h5>
               <div className="flex justify-between items-center mt-6 sm:mt-0">
                 <div>
