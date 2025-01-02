@@ -15,7 +15,7 @@ const Hero = () => {
               alt="artistic-logo"
               className="w-1/4 "
             /> */}
-            <h1 className="text-xl sm:text-5xl lg:text-7xl uppercase">news coming soon...</h1>
+            <h1 className="text-xl sm:text-5xl lg:text-7xl uppercase">coming soon...</h1>
           </div>
         </div>
       </section>
