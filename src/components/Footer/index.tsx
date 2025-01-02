@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   const links = [
-    { label: "OUR BUSINESSES", path: "/supplychain" },
-    { label: "RENEWABLE ENERGY", path: "/renewable" },
+    { label: "OUR BUSINESSES", path: "/our-businesses" },
+    { label: "RENEWABLE ENERGY", path: "/renewable-energy" },
     { label: "WESTERN HEMISPHERE", path: "/western-hemisphere" },
     { label: "ESG", path: "/esg" },
     { label: "NEWS", path: "/news" },

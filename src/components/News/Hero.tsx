@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -11,11 +10,11 @@ const Hero = () => {
       >
         <div className="w-full">
           <div className="flex flex-col items-center gap-10">
-            <img
+            {/* <img
               src="/images/logo/logo.png"
               alt="artistic-logo"
               className="w-1/4 "
-            />
+            /> */}
             <h1 className="text-xl sm:text-5xl lg:text-7xl uppercase">news coming soon...</h1>
           </div>
         </div>

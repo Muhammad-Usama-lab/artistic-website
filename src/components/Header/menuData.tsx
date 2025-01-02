@@ -4,13 +4,13 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Our Businesses",
-    path: "/supplychain",
+    path: "/our-businesses",
     newTab: false,
   },
   {
     id: 2,
     title: "Renewable Energy",
-    path: "/renewable",
+    path: "/renewable-energy",
     newTab: false,
   },
   {

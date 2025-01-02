@@ -1,20 +1,23 @@
-
 const Collage = () => {
   const data = [
     {
       title: "55% of women",
       desc: "in senior leadership positions",
-      class: "max-w-56",
+      class: "max-w-56 text-primary",
+      descriptionClass: "text-primary",
     },
     {
       title: "7,954 workers",
       desc: "fair trade-certified",
-      class: "max-w-56",
+      class: "max-w-56 text-primary",
+      descriptionClass: "text-primary",
     },
     {
       title: "252 million gallons of water",
       desc: "saved by recycling/reusing water in production",
-      class: "max-w-96",
+      class: "max-w-96 text-gray-200",
+      mainClass: "bg-primaryLight",
+      descriptionClass: "text-gray-200",
     },
   ];
 
@@ -22,13 +25,17 @@ const Collage = () => {
     {
       title: "1,262 billion watt-hours of green energy",
       desc: "supplied to the national grid through wind production",
-      class: "max-w-xl pt-10",
+      class: "max-w-xl pt-10 text-gray-200",
+      mainClass: "bg-primaryLight",
+      descriptionClass: "text-primary",
     },
     {
       title: "220,000 tonnes GHG Emissions Mitigated",
       desc: "through wind and solar",
-      class: "max-w-xl",
+      class: "max-w-xl text-primary",
+      descriptionClass: "text-primary",
     },
+
   ];
   return (
     <>
@@ -42,12 +49,16 @@ const Collage = () => {
             {data?.map((val, index) => (
               <div
                 key={index + val?.title}
-                className="border-black border-t lg:border flex flex-col items-center justify-center py-8"
+                className={`border-black border-t lg:border flex flex-col items-center justify-center py-8 ${val?.mainClass}`}
               >
-                <h1 className={`uppercase ${val?.class} primary-font text-center text-primary text-2xl sm:text-3xl md:text-4xl xl:text-5xl`}>
+                <h1
+                  className={`uppercase ${val?.class} text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl`}
+                >
                   {val?.title}
                 </h1>
-                <h5 className="uppercase max-w-52 lg:max-w-xs text-center primary-font text-primary text-sm sm:text-xl sm:p-4 mb-4">
+                <h5
+                  className={`${val?.descriptionClass} uppercase max-w-52 lg:max-w-xs text-center  text-sm sm:text-xl sm:p-4 mb-4`}
+                >
                   {val?.desc}
                 </h5>
               </div>
@@ -57,12 +68,16 @@ const Collage = () => {
             {data2?.map((val, index) => (
               <div
                 key={index + val?.title}
-                className="border-black border-t lg:border flex flex-col items-center justify-center py-8"
+                className={`${val?.mainClass} border-black border-t lg:border flex flex-col items-center justify-center py-8`}
               >
-                <h1 className={`uppercase ${val?.class} primary-font text-center text-primary text-2xl sm:text-3xl md:text-4xl xl:text-5xl`}>
+                <h1
+                  className={`uppercase ${val?.class} text-center  text-2xl sm:text-3xl md:text-4xl xl:text-5xl`}
+                >
                   {val?.title}
                 </h1>
-                <h5 className="uppercase max-w-xs text-center primary-font text-primary text-sm sm:text-xl sm:p-4 mb-4">
+                <h5
+                  className={`${val?.descriptionClass} uppercase max-w-xs text-center text-sm sm:text-xl sm:p-4 mb-4`}
+                >
                   {val?.desc}
                 </h5>
               </div>

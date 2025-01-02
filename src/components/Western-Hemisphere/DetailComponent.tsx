@@ -48,54 +48,7 @@ const DetailComponent = ({ title, paragraph, image }) => {
       </div>
     </section>
   );
-  return (
-    <>
-      <section
-        id="detail-component"
-        className="min-h-screen flex py-16 md:py-30 lg:py-40"
-      >
-        <div className="container-full px-4">
-          <div className="grid grid-cols-12">
-            <div className="md:col-span-6 col-span-12 mt-10">
-              <h1 className="max-w-8xl primary-font lg:text-7xl sm:text-6xl text-4xl sm:p-4 uppercase mb-8">
-                SOLAR
-              </h1>
-
-              <h5 className=" max-w-3xl primary-font lg:text-2xl  text-xl sm:p-4 sm:pt-2">
-                Our first foray into renewable energy was solar. Solar panels
-                installed on all our facilities helps generate clean energy for
-                our operations.
-              </h5>
-
-              <h5 className=" max-w-3xl primary-font lg:text-2xl  text-xl sm:p-4 sm:pt-2">
-                Incorporated as a separate entity in 2018, Artistic Energy Pvt.
-                Ltd. has a current capacity in excess of 49.3MW, delivers 155GWh
-                of green energy to the grid and has a CO2 offset of 101,511 Mt.
-              </h5>
-              <h5 className=" max-w-3xl primary-font lg:text-2xl  text-xl sm:p-4 sm:pt-2">
-                And the work continues. We have another 50dc capacity solar
-                energy project in the works.
-              </h5>
-            </div>
-
-            <div className="md:col-span-6 col-span-12">
-              <div
-                className={`h-full flex flex-col md:justify-center sm:justify-default`}
-              >
-                <img
-                  src={`/images/section/row1/1.jpg`}
-                  alt="about-image"
-                  width={400}
-                  height={600}
-                  className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none `}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+  
 };
 
 export default DetailComponent;

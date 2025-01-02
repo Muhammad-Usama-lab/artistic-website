@@ -11,7 +11,7 @@ const Hero = () => {
       >
         <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
           <img
-            src="/images/mexico.png" 
+            src="/images/western-hemisphere/header.png" 
             className="mx-auto w-full mt-60 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
           />
         </div>
