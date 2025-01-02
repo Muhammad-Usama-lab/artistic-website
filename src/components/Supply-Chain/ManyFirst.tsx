@@ -1,8 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import styles from "@/styles/manyfirst.module.css";
 
+
+import { useInView } from "react-intersection-observer";
 function ManyFirst() {
+  const { ref, inView: isVisible } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
   const firstCol = [
     {
       digit: "01",
@@ -32,14 +41,15 @@ function ManyFirst() {
       image: "/images/business/5.jpg",
     },
   ];
+
   return (
-    <section id="many-first" className={`min-h-screen py-16 md:py-30 `}>
+    <section ref={ref} id="many-first" className={`min-h-screen py-16 md:py-30 `}>
       <div className="p-10">
-        <h1 className="max-w-8xl primary-font lg:text-6xl sm:text-6xl text-2xl md:pt-10 uppercase my-10 ">
+        <h1 className={`${isVisible ? "fade-in":""} max-w-8xl primary-font lg:text-6xl sm:text-6xl text-2xl md:pt-10 uppercase my-10 `}>
           THERE HAVE BEEN MANY FIRSTS...
         </h1>
         <div className={styles.manyRow}>
-          <div className={styles.manyItem}>
+          <div className={`${styles.manyItem} ${isVisible ? "slide-up":""}`}>
             {firstCol?.map((value, index) => (
               <div
                 key={index + "first-col"}
@@ -65,7 +75,7 @@ function ManyFirst() {
               </div>
             ))}
           </div>
-          <div className={styles.manyItem}>
+          <div className={`${styles.manyItem} ${isVisible ? "slide-left":""}` }>
             {secondCol?.map((value, index) => (
               <div key={index + "second-col"}>
                 <div

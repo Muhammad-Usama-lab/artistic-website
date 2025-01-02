@@ -1,11 +1,22 @@
+"use client";
+
+import { useInView } from "react-intersection-observer";
+
 import Button from "../Button";
 
 const Latest = () => {
-  
+  const { ref, inView: isVisible } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
 
   return (
     <>
-      <section id="collage" className="min-h-screen md:h-screen py-28 lg:py-0">
+      <section
+        ref={ref}
+        id="collage"
+        className={`min-h-screen md:h-screen py-28 lg:py-0 ${isVisible ? "fade-in" : ""}`}
+      >
         <div className="lg:h-1/5">
           <div className="h-full flex flex-col justify-end">
             <h1 className="uppercase primary-font text-2xl sm:text-3xl md:text-4xl xl:text-5xl px-4 py-2  sm:p-4  border-black border-t border-b-1">

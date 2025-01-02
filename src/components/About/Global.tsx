@@ -1,7 +1,14 @@
-import Button from "../Button";
+"use client";
+
 import styles from "@/styles/manyfirst.module.css";
+import { useInView } from "react-intersection-observer";
 
 const Global = () => {
+  const { ref, inView: isVisible } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
   const data = [
     {
       title: "Pakistan",
@@ -46,9 +53,13 @@ const Global = () => {
   ];
   return (
     <>
-      <section id="Global" className="min-h-screen  py-16 md:py-30 lg:py-28">
-        <div>
-          <h1 className="uppercase  max-w-8xl mt-8 primary-font text-2xl sm:text-3xl md:text-4xl xl:text-7xl  p-2 sm:p-4 sm:pt-8 border-black border-t border-b-1">
+      <section
+        ref={ref}
+        id="Global"
+        className="min-h-screen  py-16 md:py-30 lg:py-28"
+      >
+        <div className={isVisible ? "fade-in" : ""}>
+          <h1 className="uppercase max-w-8xl mt-8 primary-font text-2xl sm:text-3xl md:text-4xl xl:text-6xl  p-2 sm:p-4 sm:px-6 sm:pt-8 border-black border-t border-b-1">
             We are Global
           </h1>
 
@@ -57,10 +68,10 @@ const Global = () => {
               {data?.map((val, index) => (
                 <div
                   key={index + val?.title}
-                  className="border-black border-t md:border-t-2 my-0 sm:my-3 p-5 sm:p-8"
+                  className="border-black border-t md:border-t-2 my-0 sm:my-3 p-5 sm:px-6"
                 >
                   <h1 className="text-lg sm:text-3xl">{val?.title}</h1>
-                  <h5 className="text-sm sm:text-xl my-4">
+                  <h5 className="text-sm sm:text-xl my-2">
                     {val?.desc?.map((v) => (
                       <>
                         {v} <br />{" "}
@@ -74,10 +85,10 @@ const Global = () => {
               {data2?.map((val, index) => (
                 <div
                   key={index + val?.title}
-                  className="border-black border-t md:border-t-2 my-0 sm:my-3 p-5 sm:p-8"
+                  className="border-black border-t md:border-t-2 my-0 sm:my-3 p-5"
                 >
                   <h1 className="text-lg sm:text-3xl">{val?.title}</h1>
-                  <h5 className="text-sm sm:text-xl my-4">
+                  <h5 className="text-sm sm:text-xl my-2">
                     {val?.desc?.map((v) => (
                       <>
                         {v} <br />{" "}
