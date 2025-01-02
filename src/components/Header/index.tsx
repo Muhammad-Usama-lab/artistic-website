@@ -24,6 +24,7 @@ const Header = () => {
       setSticky(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
@@ -112,9 +113,9 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-xs lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 uppercase ${
-                              // usePathName === menuItem.path ?
-                              "text-primary dark:text-white"
-                              // : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                              usePathName === menuItem.path ?
+                              "text-primary font-bold underline underline-offset-8"
+                              : "text-primary hover:text-gray-800 dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}
