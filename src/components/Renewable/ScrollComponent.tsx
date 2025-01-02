@@ -1,5 +1,6 @@
 "use client";
 
+import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
 
 const points = [
@@ -63,6 +64,12 @@ const details = [
 ];
 
 const ScrollComponent = () => {
+
+  const { ref, inView: isVisible } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
   const [activeIndex, setActiveIndex] = useState(0);
   const detailRefs = useRef([]);
 
@@ -90,7 +97,7 @@ const ScrollComponent = () => {
     };
   }, []);
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     detailRefs.current[index].scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -99,9 +106,12 @@ const ScrollComponent = () => {
   };
 
   return (
-    <div className="flex border-t border-b border-black px-20" style={{ height: 700 }}>
+    <div ref={ref}
+      className="flex border-t border-b border-black px-20"
+      style={{ height: 700 }}
+    >
       {/* Left Side - Points */}
-      <div className="w-1/3 border-r border-black p-4">
+      <div className={`w-1/3 border-r border-black p-4`}>
         <ul className="space-y-4">
           {points.map((point, index) => (
             <li
@@ -123,7 +133,7 @@ const ScrollComponent = () => {
           <div
             key={index}
             ref={(el) => (detailRefs.current[index] = el)}
-            className="mb-16"
+            className={`mb-16 ${isVisible ? "slide-left" : ""} `}
           >
             <h2 className="text-5xl uppercase font-regular mb-4">
               {detail.title}

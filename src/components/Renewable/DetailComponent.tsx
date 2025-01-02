@@ -3,7 +3,7 @@
 import styles from "@/styles/renewable-detailed.module.css";
 import { useInView } from "react-intersection-observer";
 
-const DetailComponent = ({ title, paragraph }) => {
+const DetailComponent = ({ title, paragraph, image }) => {
   const { ref, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -25,11 +25,10 @@ const DetailComponent = ({ title, paragraph }) => {
             </div>
             <div className="pt-5 grow">
               {paragraph?.map((v) => (
-                <p
+                <div
                   className={`${isVisible ? "slide-up" : ""} py-2 !leading-relaxed text-black dark:text-gray-300 md:text-xl 2xl:text-2xl py-0 font-medium`}
-                >
-                  {v}
-                </p>
+                  dangerouslySetInnerHTML={{ __html: v }}
+                />
               ))}
             </div>
           </div>
@@ -38,7 +37,7 @@ const DetailComponent = ({ title, paragraph }) => {
               className={`2xl:h-full flex flex-col md:justify-center sm:justify-default `}
             >
               <img
-                src={`/images/section/row1/1.jpg`}
+                src={image}
                 alt="about-image"
                 className={`grow w-full xl:h-full border ${styles.detailImage}`}
               />

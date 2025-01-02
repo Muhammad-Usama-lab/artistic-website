@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import styles from "@/styles/slider.module.css";
 import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ArrowButton from "../Button/ArrowButton";
-import styles from "@/styles/slider.module.css";
 interface SliderI {
   title: string;
   paragraph: string[];
@@ -40,7 +39,7 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
         className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center"
       >
         <div className="container">
-          <div className="mt-5 flex-col grid grid-cols-12 lg:grid-cols-12 border-t-2 border-b-2 border-black dark:border-gray-300">
+          <div className="mt-5 flex-col grid grid-cols-12 border-t-2 border-b-2 border-black dark:border-gray-300">
             <div className="md:col-span-5 col-span-12  lg:border-r-2   py-5 px-10 border-black dark:border-gray-300 flex flex-col">
               <div className="flex-none">
                 <h2
@@ -81,7 +80,7 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                   showStatus={false}
                   autoPlay
                   infiniteLoop
-                  interval={3000}
+                  interval={1000}
                   
                   showThumbs={false}
                   className={styles.carouselContainer}

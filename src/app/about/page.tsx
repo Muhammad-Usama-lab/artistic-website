@@ -1,26 +1,28 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Features from "@/components/About/Features";
+import Global from "@/components/About/Global";
+import Hero from "@/components/About/Hero";
+import ScrollUp from "@/components/Common/ScrollUp";
+import Footer from "@/components/Footer";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Page | Artistic Milliners",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
-};
-
-const AboutPage = () => {
+const Page = () => {
   return (
-    <>
-      <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-    </>
+    <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <ScrollUp />
+      <div className="snap-center">
+        <Hero />
+      </div>
+      <div className="snap-center">
+        <Features />
+      </div>
+      <div className="snap-center">
+        <Global />
+      </div>
+
+      <div className=" snap-center">
+        <Footer />
+      </div>
+    </div>
   );
 };
 
-export default AboutPage;
+export default Page;

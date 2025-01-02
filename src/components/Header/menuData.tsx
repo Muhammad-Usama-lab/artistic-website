@@ -4,37 +4,37 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Our Businesses",
-    path: "/",
+    path: "/our-businesses",
     newTab: false,
   },
   {
     id: 2,
     title: "Renewable Energy",
-    path: "/",
+    path: "/renewable-energy",
     newTab: false,
   },
   {
     id: 33,
     title: "Western Hemisphere",
-    path: "/",
+    path: "/western-hemisphere",
     newTab: false,
   },
   {
     id: 3,
     title: "Esg",
-    path: "/",
+    path: "/esg",
     newTab: false,
   },
   {
     id: 4,
     title: "News",
-    path: "/",
+    path: "/news",
     newTab: false,
   },
   {
     id: 5,
     title: "About",
-    path: "/",
+    path: "/about",
     newTab: false,
     // submenu: [
     //   {

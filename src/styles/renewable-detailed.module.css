@@ -3,3 +3,17 @@
   height: auto;
   display: block;
 }
+/* 
+@media (max-width: 1500px) {
+
+  .initiativesText {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .initiativesText {
+    
+    font-size: 2rem;
+  }
+} */
