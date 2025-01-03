@@ -45,7 +45,7 @@ const Features = () => {
               <h5
                 className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-2xl my-4`}
               >
-                AM web redesign 100% B12 As the preeminent vertical denim
+                As the preeminent vertical denim
                 manufacturer in Pakistan, Artistic Milliners expanded its
                 holdings to anticipate the needs of its international customer
                 base of retailers and brands. With the opening of SFI in 2020,
