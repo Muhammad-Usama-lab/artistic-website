@@ -7,7 +7,7 @@ const Hero = () => {
  id="home"
  className={`relative min-h-screen flex z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[400px] 2xl:pb-[20px] 2xl:pt-[550px]`}
 >
-  <!--Taha Comment -->
+/*Taha*/
  <div className="absolute right-0 top-0 bottom-0 left-0 z-[-1]  lg:opacity-100">
    {/* <video
      autoPlay
