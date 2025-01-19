@@ -4,9 +4,6 @@ import { useInView } from "react-intersection-observer";
 import Button from "../Button";
 
 const Features = () => {
-  
-  
-
   const { ref: inViewRef, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -30,7 +27,7 @@ const Features = () => {
             we strive for excellence in all we do.
           </h1>
           <div className={`px-4 ${isVisible ? "slide-left" : ""}`}>
-            <Button label="Learn More" />
+            <Button label="Learn More" goTo="/about" />
           </div>
         </div>
       </section>
