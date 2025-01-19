@@ -17,12 +17,12 @@ const Page = () => {
       <div className="snap-center">
         <Features />
       </div>
-      <div className="snap-center">
+      {/* <div className="snap-center">
         <ManyFirst />
-      </div>
-      <div className="snap-center">
+      </div> */}
+      {/* <div className="snap-center">
         <Milestone />
-      </div>
+      </div> */}
       <div className="snap-center">
         <section id="scroll" className={`min-h-screen py-16 md:py-40 `}>
           <div className="container-full">

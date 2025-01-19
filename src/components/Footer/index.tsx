@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const Footer = () => {
   const links = [
+    { label: "ABOUT", path: "/about" },
     { label: "OUR BUSINESSES", path: "/our-businesses" },
     { label: "RENEWABLE ENERGY", path: "/renewable-energy" },
     { label: "WESTERN HEMISPHERE", path: "/western-hemisphere" },
     { label: "ESG", path: "/esg" },
     { label: "NEWS", path: "/news" },
-    { label: "ABOUT", path: "/about" },
     { label: "PRIVACY POLICY", path: "/" },
   ];
 

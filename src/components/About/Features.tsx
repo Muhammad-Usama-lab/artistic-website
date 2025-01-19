@@ -1,6 +1,7 @@
 "use client";
 
-import styles from "@/styles/slider.module.css";
+import sStyles from "@/styles/slider.module.css";
+import styles from "@/styles/about.module.css";
 
 import { useInView } from "react-intersection-observer";
 
@@ -22,36 +23,43 @@ const Features = () => {
           <div className="p-4 mt-5 xl:mt-0 grid grid-cols-1 xl:grid-cols-2 gap-10">
             <div className="">
               <h1
-                className={`${isVisible ? "slide-left" : ""} text-xl md:text-5xl xl:text-7xl uppercase`}
+                className={`${isVisible ? "slide-left" : ""} text-xl md:text-6xl uppercase ${styles.heading}`}
               >
                 About us
               </h1>
               <h5
-                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-sm sm:text-2xl my-4`}
+                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-sm sm:text-xl my-4 ${styles.para}`}
               >
-                The Artistic Milliners portfolio of companies is a vertical
-                ecosystem that strives for excellence in every facet of its
-                operation.
+                Artistic Milliners is building the global business conglomerate
+                of the future.
               </h5>
               <h5
-                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-2xl my-4`}
+                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-xl my-4 ${styles.para}`}
               >
-                Artistic Milliners’ global footprint includes Star Fades
-                International, the Los Angeles-based design, development and
-                laundry facility; Artmill, a cutting-edge finishing facility for
-                non-denim fabrics and garments; Circular Park, a 360-degree
-                recycling facility; and Artistic Energy.
+                Our company has expanded from its roots in textiles to include
+                renewable energy, while producing world-class denim fabrics and
+                garments, as well as wovens and piece dyed fabrics. We have
+                grown from our home in Pakistan to include sourcing operations
+                in the Western Hemisphere and offices across the globe.
               </h5>
               <h5
-                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-2xl my-4`}
+                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-xl my-4 ${styles.para}`}
               >
-                AM web redesign 100% B12 As the preeminent vertical denim
-                manufacturer in Pakistan, Artistic Milliners expanded its
-                holdings to anticipate the needs of its international customer
-                base of retailers and brands. With the opening of SFI in 2020,
-                AM began building a nearshoring hub that stretches from the U.S.
-                to Mexico and Central America, including strategic partnerships
-                across the regions as well as wholly owned facilities.
+                We take a holistic approach to our business and have grown our
+                ecosystem to encompass the entire apparel value chain — from
+                field to fabric to manufacturing and finishing — as well as
+                harnessing wind and solar energy to power our operations and a
+                circular approach to the materials we use.
+              </h5>
+
+              <h5
+                className={`${isVisible ? "slide-up" : ""} max-w-full xl:max-w-3xl text-justify max-w-3xl text-sm sm:text-xl my-4 ${styles.para}`}
+              >
+                Our vision of a successful future is one that is responsible,
+                equitable, and sustainable for people, for the planet, and for
+                our business. Over the years, we have been putting in place
+                practices and policies that further these efforts, but we
+                recognize that this journey requires a steady pace.
               </h5>
             </div>
             <div className="flex">
@@ -64,7 +72,7 @@ const Features = () => {
                   alt="about-image"
                   width={400}
                   height={600}
-                  className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${styles.image}`}
+                  className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${sStyles.image}`}
                 />
 
                 {/* <Carousel

@@ -2,6 +2,13 @@ import { Menu } from "@/types/menu";
 
 const menuData: Menu[] = [
   {
+    id: 5,
+    title: "About",
+    path: "/about",
+    newTab: false,
+   
+  },
+  {
     id: 1,
     title: "Our Businesses",
     path: "/our-businesses",
@@ -31,12 +38,10 @@ const menuData: Menu[] = [
     path: "/news",
     newTab: false,
   },
-  {
-    id: 5,
-    title: "About",
-    path: "/about",
-    newTab: false,
-    // submenu: [
+];
+export default menuData;
+
+ // submenu: [
     //   {
     //     id: 41,
     //     title: "About Page",
@@ -86,6 +91,3 @@ const menuData: Menu[] = [
     //     newTab: false,
     //   },
     // ],
-  },
-];
-export default menuData;

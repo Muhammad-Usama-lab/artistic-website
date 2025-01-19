@@ -4,6 +4,9 @@ import { useInView } from "react-intersection-observer";
 import Button from "../Button";
 
 const Features = () => {
+  
+  
+
   const { ref: inViewRef, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
