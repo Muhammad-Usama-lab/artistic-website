@@ -28,7 +28,7 @@ const OurValues = ({ data }) => {
             <div
               className={`flex justify-end ${isVisible ? "slide-left" : ""} `}
             >
-              <Button theme="primary" label="Learn More" />
+              <Button theme="primary" label="Learn More" goTo={data?.link}/>
             </div>
           </div>
         </div>

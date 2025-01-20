@@ -18,7 +18,7 @@ const DetailComponent = ({ title, paragraph, image }) => {
           <div className="col-span-12 xl:col-span-5   py-5 px-10 flex flex-col">
             <div className="flex-none">
               <h2
-                className={`${isVisible ? "slide-left" : ""} sm:mt-4 xl:mt-8 tracking-widest uppercase dark:text-white sm:font-normal text-xl sm:text-4xl md:text-4xl xl:text-6xl lg:mb-14 ${styles.initiativesText}`}
+                className={`${isVisible ? "slide-left" : ""} sm:mt-4 xl:mt-8 tracking-widest uppercase dark:text-white sm:font-normal text-xl sm:text-4xl md:text-4xl xl:text-5xl lg:mb-14 ${styles.initiativesText}`}
               >
                 {title}
               </h2>

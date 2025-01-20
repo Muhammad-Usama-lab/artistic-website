@@ -68,7 +68,7 @@ const Features = () => {
               >
                 <img
                   key={"about image"}
-                  src={`/images/about/1.jpg`}
+                  src={`/images/about/1.png`}
                   alt="about-image"
                   width={400}
                   height={600}
