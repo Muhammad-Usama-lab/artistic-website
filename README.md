@@ -11,7 +11,7 @@ If you're looking for a high-quality and visually appealing, feature-rich Next.j
 - High-quality and Clean Design
 - Dark and Light Version
 - TypeScript Support
-and Much More ...sasdasdasd
+and Much More ...sasdasdasds
 
 ### 🙌 Detailed comparison between the Free and Pro versions of Startup
 
