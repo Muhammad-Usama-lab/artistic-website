@@ -18,7 +18,6 @@ const Features = () => {
           <h1
             className={`${isVisible ? "fade-in" : ""} uppercase max-w-8xl primary-font mt-10 md:mt-0 text-2xl sm:text-3xl md:text-4xl xl:text-6xl sm:p-4 mb-4`}
           >
-            {/* {" lg:text-8xl sm:text-6xl text-4xl "} */}
             Artistic Renewables
           </h1>
 

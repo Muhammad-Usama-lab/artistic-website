@@ -2,49 +2,40 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "@/styles/scroll.module.css";
-const points = [
-  "LEED-Certified Apparel Facilities",
-  "Sustainable Yarns, Fabrics, Dyes & Finishing",
-  "Artmill",
-  "Circular Park",
-  "Global Sourcing and Design Expertise",
-
-  // "Garments & Finishing",
-  // "Yarns, Fabrics, Dyes and Finishing",
-  // "Spinning and Fabric",
-  // "Artmill",
-  // "Circular Park",
-  // "Milliners Organic and Milliners Cotton Initiative",
-  // "Smart Farming & Regenerative Agriculture",
-  // "Western Hemisphere",
-];
-
 const details = [
   {
-    title: "LEED-Certified Apparel Facilities",
-    content:
-      "Artistic Milliners is proud to be a trailblazer in sustainable apparel manufacturing. We are the first in Pakistan to achieve both LEED Gold and LEED Platinum certifications for our state-of-the-art facilities. Our flagship Unit-15, a LEED Platinum-certified industrial complex, exemplifies our dedication to environmental stewardship. Through innovative design and advanced technologies, we have significantly reduced our environmental footprint, achieving a 50% reduction in water usage, alongside substantial improvements in carbon emissions, energy efficiency, and waste reduction.",
+    title: "Apparels",
+    content: [
+      `Artistic Milliners is proud to be a trailblazer in sustainable apparel manufacturing. We are the first in Pakistan to achieve both LEED Gold and LEED Platinum certifications for our state-of-the-art facilities. Our flagship Unit-15, a LEED Platinum-certified industrial complex, exemplifies our dedication to environmental stewardship. Through innovative design and advanced technologies, we have significantly reduced our environmental footprint, achieving a 50% reduction in water usage, alongside substantial improvements in carbon emissions, energy efficiency, and waste reduction.`,
+    ],
   },
   {
-    title: "Sustainable Yarns, Fabrics, Dyes & Finishing",
-    content:
-      "Our commitment to sustainability extends to every facet of our production. In 2023, we produced 85 million pounds of yarn, 144 million meters of fabric, and 36 million pieces of garments, with a significant portion incorporating sustainable, recycled, and biodegradable materials. We leverage advanced, sustainable wet processing technologies and are committed to incorporating a diverse range of sustainable fibers into our product lines.",
+    title: "Denim Fabrics",
+    content: [
+      "Artistic Milliners can produce up to 108 million meters of denim fabrics , many of which incorporate sustainable, recycled, and biodegradable elements like recycled PIW and PCW cotton, hemp, Tencel™, LYCRA® EcoMade, and ROICA™ biodegradable elastane.  Our  fabrics division is committed to the circular model of business, utilizing technologies such as Crystal Clear 3.0 indigo dye technology, a water and salt-free dyeing process, G2 Dynamic ozone technology, and Nature's Coating's BioBlack TX, a carbon-negative pigment made from wood waste.  It is precisely this ethos which enabled us to collaborate with brand and supply chain partners to develop, Dylan, the world’s first  denim products that met Cradle-to-Cradle Institute Gold Standard. ",
+    ],
   },
   {
-    title: "Artmill",
-    content:
-      "Artmill, our cutting-edge finishing facility, specializes in piece-dyed fabrics, denim hybrids, activewear, and workwear. Designed for optimal efficiency and sustainability, Artmill is the region's first LEED Platinum-certified piece-dye mill. Powered by renewable energy and employing advanced water and chemical recycling processes, Artmill represents the future of responsible textile finishing.",
+    title: "Premium Wovens",
+    content: [
+      "Artistic Milliners expanded beyond denim in 2022 with the opening of Artmill, a cutting-edge finishing facility that produces piece-dyed fabrics and denim hybrids, activewear, and workwear. With a focus on woven fabrics for piece dyeing and garment dye, Artmill can produce 25 million meters of fabric and up to 6 million garments annually. The company is now the regions first first LEED Platinum- certified piece-dye mil, with power provided by renewable energy and water and chemical recycling methods in place. Mill offerings include VAT, reactive disperse dyeing, and chemical and mechanical finishes. Artmill is designed from the ground up to offer retailers and brands a turnkey solution for their activewear, workwear, and casualwear programs.",
+    ],
   },
 
   {
-    title: "Circular Park",
-    content:
-      "Circular Park, our dedicated fiber recovery facility, underscores our commitment to circularity. This facility enables us to centralize and process internal textile waste streams and post-consumer waste, diverting them from landfills and reintroducing them into our production cycle. Circular Park is a testament to our dedication to minimizing waste and maximizing resource utilization.",
+    title: "Spinning",
+    content: [
+      "Our spinning division is a global leader in the production of sustainable and innovative yarns. We produce 8.2 million pounds of world-class cotton yarn monthly, with a diverse product portfolio that includes recycled cotton, organic cotton, BCI cotton, and smart fibers such as Tencel™, Recycled Poly, Creora, Circulose®, LYCRA® EcoMade, Thermolite®, and COOLMAX®.",
+      "The division also houses our dedicated fiber recycling facility, Circular Park. This facility consolidates our internal textile waste streams and post-consumer waste, diverting it from landfills and reintroducing it into the production cycle. Developed in partnership with French machinery specialist La Roche, the 70,000-square-foot facility is equipped with cutting-edge, precision-controlled sorting and automated shredding machines.",
+    ],
   },
+
   {
-    title: "Global Sourcing and Design Expertise",
-    content:
-      "Through SFI, Artistic Milliners offers clients a unique advantage: the agility of nearshoring combined with the expertise of a global leader. This allows us to deliver faster turnaround times, enhanced design collaboration, 3D sampling and cost-effective solutions, all while maintaining the highest standards of quality and sustainability. SFI's integrated network, spanning from Los Angeles to Guatemala and Mexico, reinforces our commitment to providing comprehensive, end-to-end solutions for our partners worldwide.",
+    title: "Renewable Energy",
+    content: [
+      "Artistic Milliners is a pioneer in renewable energy within Pakistan. Our state-of-the-art wind farms, with an operational capacity of 100 MW are a testament to our commitment to sustainability.  Currently, our wind farms power 144,500 households through Pakistan's national grid, supplying over 1.3 billion kWh of green energy.",
+      "Our manufacturing facilities also utilize over 12 MW of solar power, further reducing our reliance on traditional energy sources. We are developing new renewable energy projects across Pakistan to promote a shift away from fossil fuels, reduce carbon emissions, and lower energy generation costs. In 2023 alone, we mitigated over 670,000 tonnes of GHG emissions.",
+    ],
   },
 
   // {
@@ -88,6 +79,7 @@ const details = [
   //     "The Western Hemisphere plays a significant role in the global textile industry, offering a blend of traditional craftsmanship and modern technology, alongside significant contributions to sustainable practices.",
   // },
 ];
+const points = details?.map((v) => v?.title);
 
 const ScrollComponent = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -148,7 +140,7 @@ const ScrollComponent = () => {
 
       {/* Right Side - Details */}
       <div className="w-full p-2 pt-8 md:pt-0 xl:w-2/3 md:p-8 overflow-y-scroll scrollbar-hidden">
-        {details.map((detail, index) => (
+        {details?.map((detail, index) => (
           <div
             key={index}
             ref={(el) => (detailRefs.current[index] = el)}
@@ -157,9 +149,14 @@ const ScrollComponent = () => {
             <h2 className="mt-0 md:mt-5 text-2xl md:text-5xl uppercase font-regular mb-0 md:mb-4">
               {detail.title}
             </h2>
-            <p className="text-lg md:text-2xl py-8 text-gray-700">
-              {detail.content}
-            </p>
+            {detail?.content?.map((val, index) => (
+              <p
+                className="text-lg md:text-2xl py-4 text-gray-700"
+                key={val?.slice(3) + index}
+              >
+                {val}
+              </p>
+            ))}
           </div>
         ))}
       </div>

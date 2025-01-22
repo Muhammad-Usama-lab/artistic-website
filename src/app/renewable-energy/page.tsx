@@ -1,3 +1,4 @@
+import GridComponent from "@/components/Common/GridComponent";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
 import DetailComponent from "@/components/Renewable/DetailComponent";
@@ -6,18 +7,18 @@ import Hero from "@/components/Renewable/Hero";
 
 const Page = () => {
   const data = [
-    {
-      title: "Solar",
-      paragraph: [
-        `<p>Our first foray into renewable energy was solar. Solar panels
-        installed on all our facilities helps generate clean energy for
-        our operations.</p>`,
-       
-        `<p>And the work continues. We have another <b>50MW</b> capacity solar
-        energy project in the works.</p>`,
-      ],
-      image:"/images/renewable/1.jpg"
-    },
+    // {
+    //   title: "Solar",
+    //   paragraph: [
+    //     `<p>Our first foray into renewable energy was solar. Solar panels
+    //     installed on all our facilities helps generate clean energy for
+    //     our operations.</p>`,
+
+    //     `<p>And the work continues. We have another <b>50MW</b> capacity solar
+    //     energy project in the works.</p>`,
+    //   ],
+    //   image:"/images/renewable/1.jpg"
+    // },
     {
       title: "Wind",
       paragraph: [
@@ -28,7 +29,7 @@ const Page = () => {
         of green energy to the grid and has a CO2 offset of <b>101,511 MT</b>.</p>`,
         `<p>Operational since 2022, Artistic Wind Power Pvt. has a capacity in excess of <b>50MW</b>, delivers <b>147GWh</b> of green energy to the grid and offset <b>96,396MT</b> of CO2</p>`,
       ],
-      image:"/images/renewable/2.jpg"
+      image: "/images/renewable/2.jpg",
     },
     // {
     //   title: "Hydro",
@@ -48,7 +49,12 @@ const Page = () => {
       </div>
       {data?.map((v, index) => (
         <div className="snap-center" key={`v?.title ${index}`}>
-          <DetailComponent image={v?.image} title={v?.title} paragraph={v?.paragraph} />
+          <GridComponent
+            html
+            image={v?.image}
+            title={v?.title}
+            content={v?.paragraph}
+          />
         </div>
       ))}
 
