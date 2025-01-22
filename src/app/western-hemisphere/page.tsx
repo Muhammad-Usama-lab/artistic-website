@@ -1,3 +1,4 @@
+import GridComponent from "@/components/Common/GridComponent";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
 import DetailComponent from "@/components/Western-Hemisphere/DetailComponent";
@@ -40,9 +41,16 @@ manufacturers and brands more sourcing options closer to the United States.`,
       </div>
 
       {data?.map((v, index) => (
-        <div className="snap-center" key={`v?.title ${index}`}>
-          <DetailComponent image={v?.image} title={v?.title} paragraph={v?.paragraph} />
-        </div>
+        <section className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center">
+          <div className="snap-center" key={`v?.title ${index}`}>
+            <GridComponent
+              image={v?.image}
+              title={v?.title}
+              content={v?.paragraph}
+              html
+            />
+          </div>
+        </section>
       ))}
 
       <div className=" snap-center">

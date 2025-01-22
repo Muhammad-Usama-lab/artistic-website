@@ -7,6 +7,7 @@ import Latest from "@/components/Esg/Latest";
 import Features from "@/components/Esg/Features";
 import Footer from "@/components/Footer";
 import ScrollComponent from "@/components/Esg/ScrollComponent";
+import GridComponent from "@/components/Common/GridComponent";
 
 const Page = () => {
   return (
@@ -22,14 +23,16 @@ const Page = () => {
         <Collage />
       </div>
       <div className="snap-center">
-        <DetailComponent
-          title="AM INITIATIVES"
-          paragraph={[
-            `Our efforts to provide health and wellness benefits extend beyond our employees and into the communities where we operate. Those initiatives include providing new jobs, community schools, clean drinking water and medical services.`,
-            `We are always expanding the scope of our worker empowerment initiatives in collaboration with our customers and international organizations.`,
-          ]}
-          image="/images/esg/1.jpg"
-        />
+        <section className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center">
+          <GridComponent
+            title="AM INITIATIVES"
+            content={[
+              `Our efforts to provide health and wellness benefits extend beyond our employees and into the communities where we operate. Those initiatives include providing new jobs, community schools, clean drinking water and medical services.`,
+              `We are always expanding the scope of our worker empowerment initiatives in collaboration with our customers and international organizations.`,
+            ]}
+            image="/images/esg/1.jpg"
+          />
+        </section>
       </div>
 
       <div className="snap-center">
