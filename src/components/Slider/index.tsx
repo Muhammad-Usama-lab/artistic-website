@@ -78,9 +78,9 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                   showArrows={false}
                   showIndicators={false}
                   showStatus={false}
-                  autoPlay
+                  // autoPlay
                   infiniteLoop
-                  interval={1000}
+                  // interval={2000}
                   
                   showThumbs={false}
                   className={styles.carouselContainer}
