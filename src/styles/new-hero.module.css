@@ -1,0 +1,89 @@
+/* Outer Container */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+/* Inner Cube Wrapper */
+.sliderInner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 3s cubic-bezier(0.4, 0.2, 0.3, 1);
+}
+
+/* Individual Slides */
+.sliderItem {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.sliderItem.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  color: #fff;
+  z-index: 10;
+  padding: 0 20px; /* For smaller devices */
+  box-sizing: border-box;
+}
+
+.overlay h1 {
+  font-size: 6rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.overlayText {
+  position: absolute;
+  bottom: 150px; /* 150px from the bottom */
+  left: 150px; /* 150px from the left */
+  transform: translate(0, 0); /* No centering needed for bottom-left */
+  opacity: 0;
+  transition: all 0.3s ease-in-out; /* Reduced duration for smoother effect */
+}
+
+.textVisible {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.textHidden {
+  opacity: 0;
+  transform: translateY(10px); /* Slide-down effect for hiding */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+}

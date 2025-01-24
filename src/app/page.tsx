@@ -1,10 +1,11 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+import HeroSlider from "@/components/Hero/new-hero";
 import Slider from "@/components/Slider";
 import OurValues from "@/components/Values";
 import { slides, values } from "@/mock";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,14 +15,20 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
- 
+  const images = [
+    { image: "/images/hero/1.png", title: "ARTISTIC MILLINERS" },
+    { image: "/images/hero/2.png", title: "RENEWABLE ENERGY" },
+    { image: "/images/hero/3.jpg", title: "ARTMILL" },
+    { image: "/images/hero/4.png", title: "WE ARE GLOBAL" },
+  ];
+
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <ScrollUp />
       <div className="snap-center">
-        <Hero />
+        <HeroSlider images={images} />
       </div>
-      <div className="snap-center" >
+      <div className="snap-center">
         <Features />
       </div>
 
