@@ -20,6 +20,8 @@ export default function Home() {
     { image: "/images/hero/2.png", title: "RENEWABLE ENERGY" },
     { image: "/images/hero/3.jpg", title: "ARTMILL" },
     { image: "/images/hero/4.png", title: "WE ARE GLOBAL" },
+    { image: "/images/hero/5.JPG", title: "WE ARE GLOBAL" },
+    { image: "/images/hero/6.jpg", title: "WE ARE GLOBAL" },
   ];
 
   return (
