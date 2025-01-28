@@ -20,7 +20,6 @@ const Hero = () => {
   const videoRef = useRef(null);
 
   const wordDurations = [3000, 6000, 5000, 8000, 12000, 15000, 10000];
-
   return (
     <>
       <section

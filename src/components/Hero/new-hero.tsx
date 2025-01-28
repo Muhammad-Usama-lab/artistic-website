@@ -21,6 +21,7 @@ const HeroSlider = ({ images }) => {
   }, [images.length]);
 
   return (
+    
     <div className={styles.slider}>
       <div className={styles.sliderInner}>
         {images?.map((image, index: number) => (

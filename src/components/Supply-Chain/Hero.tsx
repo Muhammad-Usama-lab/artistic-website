@@ -17,7 +17,7 @@ const Hero = () => {
      className="mx-auto w-full mt-60 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
    /> */}
    <img
-     src="/images/hero/business.png"
+     src="/images/business/business.png"
      className="mx-auto w-full mt-60 md:mt-0 drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
    />
  </div>
