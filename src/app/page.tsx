@@ -19,6 +19,7 @@ export default function Home() {
     { image: "/images/hero/1.png", title: "ARTISTIC MILLINERS" },
     { image: "/images/hero/2.png", title: "RENEWABLE ENERGY" },
     { image: "/images/hero/3.jpg", title: "ARTMILL" },
+    { image: "/images/hero/4.png", title: "WE ARE GLOBAL" },
     { image: "/images/hero/5.png", title: "WE ARE GLOBAL" },
     { image: "/images/hero/6.png", title: "WE ARE GLOBAL" },
     { image: "/images/hero/7.png", title: "WE ARE GLOBAL" },
