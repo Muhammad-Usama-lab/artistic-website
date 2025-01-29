@@ -22,6 +22,7 @@ export default function Home() {
     { image: "/images/hero/5.png", title: "WE ARE GLOBAL" },
     { image: "/images/hero/6.png", title: "WE ARE GLOBAL" },
     { image: "/images/hero/7.png", title: "WE ARE GLOBAL" },
+    { image: "/images/hero/8.jpg", title: "WE ARE GLOBAL" },
   ];
 
   return (
