@@ -1,0 +1,130 @@
+.mainContainer {
+  /* height: 100vh !important; */
+}
+
+@media (min-width: 550px) {
+  .mainHeading {
+    font-size: 2rem !important;
+  }
+  .mainHeading {
+    font-size: 1.25rem !important;
+  }
+
+  .mainContainer {
+    /* border: 3px solid rgb(159, 230, 53) !important; */
+  }
+
+  .collageBox {
+    padding: 0.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .subHeading {
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .mainHeading {
+    font-size: 1.25rem !important;
+  }
+
+  .mainContainer {
+    /* border: 2px solid purple !important; */
+  }
+  .collageBox {
+    padding: 0.5rem;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subHeading {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .mainHeading {
+    font-size: 2rem !important;
+  }
+
+  .mainContainer {
+    /* border: 10px solid violet !important; */
+  }
+
+  .collageBox {
+    padding: 0.5rem;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .subHeading {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainHeading {
+    font-size: 1.75rem !important;
+  }
+  .mainContainer {
+    /* border: 2px solid orange !important; */
+  }
+  .collageBox {
+    padding: 0.5rem;
+  }
+  .heading {
+    font-size: 2.8rem;
+  }
+  .subHeading {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1540px) {
+  .mainContainer {
+    /* border: 1rem solid green !important; */
+  }
+
+  .collageBox {
+    padding: 0.25rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .mainHeading {
+    font-size: 2.5rem !important;
+  }
+
+  .mainContainer {
+    /* border: 2px solid blue !important; */
+  }
+
+  .collageBox {
+    padding: 0.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+  .subHeading {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1720px) {
+  .mainHeading {
+    font-size: 3rem !important;
+  }
+  .mainContainer {
+    /* border: 2px solid red !important; */
+  }
+  .collageBox {
+    padding: 1.5rem;
+  }
+}

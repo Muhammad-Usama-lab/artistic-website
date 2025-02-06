@@ -1,6 +1,7 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
+import styles from "@/styles/collage.module.css";
 
 const Collage = () => {
   const { ref, inView: isVisible } = useInView({
@@ -12,13 +13,13 @@ const Collage = () => {
     {
       title: "55% of women",
       desc: "in senior leadership positions",
-      class: "max-w-56 text-primary",
+      class: "md:max-w-56 text-primary",
       descriptionClass: "text-primary",
     },
     {
       title: "7,954 workers",
       desc: "fair trade-certified",
-      class: "max-w-56 text-primary",
+      class: "md:max-w-56 text-primary",
       descriptionClass: "text-primary",
     },
     {
@@ -45,17 +46,17 @@ const Collage = () => {
       descriptionClass: "text-primary",
     },
   ];
-  
+
   return (
     <>
       <section
         ref={ref}
         id="collage"
-        className="min-h-screen  py-16 md:py-30 lg:py-28"
+        className={`min-h-screen py-16 md:py-30 md:pt-28 ${styles.mainContainer}`} // 
       >
         <div>
           <h1
-            className={`${isVisible ? "fade-in" : ""} uppercase max-w-8xl mt-5 primary-font text-2xl sm:text-3xl md:text-4xl xl:text-5xl  p-4 sm:p-4 border-black border-t border-b-1`}
+            className={`${isVisible ? "fade-in" : ""} uppercase max-w-8xl mt-5 primary-font text-2xl sm:text-3xl md:text-4xl xl:text-5xl  p-4 sm:p-4 border-black border-t border-b-1 ${styles.mainHeading}`}
           >
             AM BY THE NUMBERS
           </h1>
@@ -64,15 +65,15 @@ const Collage = () => {
             {data?.map((val, index) => (
               <div
                 key={index + val?.title}
-                className={`${isVisible ? "slide-left" : ""} border-black border-t lg:border flex flex-col items-center justify-center py-8 ${val?.mainClass}`}
+                className={`${isVisible ? "slide-left" : ""} border-black border-t lg:border flex flex-col items-center justify-center py-8 ${val?.mainClass} ${styles.collageBox}`}
               >
                 <h1
-                  className={`uppercase ${val?.class} text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl`}
+                  className={`uppercase ${val?.class} text-center text-2xl sm:text-3xl md:text-3xl xl:text-5xl ${styles.heading}`}
                 >
                   {val?.title}
                 </h1>
                 <h5
-                  className={`${val?.descriptionClass} uppercase max-w-52 lg:max-w-xs text-center  text-sm sm:text-xl sm:p-4 mb-4`}
+                  className={`${val?.descriptionClass} uppercase max-w-52 lg:max-w-xs text-center  text-sm sm:text-xl sm:p-4 mb-4 ${styles.subHeading}`}
                 >
                   {val?.desc}
                 </h5>
@@ -83,15 +84,15 @@ const Collage = () => {
             {data2?.map((val, index) => (
               <div
                 key={index + val?.title}
-                className={`${isVisible ? "slide-right" : ""} ${val?.mainClass} border-black border-t lg:border flex flex-col items-center justify-center py-8`}
+                className={`${isVisible ? "slide-right" : ""} ${val?.mainClass} border-black border-t lg:border flex flex-col items-center justify-center py-8 ${styles.collageBox}`}
               >
                 <h1
-                  className={`uppercase ${val?.class} text-center  text-2xl sm:text-3xl md:text-4xl xl:text-5xl`}
+                  className={`uppercase ${val?.class} text-center  text-2xl sm:text-3xl md:text-4xl xl:text-5xl ${styles.heading}`}
                 >
                   {val?.title}
                 </h1>
                 <h5
-                  className={`${val?.descriptionClass} uppercase max-w-xs text-center text-sm sm:text-xl sm:p-4 mb-4`}
+                  className={`${val?.descriptionClass} uppercase max-w-xs text-center text-sm sm:text-xl sm:p-4 mb-4 ${styles.subHeading}`}
                 >
                   {val?.desc}
                 </h5>
