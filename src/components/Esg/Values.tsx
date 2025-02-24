@@ -3,12 +3,12 @@
 import { useInView } from "react-intersection-observer";
 import styles from "@/styles/values.module.css";
 
-const Values = ({ text }) => {
+const Values = ({ text, link = false }) => {
   const { ref, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
   });
-  
+
   return (
     <>
       <section
@@ -21,6 +21,11 @@ const Values = ({ text }) => {
           >
             {text}
           </h4>
+          {link && (
+            <a href="/esg.pdf" download  className="sm:text-2xl underline cursor-pointer">
+              To learn more, click here to access our latest ESG report.
+            </a>
+          )}
         </div>
       </section>
     </>

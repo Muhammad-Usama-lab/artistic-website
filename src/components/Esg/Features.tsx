@@ -22,7 +22,7 @@ const Features = () => {
   ];
   return data?.map((val, index) => (
     <div className="snap-center">
-      <Values text={val} key={"val" + index} />
+      <Values link={index === 0} text={val} key={"val" + index} />
     </div>
   ));
 };
