@@ -26,9 +26,9 @@ const Button = ({ label, theme = "black", goTo = "/" }: ButtonI) => {
               <g
                 fill="none"
                 stroke="#112e9d"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="4"
+                strokeLinecap="round"
+            strokeLinejoin="round"
+                strokeWidth="4"
               >
                 <path d="M41.9999 24H5.99994" />
                 <path d="M30 12L42 24L30 36" />
@@ -44,9 +44,9 @@ const Button = ({ label, theme = "black", goTo = "/" }: ButtonI) => {
             <path
               fill="none"
               stroke="black"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="m21 12l-5-5m5 5l-5 5m5-5H3"
             />
           </svg>

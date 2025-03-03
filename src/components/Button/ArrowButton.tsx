@@ -19,9 +19,10 @@ const ArrowButton = ({ onClick, right }: ArrowI) => {
           <g
             fill="none"
             stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+           
+            strokeWidth="4"
           >
             <path d="M41.9999 24H5.99994" />
             <path d="M30 12L42 24L30 36" />
@@ -45,9 +46,9 @@ const ArrowButton = ({ onClick, right }: ArrowI) => {
           <path
             fill="none"
             stroke="black"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+           strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="m3 12l5 5m-5-5l5-5m-5 5h18"
           />
         </svg>

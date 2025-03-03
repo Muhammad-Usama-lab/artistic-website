@@ -26,7 +26,7 @@ const AnimatedButton = () => {
             height="48"
             fill="none"
             stroke="#000"
-            stroke-width="2"
+            strokeWidth="2"
             className={inView ? styles["rect-visible"] : ""}
           />
         </svg>
