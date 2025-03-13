@@ -1,6 +1,7 @@
 import GridComponent from "@/components/Common/GridComponent";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Features from "@/components/Western-Hemisphere/Features";
 import Hero from "@/components/Western-Hemisphere/Hero";
 
@@ -31,6 +32,7 @@ manufacturers and brands more sourcing options closer to the United States.`,
   ];
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <Header />
       <ScrollUp />
       <div className="snap-center">
         <Hero />

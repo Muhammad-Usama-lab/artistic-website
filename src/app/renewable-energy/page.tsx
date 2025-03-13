@@ -1,7 +1,7 @@
 import GridComponent from "@/components/Common/GridComponent";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
-import DetailComponent from "@/components/Renewable/DetailComponent";
+import Header from "@/components/Header";
 import Features from "@/components/Renewable/Features";
 import Hero from "@/components/Renewable/Hero";
 
@@ -40,6 +40,7 @@ const Page = () => {
   ];
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <Header />
       <ScrollUp />
       <div className="snap-center">
         <Hero />

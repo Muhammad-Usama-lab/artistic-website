@@ -3,10 +3,12 @@ import Global from "@/components/About/Global";
 import Hero from "@/components/About/Hero";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <Header />
       <ScrollUp />
       <div className="snap-center">
         <Hero />

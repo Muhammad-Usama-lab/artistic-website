@@ -1,17 +1,18 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Collage from "@/components/Esg/Collage";
-import DetailComponent from "@/components/Esg/DetailComponent";
 
+import GridComponent from "@/components/Common/GridComponent";
+import Features from "@/components/Esg/Features";
 import Hero from "@/components/Esg/Hero";
 import Latest from "@/components/Esg/Latest";
-import Features from "@/components/Esg/Features";
-import Footer from "@/components/Footer";
 import ScrollComponent from "@/components/Esg/ScrollComponent";
-import GridComponent from "@/components/Common/GridComponent";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll overflow-x-hidden h-screen">
+      <Header />
       <ScrollUp />
       <div className="snap-center">
         <Hero />

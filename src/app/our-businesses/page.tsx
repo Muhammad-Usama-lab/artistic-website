@@ -1,15 +1,14 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Features from "@/components/Supply-Chain/Features";
 import Hero from "@/components/Supply-Chain/Hero";
-import ManyFirst from "@/components/Supply-Chain/ManyFirst";
-import Milestone from "@/components/Supply-Chain/Milestone";
 import ScrollComponent from "@/components/Supply-Chain/ScrollComponent";
 
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <Header />
       <ScrollUp />
       <div className="snap-center">
         <Hero />

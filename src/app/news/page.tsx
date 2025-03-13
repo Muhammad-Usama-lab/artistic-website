@@ -2,10 +2,12 @@ import Features from "@/components/News/Features";
 import Hero from "@/components/News/Hero";
 
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <Header />
       <div className="snap-center">
         <Hero />
       </div>
