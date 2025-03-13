@@ -68,8 +68,8 @@ function Page({ params }) {
   return (
     <>
       <div
-        className="min-h-[100vh] xs:px-2 sm:px-4 md:px-4 lg:px-8  xl:px-24 "
-        style={{ background: "#050c24" }}
+        className="min-h-[100vh] xs:px-2 sm:px-4 md:px-4 lg:px-8  xl:px-24 bg-gradient-to-r from-slate-900 to-slate-700 "
+      
       >
         {/* jarvis logo  */}
         <div className="flex flex-row items-center justify-center gap-2 p-6  ">
