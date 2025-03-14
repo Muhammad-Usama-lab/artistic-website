@@ -86,7 +86,7 @@ to-[#334155] "
 
         {recipeLoading ? (
           <>
-            <div className="flex items-center justify-center  bg-[  #050c24] pt-3 mt-10">
+            <div className="flex items-center justify-center   pt-3 mt-10">
               <div className="relative">
                 <div className="relative w-32 h-32">
                   <div
