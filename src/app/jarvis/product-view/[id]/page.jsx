@@ -67,9 +67,13 @@ function Page({ params }) {
 
   return (
     <>
-      <div className="min-h-[100vh] xs:px-2 sm:px-4 md:px-4 lg:px-8  xl:px-24 bg-gradient-to-r from-slate-900 to-slate-700 ">
+      <div
+        className="min-h-[100vh] xs:px-2 sm:px-4 md:px-4 lg:px-8  xl:px-24 bg-gradient-to-r
+from-[#0f172a]
+to-[#334155] "
+      >
         {/* jarvis logo  */}
-        <div className="flex flex-row items-center justify-center gap-2 p-6  ">
+        <div className="flex flex-row items-center justify-center gap-2 md:p-6  ">
           <div className="size-12   mt-10 md:mt-2 ">
             <img src="/images/jarvis.png" />
           </div>
@@ -103,7 +107,7 @@ function Page({ params }) {
           </>
         ) : error ? (
           <>
-            <div className="h-[100%] mt-10 items-center justify-center flex ">
+            <div className="h-[100%] mt-10 items-center justify-center flex  max-w-xs mx-auto text-center">
               <h1 className="text-2xl md:4xl text-white">{error}</h1>
             </div>
           </>
