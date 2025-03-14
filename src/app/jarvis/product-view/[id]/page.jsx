@@ -68,11 +68,12 @@ function Page({ params }) {
   return (
     <>
       <div
-        className="min-h-[100vh] xs:px-2 sm:px-4 md:px-4 lg:px-8  xl:px-24 bg-gradient-to-r from-slate-900 to-slate-700 "
-      
+        className="min-h-[100vh] xs:px-2 sm:px-4 md:px-4 lg:px-8  xl:px-24 bg-gradient-to-r
+from-[#0f172a]
+to-[#334155] "
       >
         {/* jarvis logo  */}
-        <div className="flex flex-row items-center justify-center gap-2 p-6  ">
+        <div className="flex flex-row items-center justify-center gap-2 md:p-6  ">
           <div className="size-12   mt-10 md:mt-2 ">
             <img src="/images/jarvis.png" />
           </div>
@@ -106,7 +107,7 @@ function Page({ params }) {
           </>
         ) : error ? (
           <>
-            <div className="h-[100%] mt-10 items-center justify-center flex ">
+            <div className="h-[100%] mt-10 items-center justify-center flex  max-w-xs mx-auto text-center">
               <h1 className="text-2xl md:4xl text-white">{error}</h1>
             </div>
           </>
@@ -117,16 +118,13 @@ function Page({ params }) {
                 <h1 className="text-white text-center font-extrabold tracking-wide sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                   AMX-50345-c-Preskewed
                 </h1>
-                <div className="flex justify-between items-center gap-4">
-                  <div>
-                    <div className="relative mt-6 rounded-xl overflow-hidden shadow-lg ring-2 ring-gray-500 sm:mt-8 sm:w-52 md:w-64 lg:w-72">
-                      <img
-                        className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL3ZOIs495C8D7dMKaLMxQtS4VTJ6G0XM4uw&s"
-                        alt="machine"
-                      />
-                    </div>
-                  </div>
+
+                <div className="relative mt-6 rounded-xl overflow-hidden shadow-lg ring-2 ring-gray-500 sm:mt-8 w-[90%] xs:w-[90%] sm:w-[90%] md:w-[85%] lg:max-w-[30%] aspect-video">
+                  <img
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL3ZOIs495C8D7dMKaLMxQtS4VTJ6G0XM4uw&s"
+                    alt="machine"
+                  />
                 </div>
               </div>
 
