@@ -1,6 +1,7 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import HeroSlider from "@/components/Hero/new-hero";
 import Slider from "@/components/Slider";
 import OurValues from "@/components/Values";
@@ -26,11 +27,11 @@ export default function Home() {
     { image: "/images/hero/9.jpg", title: "WE ARE GLOBAL" },
     { image: "/images/hero/11.jpg", title: "WE ARE GLOBAL" },
     { image: "/images/hero/12.jpg", title: "WE ARE GLOBAL" },
-    
   ];
 
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+      <Header />
       <ScrollUp />
       <div className="snap-center">
         <HeroSlider images={images} />
