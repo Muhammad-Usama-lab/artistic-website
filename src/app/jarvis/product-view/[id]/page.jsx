@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import RecipeHeader from "../../../../components/Jarvis/Recipie/RecipeHeader";
+
 import RecipeList from "../../../../components/Jarvis/Recipie/RecipeList";
 import { RecipeService } from "../../../../services/recipe.service";
 function Page({ params }) {
   const [recipeData, setRecipeData] = useState([]);
+  const [recipeTitleData, setRecipeTitleData] = useState(null);
+
   const [recipeLoading, setRecipeLoading] = useState(true);
   const [error, setError] = useState("");
   useEffect(() => {
@@ -18,6 +20,13 @@ function Page({ params }) {
     try {
       setRecipeLoading(true);
       const response = await RecipeService.getRecipes(recipeId);
+      const titleResponse = await RecipeService.getRecipesTitle(recipeId);
+      console.log("🚀 ~ getRecipes ~ titleResponse:", titleResponse);
+
+      if (titleResponse.items.length) {
+        setRecipeTitleData(titleResponse.items[0]);
+      }
+
       if (response?.items.length) {
         setRecipeData(response.items);
       } else {
@@ -116,7 +125,7 @@ to-[#334155] "
             <div className="mt-10">
               <div className="flex flex-col items-center">
                 <h1 className="text-white text-center font-extrabold tracking-wide sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                  AMX-50345-c-Preskewed
+                  {recipeTitleData?.fabric ?? "N/A"}
                 </h1>
 
                 <div className="relative mt-6 rounded-xl overflow-hidden shadow-lg ring-2 ring-gray-500 sm:mt-8 w-[90%] xs:w-[90%] sm:w-[90%] md:w-[85%] lg:max-w-[30%] aspect-video">
