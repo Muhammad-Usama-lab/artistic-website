@@ -11,9 +11,7 @@ import { Carousel } from "react-responsive-carousel";
 function Page({ params }) {
   const [recipeData, setRecipeData] = useState([]);
   const [recipeTitleData, setRecipeTitleData] = useState(null);
-  console.log("🚀 ~ Page ~ recipeTitleData:", recipeTitleData);
   const imgUrls = getRecipesImages(recipeTitleData?.image_url);
-  console.log("🚀 ~ Page ~ imgUrls:", imgUrls);
   const [recipeLoading, setRecipeLoading] = useState(true);
   const [error, setError] = useState("");
   useEffect(() => {
