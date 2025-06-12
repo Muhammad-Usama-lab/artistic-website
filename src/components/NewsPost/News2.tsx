@@ -3,7 +3,7 @@
 import React from "react";
 
 import { useInView } from "react-intersection-observer";
-function News1() {
+function News2() {
   const { ref, inView: isVisible } = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -19,80 +19,70 @@ function News1() {
         <h1
           className={`${isVisible ? "fade-in" : ""} text-center uppercase max-w-5xl primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:p-4`}
         >
-          AM Mexico, Artistic Milliners' Newest Western Hemisphere Facility,
-          Begins Production
+          Sowing Seeds of Change: Empowering Women and Transforming Cotton
+          Farming
         </h1>
       </div>
 
       <div className="max-w-4xl mx-auto space-y-6">
         <p className="">
-          LOS ANGELES | June 12, 2025 | Artistic Milliners, a global leader in
-          denim manufacturing, has begun production out of AM Mexico, its newest
-          division and state-of-the-art denim production facility in Parras,
-          Mexico.
+          Artistic Milliners, in partnership with the Centre of Excellence in
+          Responsible Business (CERB) and the Pakistan Business Council, is
+          driving significant change in rural Pakistan through the Milliner
+          Cotton Initiative (MCI). This program is dedicated to empowering rural
+          women and transforming cotton farming through sustainable practices.
         </p>
 
         <p>
-          Yaqoob Ahmed, Chairman, Omer Ahmed, Managing Director, and Murtaza
-          Ahmed, Chief Executive Officer of Artistic Milliners were on hand to
-          mark the occasion on May 26, 2025. They were joined by key Artistic
-          Milliners leadership figures including Sujeewa Imbulgoda, Managing
-          Director of AM Mexico, Guillermo Riddle, General Manager Operations of
-          AM Mexico, as well as strategic partners Steve Maggard, President of
-          Cone Denim, and Cesar Albarran, Plant Manager of Cone Denim Parras.
+          The MCI addresses systemic barriers faced by women in rural areas by
+          introducing two key programs: the Alternate Livelihood Program (ALP)
+          and Fields of Equity. The ALP equips women with skills in
+          micro-enterprises like kitchen gardening, poultry farming, and bee-
+          farming, creating new avenues for sustainable income, especially
+          during non-farming seasons. For instance, Shahida Bibi's monthly
+          income rose significantly through kitchen gardening, allowing her to
+          invest in her children's education. Similarly, Zarina Bibi transformed
+          her passion for sewing into a sustainable livelihood, contributing
+          substantially to her family's income.
         </p>
 
         <p>
-          The launch of production at AM Mexico marks a significant milestone in
-          Artistic Milliners' journey of innovation and Western Hemisphere
-          expansion. The facility specializes in producing and washing jeans,
-          catering to both existing and new global customers. And it is already
-          bringing an unmatched level of innovation and service to North
-          American customers. In April of this year, AM Mexico and Los
-          Angeles-based sister company Star Fades International (SFI) announced
-          a partnership with The LYCRA Company to offer LYCRA FitSense® denim
-          technology for the first time in North America.
-        </p>
-
-        <blockquote className="border-l-4 border-gray-300 pl-4 italic my-6">
-          "The opening of AM Mexico is the culmination of years of investments
-          and commitments to Artistic Milliners' customers, who from day one
-          supported our vision to offer them multi- country / multi-category
-          products," said Murtaza Ahmed, Chief Executive Officer at Artistic
-          Milliners. "They now have a denim factory in this hemisphere that
-          meets and exceeds their expectation for product creation and
-          automation."
-        </blockquote>
-
-        <p>
-          AM Mexico is situated on a 10-acre site, featuring a
-          150,000-square-foot production floor. The facility, acquired in 2024
-          from VF Corp.'s Dickies de Parras S. de RL de CV, has undergone
-          significant upgrades.
+          Fields of Equity, active in both MCI and AM-Regen communities,
+          provides training and tools for female farmers to actively participate
+          in cotton farming—a traditionally male-dominated field. Participants
+          learn modern farming techniques, including sustainable practices like
+          improved soil management, integrated pest management, and
+          water-efficient irrigation. Zahra Bibi, for example, cultivated a
+          thriving cotton crop, diversified into goat farming, and repaid her
+          loan, showcasing remarkable entrepreneurial spirit.
         </p>
 
         <p>
-          The facility joins Artistic Milliners' global ecosystem and its
-          growing Western Hemisphere network, which includes SFI and Star Fades
-          Studios in the United States, its SFI factory in Guatemala and
-          strategic partners such as Cone Denim, which also has a factory in
-          Parras.
+          This economic empowerment has directly led to greater respect and
+          influence for women within their households, challenging traditional
+          gender roles. Women like Noreen Akhtar, through her poultry business,
+          gained the confidence to advocate for her children's education.
         </p>
 
-        <blockquote className="border-l-4 border-gray-300 pl-4 italic my-6">
-          "By tapping into Artistic Milliners' Western Hemisphere network, our
-          brand partners can accelerate their development and production
-          timelines," said Omer Ahmed, Artistic Milliners' Managing Director.
-          "AM Mexico will shave up to 13 weeks off of delivery timelines - and
-          it also unlocks the benefits of reduced risk and supply chain
-          resilience."
-        </blockquote>
-
-        <p className="font-medium">
-          This expansion underscores Artistic Milliners' commitment to
-          delivering exceptional denim solutions through innovation,
-          sustainability, and customer-centric operations.
+        <p>
+          The initiative also champions sustainability. A pilot in Rahim Yar
+          Khan demonstrated significant environmental benefits: 14.3% fewer
+          tillage operations, a 21.6% decrease in pesticide usage, and a 13.6%
+          reduction in irrigation water usage. These practices led to increased
+          cotton yield and a 32.8% reduction in overall farming costs, proving
+          that sustainability and economic success go hand-in-hand.
         </p>
+
+        <p>
+          The Milliner Cotton Initiative presents a compelling business case for
+          responsible practices, stabilizing supply chains and meeting rising
+          demands for ethical sourcing. Artistic Milliners is committed to
+          expanding these programs, ensuring long-term self-reliance for
+          participants and continuing to inspire a more equitable and
+          sustainable future for rural communities in Pakistan
+        </p>
+
+        <p>Read the full case study at https://bit.ly/3FzoQoo</p>
       </div>
 
       {/* <div className="max-w-4xl mx-auto mt-8">
@@ -183,4 +173,4 @@ function News1() {
   );
 }
 
-export default News1;
+export default News2;
