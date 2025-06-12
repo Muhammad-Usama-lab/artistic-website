@@ -92,7 +92,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="/"
+            href="https://www.linkedin.com/company/artisticmilliners1949/"
             aria-label="social-link"
             target="_blank"
             rel="noopener noreferrer"

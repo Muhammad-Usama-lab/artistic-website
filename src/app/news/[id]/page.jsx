@@ -1,24 +1,14 @@
-import Features from "@/components/News/Features";
-import Hero from "@/components/News/Hero";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import LatestNews from "@/components/News/LatestNews";
+import News1 from "@/components/NewsPost/News1";
 
 const Page = () => {
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       <Header />
-      <div className="snap-center">
-        <Hero />
-      </div>
 
       <div className="snap-center">
-        <Features />
-      </div>
-
-      <div className="snap-center border">
-        <LatestNews />
+        <News1 />
       </div>
 
       <div className=" snap-center">
