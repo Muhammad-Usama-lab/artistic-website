@@ -1,7 +1,12 @@
-.news-post{
-
+.news-post {
 }
 
-.news-post p{
-    font-size: x-large;
+.postPage p {
+  font-size: x-large;
+}
+
+.postPage blockquote {
+  font-size: large;
+  margin-top:40px;
+  margin-bottom:40px;
 }
