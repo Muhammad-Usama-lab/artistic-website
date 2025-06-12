@@ -112,7 +112,7 @@ function News3() {
         {/* Image at the end */}
         <div className="mt-10">
           <Image
-            src="/images/newsposts/3.1.png"
+            src="/images/newsposts/3.1.PNG"
             alt="Artistic Milliners LYCRA FitSense Launch"
             width={1000}
             height={600}
