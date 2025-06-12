@@ -85,7 +85,11 @@ function News2() {
 
         <p>
           Read the full case study at{" "}
-          <a className="text-blue-500 underline" href="https://bit.ly/3FzoQoo">
+          <a
+            className="text-blue-500 underline"
+            target="_blank"
+            href="https://bit.ly/3FzoQoo"
+          >
             https://bit.ly/3FzoQoo
           </a>{" "}
         </p>

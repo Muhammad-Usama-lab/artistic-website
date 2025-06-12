@@ -67,7 +67,7 @@ const LatestNews = () => {
             <div className="flex justify-between items-center mt-6 sm:mt-0">
               <div>
                 <h6 className="text-sm sm:text-xl uppercase">news</h6>
-                <h4 className="text-xl sm:text-5xl">13.11.24</h4>
+                <h4 className="text-xl sm:text-5xl">10.04.25</h4>
               </div>
               <Button label="Learn More" goTo="/news/3" />
             </div>
