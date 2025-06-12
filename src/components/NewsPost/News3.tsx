@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-
+import styles from "@/styles/newspost.module.css";
 function News3() {
   const { ref, inView: isVisible } = useInView({
     threshold: 0.1,
@@ -14,7 +14,7 @@ function News3() {
     <section
       id="features"
       ref={ref}
-      className="min-h-screen py-16 px-8 md:py-30 lg:py-32"
+      className={`min-h-screen py-16 px-8 md:py-30 lg:py-32 ${styles.postPage}`}
     >
       <div className="flex justify-center w-full">
         <h1

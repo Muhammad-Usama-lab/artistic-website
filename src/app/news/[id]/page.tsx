@@ -24,7 +24,7 @@ const Page = ({ params }: Props) => {
       case "3":
         return <News3 />;
       default:
-        return <div className="p-4 text-center">News post not found</div>;
+        return <div className="p-4 text-center ">News post not found</div>;
     }
   };
 

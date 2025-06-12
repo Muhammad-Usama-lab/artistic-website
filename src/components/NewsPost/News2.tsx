@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import styles from "@/styles/newspost.module.css";
 
 import { useInView } from "react-intersection-observer";
 function News2() {
@@ -13,7 +14,7 @@ function News2() {
     <section
       id="features"
       ref={ref}
-      className="min-h-screen py-16 px-8 md:py-30 lg:py-32"
+      className={`min-h-screen py-16 px-8 md:py-30 lg:py-32 ${styles.postPage}`}
     >
       <div className="flex justify-center w-full">
         <h1
@@ -82,7 +83,12 @@ function News2() {
           sustainable future for rural communities in Pakistan
         </p>
 
-        <p>Read the full case study at https://bit.ly/3FzoQoo</p>
+        <p>
+          Read the full case study at{" "}
+          <a className="text-blue-500 underline" href="https://bit.ly/3FzoQoo">
+            https://bit.ly/3FzoQoo
+          </a>{" "}
+        </p>
       </div>
 
       {/* <div className="max-w-4xl mx-auto mt-8">
