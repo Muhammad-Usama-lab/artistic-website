@@ -20,14 +20,14 @@ function News3() {
         <h1
           className={`${
             isVisible ? "fade-in" : ""
-          } text-center uppercase max-w-5xl primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:p-4`}
+          }  uppercase max-w-[90%]  primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:pt-4`}
         >
           Artistic Milliners Joins Forces with SFI and The LYCRA Company to
           Revolutionize Denim with LYCRA FitSense® Technology
         </h1>
       </div>
 
-      <div className="max-w-4xl mx-auto space-y-6 mt-8">
+      <div className="max-w-[90%] mx-auto space-y-6 my-14">
         <p>
           KARACHI, PAKISTAN – APRIL 10, 2025 – Artistic Milliners is proud to
           announce its pivotal role in an exciting new partnership bringing
@@ -115,7 +115,7 @@ function News3() {
             src="/images/newsposts/3.1.PNG"
             alt="Artistic Milliners LYCRA FitSense Launch"
             width={1000}
-            height={600}
+            height={200}
             className="rounded-lg w-full object-cover"
           />
         </div>
