@@ -20,14 +20,14 @@ function News2() {
     >
       <div className="flex justify-center w-full ">
         <h1
-          className={`${isVisible ? "fade-in" : ""}   uppercase max-w-[90%] primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:pt-4`}
+          className={`${isVisible ? "fade-in" : ""} max-w-4xl   uppercase primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:pt-4`}
         >
           Sowing Seeds of Change: Empowering Women and Transforming Cotton
           Farming
         </h1>
       </div>
 
-      <div className="max-w-[90%] mx-auto space-y-6 my-14">
+      <div className="max-w-4xl  mx-auto space-y-6 my-14">
         <p className="">
           Artistic Milliners, in partnership with the Centre of Excellence in
           Responsible Business (CERB) and the Pakistan Business Council, is
@@ -87,108 +87,25 @@ function News2() {
             href="https://bit.ly/3FzoQoo"
           >
             https://bit.ly/3FzoQoo
-          </a>{" "}
+          </a>
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-          {[1, 2, 3, 4, 5].map((v) => (
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10"> */}
+          {[1, 2, 3].map((v) => (
             <div
               key={v}
               className="w-full aspect-[4/3] overflow-hidden rounded-lg shadow"
             >
               <img
-                src={`/images/newsposts/2.${v}.${v === 5 ? "png" : "jpg"}`}
+                src={`/images/newsposts/2.${v}.jpg`}
                 alt={`News image ${v}`}
                 className="w-full h-full object-cover"
               />
             </div>
           ))}
-        </div>
+        {/* </div> */}
       </div>
 
-      {/* <div className="max-w-4xl mx-auto mt-8">
-
-        <p className="mb-6">
-          LOS ANGELES | June 12, 2025 | Artistic Milliners, a global leader in
-          denim manufacturing, has begun production out of AM Mexico, its newest
-          division and state-of-the-art denim production facility in Parras,
-          Mexico.
-        </p>
-
-        <p className="mb-6">
-          Yaqoob Ahmed, Chairman, Omer Ahmed, Managing Director, and Murtaza
-          Ahmed, Chief Executive Officer of Artistic Milliners were on hand to
-          mark the occasion on May 26, 2025. They were joined by key Artistic
-          Milliners leadership figures including Sujeewa Imbulgoda, Managing
-          Director of AM Mexico, Guillermo Riddle, General Manager Operations of
-          AM Mexico, as well as strategic partners Steve Maggard, President of
-          Cone Denim, and Cesar Albarran, Plant Manager of Cone Denim Parras.
-        </p>
-
-        <h2 className="text-xl font-bold mt-8 mb-4">
-          Facility Highlights & Strategic Advantages
-        </h2>
-
-        <h3 className="font-semibold mb-2">Proximity to Market</h3>
-        <p className="mb-6">
-          Strategically located near the U.S. border, AM Mexico enables reduced
-          shipping times and costs compared to overseas sourcing. Its close
-          proximity to major transportation hubs—Torreon and Saltillo—ensures
-          smooth logistics and accessibility.
-        </p>
-
-        <h3 className="font-semibold mb-2">State-of-the-Art Technology</h3>
-        <p className="mb-6">
-          AM Mexico features cutting-edge automation across cutting, sewing,
-          finishing and laundry operations, delivering unmatched efficiency,
-          precision, and consistent quality. The facility integrates machinery
-          and technology from leaders such as Lectra, Jeanologia, Tonello, C
-          Tex, IMA, Morgan, Tajima, Hashima, Sip-Italy, Smart MRT and Triveneta.
-        </p>
-
-        <h2 className="text-xl font-bold mt-8 mb-4">
-          Sowing Seeds of Change: Empowering Women and Transforming Cotton
-          Farming
-        </h2>
-        <p className="mb-6">
-          Artistic Milliners, in partnership with the Centre of Excellence in
-          Responsible Business (CERB) and the Pakistan Business Council, is
-          driving significant change in rural Pakistan through the Milliner
-          Cotton Initiative (MCI). This program is dedicated to empowering rural
-          women and transforming cotton farming through sustainable practices.
-        </p>
-
-        <h2 className="text-xl font-bold mt-8 mb-4">
-          Artistic Milliners Joins Forces with SFI and The LYCRA Company
-        </h2>
-        <p className="mb-6">
-          KARACHI, PAKISTAN – APRIL 10, 2025 – Artistic Milliners is proud to
-          announce its pivotal role in an exciting new partnership bringing
-          LYCRA FitSense® denim technology to the Western Hemisphere. This
-          collaboration, alongside Star Fades International (SFI), a leader in
-          premium denim innovation, and The LYCRA Company, a global pioneer in
-          fiber and fabric technology, marks a significant step forward in
-          providing innovative and high-performance denim solutions.
-        </p>
-
-        <p className="mb-6">
-          Key benefits of FitSense™ technology include:
-          <ul className="list-disc pl-6 mt-2">
-            <li>Patented yarn and garment processing technology</li>
-            <li>
-              A breakthrough approach to delivering a customizable fit and
-              shaping solution to denim
-            </li>
-            <li>
-              Durable shape and fit retention that targets areas such as tummy,
-              thigh, butt, leg, and waist
-            </li>
-            <li>
-              Invisible targeted shaping to make every pair of jeans feel like a
-              perfect fit, for all body types and shapes
-            </li>
-          </ul>
-        </p>
-      </div> */}
+   
     </section>
   );
 }

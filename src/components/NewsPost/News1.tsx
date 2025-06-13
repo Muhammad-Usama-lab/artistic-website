@@ -18,7 +18,7 @@ function News1() {
       ref={ref}
       className={`min-h-screen py-16 px-8 md:py-30 lg:py-32 ${styles.postPage}`}
     >
-      <div className="flex justify-center w-full ">
+      <div className=" flex justify-center">
         <h1
           className={`${isVisible ? "fade-in" : ""}   uppercase max-w-[90%] primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:pt-4 `}
         >
@@ -27,7 +27,7 @@ function News1() {
         </h1>
       </div>
 
-      <div className="max-w-[90%] mx-auto space-y-6 my-14 ">
+      <div className="max-w-4xl mx-auto space-y-6 my-14">
         <p className="">
           LOS ANGELES | June 12, 2025 | Artistic Milliners, a global leader in
           denim manufacturing, has begun production out of AM Mexico, its newest
@@ -119,21 +119,9 @@ function News1() {
           and technology from leaders such as Lectra, Jeanologia, Tonello, C
           Tex, IMA, Morgan, Tajima, Hashima, Sip-Italy, Smart MRT and Triveneta.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-          {images?.map((v) => (
-            <div
-              key={v}
-              className="w-full aspect-[4/3] overflow-hidden rounded-lg shadow"
-            >
-              <img
-                src={`/images/newsposts/1.${v}.png`}
-                alt={`News image ${v}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
+        {images?.map((v) => (
+          <img src={`/images/newsposts/1.${v}.png`} alt="article image" />
+        ))}
       </div>
     </section>
   );
