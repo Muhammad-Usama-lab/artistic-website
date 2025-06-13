@@ -1,15 +1,6 @@
-"use client";
-
-import { useInView } from "react-intersection-observer";
-
 import Button from "../Button";
 
 const Latest = () => {
-  const { ref, inView: isVisible } = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
   return (
     <>
       <div className="grid h-full grid-cols-1 lg:grid-cols-2 pt-8">
@@ -37,7 +28,9 @@ const Latest = () => {
             <Button label="Learn More" goTo="/news/1" />
           </div>
         </div>
-        <div className="flex flex-col justify-between border-black p-8"></div>
+        <div className="">
+          <img src="/images/newsposts/1.3.png" alt="latest news" className="w-full md:w-auto"/>
+        </div>
       </div>
     </>
   );

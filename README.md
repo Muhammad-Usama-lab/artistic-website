@@ -1,1 +1,1 @@
-# Artistic Milliners Revamp.
+# Artistic Milliners Revamp
