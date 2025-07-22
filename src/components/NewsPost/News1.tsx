@@ -20,7 +20,7 @@ function News1() {
     >
       <div className=" flex justify-center">
         <h1
-          className={`${isVisible ? "fade-in" : ""}   uppercase max-w-[90%] primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:pt-4 `}
+          className={`${isVisible ? "fade-in" : ""} max-w-4xl  uppercase primary-font mt-10 md:mt-0 text-2xl md:text-3xl xl:text-5xl sm:pt-4 `}
         >
           AM Mexico, Artistic Milliners' Newest Western Hemisphere Facility,
           Begins Production

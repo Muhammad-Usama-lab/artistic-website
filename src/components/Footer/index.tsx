@@ -1,7 +1,11 @@
 "use client";
+
 import Link from "next/link";
+import { useReportIncidentModal } from "@/contexts/ReportIncidentModalContext";
 
 const Footer = () => {
+  const { openModal } = useReportIncidentModal();
+
   const links = [
     { label: "ABOUT", path: "/about" },
     { label: "OUR BUSINESSES", path: "/our-businesses" },
@@ -10,6 +14,7 @@ const Footer = () => {
     { label: "ESG", path: "/esg" },
     { label: "NEWS", path: "/news" },
     { label: "PRIVACY POLICY", path: "/" },
+    { label: "WHISTLE BLOWER", onClick: openModal },
   ];
 
   const Part1 = (
@@ -122,7 +127,8 @@ const Footer = () => {
           {links?.map((v, i) => (
             <li key={`${i}-link`} className="text-right">
               <Link
-                href={v?.path}
+                href={v?.path ? v?.path : ""}
+                onClick={v?.onClick}
                 className="mb-2 inline-block text-sm text-black text-right duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
               >
                 {v?.label}
@@ -138,6 +144,7 @@ const Footer = () => {
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-8 ">
         <div className="container-full">
+          
           <div className="p-4 flex justify-between flex-wrap">
             {Part1}
             {Part2}

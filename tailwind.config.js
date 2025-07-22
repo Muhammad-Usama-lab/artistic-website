@@ -41,6 +41,7 @@ module.exports = {
         black: "#121723",
         dark: "#241D53",
         primary: "#112E9D", //"#4A6CF7", // #AC2029
+        "primary-dark": "#0E257A",
         // #2F1D57
         // #521E4E
         // #241D53

@@ -10,6 +10,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const Page = () => {
+  
+
   return (
     <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll overflow-x-hidden h-screen">
       <Header />
