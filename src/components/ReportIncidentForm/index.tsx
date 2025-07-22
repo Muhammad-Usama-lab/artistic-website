@@ -1,6 +1,6 @@
 "use client";
 import { useReportIncidentModal } from "@/contexts/ReportIncidentModalContext";
-import { postIncident } from "@/services/incident.service";
+import { postImage, postIncident } from "@/services/incident.service";
 import React, { useEffect, useRef, useState } from "react";
 
 interface FormErrors {
@@ -19,6 +19,12 @@ const initialForm = {
   evidence: null,
   contactInfo: "",
 };
+
+interface FileInfo {
+  name: string;
+  type: string;
+  extension: string;
+}
 const ReportIncidentForm = () => {
   const { isOpen, closeModal } = useReportIncidentModal();
 
@@ -109,6 +115,20 @@ const ReportIncidentForm = () => {
     setErrors((prev) => ({ ...prev, [name]: error }));
   };
 
+  const getFileInfo = (file: File | null): FileInfo | null => {
+    if (!file) return null;
+
+    const name = file.name;
+    const type = file.type;
+    const extension = name.split(".").pop()?.toLowerCase() || "";
+
+    return {
+      name,
+      type,
+      extension,
+    };
+  };
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -162,6 +182,14 @@ const ReportIncidentForm = () => {
       });
 
       if ("HEADER_ID" in response) {
+        if (formData?.evidence) {
+          const string = `V_HEADER_ID=${response?.HEADER_ID}&FILENAME=${getFileInfo(formData?.evidence)?.name}&MIMETYPE=${getFileInfo(formData.evidence)?.type}`;
+
+          const form = new FormData();
+          form.append("file", formData?.evidence);
+
+          await postImage(string, form);
+        }
         setShowSuccessModal(true);
         setFormData({
           incidentType: "",
