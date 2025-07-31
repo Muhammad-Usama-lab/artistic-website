@@ -139,7 +139,7 @@ const ScrollComponent = () => {
       </div>
 
       {/* Right Side - Details */}
-      <div className="w-full p-2 pt-8 md:pt-0 xl:w-2/3 md:p-8 overflow-y-scroll scrollbar-hidden">
+      <div className="w-full p-2 pt-8 md:pt-0 xl:w-2/3 md:p-8">
         {details?.map((detail, index) => (
           <div
             key={index}

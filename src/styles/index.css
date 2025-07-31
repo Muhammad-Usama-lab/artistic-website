@@ -60,6 +60,14 @@
   }
 }
 
+.animate-word-in {
+  transform: translateY(0);
+}
+
+.word-anim {
+  will-change: transform;
+}
+
 @layer components {
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
@@ -163,6 +171,11 @@
   animation: slideRight 2s forwards;
 }
 
+.fade-in-stagger {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
 @keyframes slideRight {
   to {
     transform: translateX(0);
@@ -231,6 +244,12 @@
     transform: scale(0);
     opacity: 0;
   }
+}
+
+.animate-flip-in {
+  animation: flip-in 0.5s forwards;
+  opacity: 0;
+  display: inline-block;
 }
 
 @keyframes flip-in {

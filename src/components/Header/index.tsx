@@ -16,13 +16,17 @@ const Header = () => {
   };
 
   // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+      setHeaderVisible(false);
     } else {
-      setSticky(false);
+      setHeaderVisible(true);
     }
+    setLastScrollY(currentScrollY);
   };
 
   useEffect(() => {
@@ -44,21 +48,14 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
-          sticky
-            ? " fixed z-[9999]  shadow-sticky backdrop-blur-sm transition" // dark:bg-gray-dark dark:shadow-sticky-dark bg-white
-            : " absolute main-header" // bg-transparent
-        }`}
-      >
+        className={`header left-0 top-0 z-40 flex w-full items-center transition-all duration-300 fixed z-[9999] bg-white/80 shadow-sticky backdrop-blur-lg ${headerVisible ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between pr-10">
             {/* Logo */}
             <div className="w-[60%] md:w-[35%] lg:w-[25%] px-4">
               <Link
                 href="/"
-                className={`header-logo flex gap-2 items-center block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                }`}
+                className={`header-logo flex gap-2 items-center block w-full py-5 lg:py-2`}
               >
                 {/* <div className="sm:visible">
                   <h6 className="font-bold text-sm  md:text-xl  text-primary uppercase">

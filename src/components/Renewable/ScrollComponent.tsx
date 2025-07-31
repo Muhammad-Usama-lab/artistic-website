@@ -128,7 +128,7 @@ const ScrollComponent = () => {
       </div>
 
       {/* Right Side - Details */}
-      <div className="w-2/3 p-8 overflow-y-scroll scrollbar-hidden">
+      <div className="w-2/3 p-8">
         {details.map((detail, index) => (
           <div
             key={index}

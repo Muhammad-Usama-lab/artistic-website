@@ -30,36 +30,29 @@ export default function Home() {
   ];
 
   return (
-    <div className="scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
+    <div>
       <Header />
       <ScrollUp />
-      <div className="snap-center">
-        <HeroSlider images={images} />
-      </div>
-      <div className="snap-center">
-        <Features />
-      </div>
+
+      <HeroSlider images={images} />
+
+      <Features />
 
       {slides.map((slide, index) => (
-        <div key={index} className="snap-center">
-          <Slider
-            title={slide.title}
-            paragraph={slide.list}
-            folder={slide.folder}
-            quantity={slide.quantity}
-          />
-        </div>
+        <Slider
+          title={slide.title}
+          paragraph={slide.list}
+          folder={slide.folder}
+          quantity={slide.quantity}
+          key={index}
+        />
       ))}
 
       {values?.map((val, index) => (
-        <div key={`values ${index}`} className="snap-center">
-          <OurValues data={val} />
-        </div>
+        <OurValues data={val} key={`values ${index}`} />
       ))}
 
-      <div className=" snap-center">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

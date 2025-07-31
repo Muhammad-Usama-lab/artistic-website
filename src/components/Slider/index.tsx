@@ -36,22 +36,28 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
     <>
       <section
         ref={inViewRef}
-        className="min-h-screen flex py-16 md:py-10 lg:py-20 items-center"
+        className="flex py-16 md:py-10 lg:py-20 items-center"
       >
-        <div className="container">
-          <div className="mt-5 flex-col grid grid-cols-12 border-t-2 border-b-2 border-black dark:border-gray-300">
-            <div className="md:col-span-5 col-span-12  lg:border-r-2   py-5 px-10 border-black dark:border-gray-300 flex flex-col">
+        <div className={`container ${isVisible ? styles["in-view"] : ""}`}>
+          <div className="mt-5 flex-col grid grid-cols-12 relative">
+            <div className="md:col-span-5 col-span-12 py-5 px-10 border-black dark:border-gray-300 flex flex-col">
               <div className="flex-none">
                 <h2
-                  className={`${isVisible ? "slide-left" : ""}  text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
+                  className={`${isVisible ? "fade-in-stagger" : ""}  text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
+                  style={{ animationDelay: isVisible ? `1s` : "0s" }}
                 >
                   {title}
                 </h2>
               </div>
               <div className="pt-5 grow">
-                {paragraph?.map((v) => (
+                {paragraph?.map((v, i) => (
                   <p
-                    className={`${isVisible ? "slide-up" : ""} !leading-relaxed text-black dark:text-gray-300 md:text-2xl py-0 font-medium`}
+                    className={`${isVisible ? "fade-in-stagger" : ""} !leading-relaxed text-black dark:text-gray-300 md:text-2xl py-0 font-medium`}
+                    style={{
+                      animationDelay: isVisible
+                        ? `${(i + 1) * 0.4 + 1}s`
+                        : "0s",
+                    }}
                   >
                     {v}
                   </p>
@@ -81,11 +87,10 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                   // autoPlay
                   infiniteLoop
                   // interval={2000}
-                  
+
                   showThumbs={false}
                   className={styles.carouselContainer}
                 >
-                  
                   {Array(quantity)
                     .fill(0)
                     ?.map((val, i) => (
@@ -95,12 +100,15 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                         alt="about-image"
                         width={400}
                         height={600}
-                        className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${styles.image}`}
+                        className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${styles.image} ${isVisible ? "fade-in" : ""}`}
                       />
                     ))}
                 </Carousel>
               </div>
             </div>
+            <div className={styles["border-animate-bottom"]}></div>
+            <div className={styles["border-animate-top"]}></div>
+            <div className={styles["border-animate-middle"]}></div>
           </div>
         </div>
       </section>

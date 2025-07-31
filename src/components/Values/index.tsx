@@ -21,9 +21,18 @@ const OurValues = ({ data }) => {
             </h2>
 
             <h4
-              className={`${isVisible ? "fade-in" : ""} mt-16 sm:mt-24   mb-16  text-primary font-normal text-xl sm:text-2xl  md:text-5xl ${styles.valueText}`}
+              className={`mt-16 sm:mt-24   mb-16  text-primary font-normal text-xl sm:text-2xl  md:text-5xl ${styles.valueText}`}
             >
-              {data?.text}
+              {data?.text.split('.').filter(s => s.trim()).map((sentence, i) => (
+                <div key={i}>
+                  <span
+                    className={`${isVisible ? "animate-flip-in" : ""}`}
+                    style={{ animationDelay: `${i * 0.4}s` }}
+                  >
+                    {(sentence.trim() + '.')}
+                  </span>
+                </div>
+              ))}
             </h4>
             <div
               className={`flex justify-end ${isVisible ? "slide-left" : ""} `}
