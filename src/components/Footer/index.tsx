@@ -1,10 +1,15 @@
 "use client";
 
+import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { useReportIncidentModal } from "@/contexts/ReportIncidentModalContext";
 
 const Footer = () => {
   const { openModal } = useReportIncidentModal();
+  const { ref, inView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
 
   const links = [
     { label: "ABOUT", path: "/about" },
@@ -150,7 +155,7 @@ const Footer = () => {
             {Part2}
           </div>
 
-          <div className="h-px w-full bg-gray-300 dark:bg-white"></div>
+          <div ref={ref} className={`footer-border ${inView ? 'footer-border-animate' : ''}`}></div>
           <div className="py-4">
             <p className="px-8 text-primary font-bold uppercase text-sm sm:text-base text-body-color dark:text-white">
               Artistic Milliners

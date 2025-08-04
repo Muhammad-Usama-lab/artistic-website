@@ -173,7 +173,7 @@
 
 .fade-in-stagger {
   opacity: 0;
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes slideRight {
@@ -358,6 +358,17 @@
 
 .animate-cuboid {
   animation: cuboid-rotate 1s ease-in-out; /* Adjust duration */
+}
+
+.footer-border {
+  height: 1px;
+  background-color: #000; /* black */
+  width: 0;
+  transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.footer-border-animate {
+  width: 100%;
 }
 
 

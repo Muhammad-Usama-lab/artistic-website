@@ -15,8 +15,8 @@ interface SliderI {
 
 const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
   const { ref: inViewRef, inView: isVisible } = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
+    threshold: 0.5,
+    triggerOnce: true,
   });
   const carouselRef = useRef<Carousel>(null);
 
@@ -43,8 +43,8 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
             <div className="md:col-span-5 col-span-12 py-5 px-10 border-black dark:border-gray-300 flex flex-col">
               <div className="flex-none">
                 <h2
-                  className={`${isVisible ? "fade-in-stagger" : ""}  text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
-                  style={{ animationDelay: isVisible ? `1s` : "0s" }}
+                  className={`${isVisible ? "fade-in-stagger" : "opacity-0"}  text-xs tracking-widest text-gray-500 dark:text-white sm:text-lg md:text-[13px]`}
+                  style={{ animationDelay: isVisible ? `0.1s` : '0s' }}
                 >
                   {title}
                 </h2>
@@ -52,12 +52,8 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
               <div className="pt-5 grow">
                 {paragraph?.map((v, i) => (
                   <p
-                    className={`${isVisible ? "fade-in-stagger" : ""} !leading-relaxed text-black dark:text-gray-300 md:text-2xl py-0 font-medium`}
-                    style={{
-                      animationDelay: isVisible
-                        ? `${(i + 1) * 0.4 + 1}s`
-                        : "0s",
-                    }}
+                    className={`${isVisible ? "fade-in-stagger" : "opacity-0"} !leading-relaxed text-black dark:text-gray-300 md:text-2xl py-0 font-medium`}
+                    style={{ animationDelay: isVisible ? `${i * 0.1 + 0.2}s` : '0s' }}
                   >
                     {v}
                   </p>
@@ -75,7 +71,7 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:col-span-7 col-span-12 ">
+            <div className="p-4 md:col-span-7 col-span-12 sticky top-0">
               <div
                 className={`h-full flex flex-col md:justify-center sm:justify-default `}
               >
@@ -94,14 +90,20 @@ const Slider = ({ title, paragraph, folder, quantity = 4 }: SliderI) => {
                   {Array(quantity)
                     .fill(0)
                     ?.map((val, i) => (
-                      <img
+                      <div
                         key={"any" + i}
-                        src={`/images/section/${folder}/${i + 1}.jpg`}
-                        alt="about-image"
-                        width={400}
-                        height={600}
-                        className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${styles.image} ${isVisible ? "fade-in" : ""}`}
-                      />
+                        className={styles["image-cover-reveal"]}
+                        data-scroll
+                        data-scroll-speed="0.8"
+                      >
+                        <img
+                          src={`/images/section/${folder}/${i + 1}.jpg`}
+                          alt="about-image"
+                          width={400}
+                          height={600}
+                          className={`grow w-full h-full border drop-shadow-three dark:drop-shadow-none ${styles.image}`}
+                        />
+                      </div>
                     ))}
                 </Carousel>
               </div>
